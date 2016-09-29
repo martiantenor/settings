@@ -95,7 +95,7 @@ else
     "set background=light
     colorscheme solarized
 
-    #colorscheme ir_black
+    "colorscheme ir_black
 
 endif
 syntax on                       "turns on syntax highlighting
