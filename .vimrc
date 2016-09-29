@@ -21,9 +21,17 @@ if has("unix")
     endif
 endif
 
+"OS detection
+if !exists("g:os")
+    if has("win64") || has("win32") || has("win16")
+        let g:os = "Windows"
+    else
+        let g:os = substitute(system('uname'), '\n', '', '')
+    endif
+endif
 
 "If not in Windows, load Vundle plugins
-if !has("win32") && !has("win64")
+if g:os == "Darwin" || g:os == "Linux"
     "Vundle settings
     filetype off
     set rtp+=~/.vim/bundle/Vundle.vim
