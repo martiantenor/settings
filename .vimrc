@@ -91,11 +91,11 @@ else
 
     "colorscheme wombat          " ...otherwise, load a colorscheme
 
-    "set background=dark
+    set background=dark
     "set background=light
-    "colorscheme solarized
+    colorscheme solarized
 
-    colorscheme ir_black
+    #colorscheme ir_black
 
 endif
 syntax on                       "turns on syntax highlighting
