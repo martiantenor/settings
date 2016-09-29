@@ -1,6 +1,5 @@
 "VIM Configuration File
 
-
 "Basic Settings
 set mouse=a         "allows use of the mouse!
 set noerrorbells    "don't make any damn noise!
@@ -50,6 +49,11 @@ if g:os == "Darwin" || g:os == "Linux"
         set breakindentopt=shift:2
         set lbr
     endif
+endif
+
+" If in Haiku, change runtimepath
+if g:os == "Haiku"
+    set runtimepath+=/boot/home/config/settings/vim
 endif
 
 "Windows compatibility section
