@@ -77,10 +77,10 @@ sarah="dblair@sarah.geo.brown.edu"
 
 ## Old work machines
 cirrus="dblair@cirrus.haystack.mit.edu"
-taylor="dblair@taylor.eas.purdue.edu"
-chilmark="dblair@chilmark.eas.purdue.edu"
-dogfish="dblair@dogfish.eas.purdue.edu"
-vineyard="dblair@vineyard.eas.purdue.edu"
+taylor="dblair@taylor.eaps.purdue.edu"
+chilmark="dblair@chilmark.eaps.purdue.edu"
+dogfish="dblair@dogfish.eaps.purdue.edu"
+vineyard="dblair@vineyard.eaps.purdue.edu"
 maven="dblair@maven.itap.purdue.edu"
 
 ## Specific folders on other machines
@@ -274,7 +274,7 @@ elif [ "$machine" == "Solaria" ]; then
 
 
 ######## Taylor ################################################################
-elif [ "$machine" == "taylor.eas.purdue.edu" ]; then
+elif [ "$machine" == "taylor.eaps.purdue.edu" ]; then
 
     # Terminal
     ## Fix delete key
@@ -371,7 +371,7 @@ elif [ "$machine" == "taylor.eas.purdue.edu" ]; then
 
 
 ######## Chilmark ##############################################################
-elif [ "$machine" == "chilmark.eas.purdue.edu" ]; then
+elif [ "$machine" == "chilmark.eaps.purdue.edu" ]; then
 
     # Terminal
     ### Fix delete key:
@@ -420,7 +420,7 @@ elif [ "$machine" == "chilmark.eas.purdue.edu" ]; then
 
 
 ######## Vineyard ##############################################################
-elif [ "$machine" == "vineyard.eas.purdue.edu" ]; then
+elif [ "$machine" == "vineyard.eaps.purdue.edu" ]; then
 
     # Terminal
     ### Fix delete key:
@@ -497,8 +497,8 @@ elif [ "$machine" == "gandalf" -o "$machine" == "bombadil" ]; then
     notes="$db/Notes"
 
 
-######## dogfish.eas.purdue.edu ################################################
-elif [ "$machine" == "dogfish.eas.purdue.edu" ]; then
+######## dogfish.eaps.purdue.edu ################################################
+elif [ "$machine" == "dogfish.eaps.purdue.edu" ]; then
 
     ## Aliases
     alias ls="ls -F --color"
