@@ -167,6 +167,25 @@ elif [ $(uname) == "Linux" ]; then
     fi
     browsercommand="firefox"
 
+######## FreeBSD ###############################################################
+elif [ $(uname) == "FreeBSD" ]; then
+
+    # Prompt
+    export PS1="$txtcyn[\A]$bldgrn\u@$machine:$bldblu\W$txtrst$ "
+
+    # Aliases
+    alias ls='ls -pG'
+    alias la='ls -paG'
+    alias ll='ls -pohGa'
+
+    # Colors
+    export TERM='xterm-256color'
+    LSCOLORS='ExGxxxxxCxxxxxxxxxxxxx'
+    export LSCOLORS
+
+    # Other
+    browsercommand="midori"
+
 ######## Windows+Cygwin ########################################################
 elif [ $(uname) == "CYGWIN_NT-10.0" ]; then
 
@@ -220,6 +239,11 @@ if [ "$machine" == "gc166-alderaan" ]; then
     export PATH="$PATH:/usr/local/bin:/opt/X11/bin"
     export PATH="$PATH:/usr/bin:/bin:/usr/sbin:/sbin"
 
+######## vm_asag ################################################################
+elif [ "$machine" == "vm_asag" ]; then
+
+    ## Test
+    echo "BSD 4EVA!!"
 
 ######## Arrakis ###############################################################
 elif [ "$machine" == "Arrakis" ]; then
@@ -512,6 +536,6 @@ elif [ "$machine" == "dogfish.eaps.purdue.edu" ]; then
 
 
 ######## Other Machines ########################################################
-else
-    echo "Machine not recognized in .bashrc"
-fi
+#else
+#    echo "Machine not recognized in .bashrc"
+#fi
