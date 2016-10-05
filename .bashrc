@@ -538,4 +538,5 @@ elif [ "$machine" == "dogfish.eaps.purdue.edu" ]; then
 ######## Other Machines ########################################################
 #else
 #    echo "Machine not recognized in .bashrc"
-#fi
+
+fi
