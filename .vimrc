@@ -62,7 +62,8 @@ if g:os == "Haiku"
 endif
 
 "Windows compatibility section
-if has("win32") || has("win64")
+"if has("win32") || has("win64")
+if g:os == "Windows"
     source $VIMRUNTIME/vimrc_example.vim
     source $VIMRUNTIME/mswin.vim
     behave mswin

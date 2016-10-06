@@ -14,11 +14,20 @@ colorscheme solarized
 
 " Fonts
 
-""Windows check
-if has('win32') || has('win64')
+"OS detection
+if !exists("g:os")
+    if has("win64") || has("win32") || has("win16")
+        let g:os = "Windows"
+    else
+        let g:os = substitute(system('uname'), '\n', '', '')
+    endif
+endif
+
+""Windows fonts
+if g:os == "Windows"
     set guifont=Consolas:h10
     set guifontwide=M+\ 2m:h10
-else
+elseif g:os == "Darwin"
 
     "" Bitmap fonts
     "set noantialias "regular only 
@@ -40,6 +49,9 @@ else
     set guifont=Anonymous\ Pro:h12
     "set guifont=Sudo:h16
     "set guifont=Monaco:h10
+
+else
+    set guifont="DejaVu Sans Mono":h10
 endif
 
 " Scroll bars
