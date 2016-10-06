@@ -12,14 +12,6 @@ set nomodeline
 
 set enc=utf-8
 
-"Fix the delete key, if on an OS X host (including MacVim)
-if has("unix")
-    let s:uname = system("uname")
-    if s:uname == "Darwin\n"
-        fixdel              "Fixes delete (for me)
-    endif
-endif
-
 "OS detection
 if !exists("g:os")
     if has("win64") || has("win32") || has("win16")
@@ -49,6 +41,19 @@ if g:os == "Darwin" || g:os == "Linux"
         set breakindentopt=shift:2
         set lbr
     endif
+endif
+
+"Fix the delete key, if on an OS X host (including MacVim)
+"if has("unix")
+"    let s:uname = system("uname")
+"    if s:uname == "Darwin\n"
+"        fixdel              "Fixes delete (for me)
+"    endif
+"endif
+
+"Fix delete key in OS X and BSD
+if g:os == "Darwin" || g:os == "FreeBSD"
+    fixdel
 endif
 
 " If in Haiku, change runtimepath
