@@ -21,8 +21,8 @@ if !exists("g:os")
     endif
 endif
 
-"If not in Windows, load Vundle plugins
-if g:os == "Darwin" || g:os == "Linux"
+"If on a Mac, load Vundle plugins
+if g:os == "Darwin"
     "Vundle settings
     filetype off
     set rtp+=~/.vim/bundle/Vundle.vim
@@ -34,6 +34,10 @@ if g:os == "Darwin" || g:os == "Linux"
     Plugin 'jdonaldson/vaxe'        "for Haxe, and HaxeFlixel
     call vundle#end()
     filetype plugin indent on
+endif
+
+" If on Linux or Mac, do line break stuff
+if g:os == "Darwin"  || g:os == "Linux"
 
     "Line break/wrapping settings
     if v:version >= 704

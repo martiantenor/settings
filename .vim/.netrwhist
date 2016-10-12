@@ -1,4 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
-let g:netrw_dirhist_1='/Users/dblair/Library/Mobile Documents/com~apple~CloudDocs/Games - Emulator Settings Folders/OpenEmu/OpenEmu Library'
-let g:netrw_dirhist_2='C:/Users/Dave Blair/Desktop'
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/usr/share/X11/xorg.conf.d'
+let g:netrw_dirhist_2='/home/dblair/.config/openbox'
+let g:netrw_dirhist_3='/etc/network/interfaces.d'
+let g:netrw_dirhist_4='/etc/network'
