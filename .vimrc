@@ -194,7 +194,8 @@ map <SPACE> <ESC>zz
 if has("unix")
     let s:uname = system("uname")
     if s:uname == "Darwin\n"
-        map <F5> <ESC>:!open -a "Marked 2" "%"<CR><CR>
+        "map <F5> <ESC>:!open -a "Marked 2" "%"<CR><CR>
+        map <F5> <ESC>:!pandoc -s "%" > foo.html<CR><CR>
     elseif s:uname == "Linux\n"
         "markdown.pl
         "map <F5> <ESC>:!/project/taylor/a/dave/Dropbox/Code/bin-3rdparty/markdown.pl "%" > foo_mmd_output.html; firefox foo_mmd_output.html<CR>

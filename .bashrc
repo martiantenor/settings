@@ -230,7 +230,7 @@ function wiki() { $browsercommand http://en.wikipedia.org/w/index.php?search="`e
 ######## Machine-Specific Settings #############################################
 
 
-######## gc166-imac ############################################################
+######## gc166-alderaan ########################################################
 if [ "$machine" == "gc166-alderaan" ]; then
 
     # Terminal
@@ -238,6 +238,9 @@ if [ "$machine" == "gc166-alderaan" ]; then
     export PATH="$PATH:/Users/dblair/.code/bin"
     export PATH="$PATH:/usr/local/bin:/opt/X11/bin"
     export PATH="$PATH:/usr/bin:/bin:/usr/sbin:/sbin"
+
+    # Aliases
+    alias sbcl="rlwrap sbcl"
 
 ######## vm_asag ################################################################
 elif [ "$machine" == "vm_asag" ]; then

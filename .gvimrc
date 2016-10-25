@@ -23,7 +23,7 @@ if !exists("g:os")
     endif
 endif
 
-""Windows fonts
+""Fonts
 if g:os == "Windows"
     set guifont=Consolas:h10
     set guifontwide=M+\ 2m:h10
