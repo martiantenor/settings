@@ -23,17 +23,17 @@ endif
 
 "If on a Mac, load Vundle plugins
 if g:os == "Darwin"
-    "Vundle settings
-    filetype off
-    set rtp+=~/.vim/bundle/Vundle.vim
-    call vundle#begin()
+    ""Vundle settings
+    "filetype off
+    "set rtp+=~/.vim/bundle/Vundle.vim
+    "call vundle#begin()
 
-    "Vundle plugins
-    Plugin 'VundleVim/Vundle.vim'   "required
-    Plugin 'vim-pandoc/vim-pandoc-syntax'
-    Plugin 'jdonaldson/vaxe'        "for Haxe, and HaxeFlixel
-    call vundle#end()
-    filetype plugin indent on
+    ""Vundle plugins
+    "Plugin 'VundleVim/Vundle.vim'   "required
+    "Plugin 'vim-pandoc/vim-pandoc-syntax'
+    "Plugin 'jdonaldson/vaxe'        "for Haxe, and HaxeFlixel
+    "call vundle#end()
+    "filetype plugin indent on
 endif
 
 " If on Linux or Mac, do line break stuff

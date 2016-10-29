@@ -1,7 +1,14 @@
 ;; Don't display a startup message
 (setq inhibit-startup-message t)
 
+;; Something with region highlighting???
 (setq-default transient-mark-mode t)
+
+;; Make it so that tab always indents to the tab-to-tab-stop list
+;;(global-set-key (kbd "TAB") 'tab-to-tab-stop)
+
+;; Permanently force Emacs to indent with spaces, never with TABs:
+(setq-default indent-tabs-mode nil)
 
 ;; Line wrapping
 (setq fill-column 20)
