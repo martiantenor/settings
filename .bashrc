@@ -42,8 +42,8 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
 
-# VIM-mode in the prompt
-set -o vi
+# VIM-mode in the prompt (vs. Emacs mode)
+#set -o vi
 
 
 ## Recreates the handy-dandy <C-l> for "clear"
