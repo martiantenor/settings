@@ -2,6 +2,12 @@
 
 ######## Universal Options #####################################################
 
+# If not running interactively, don't do anything
+case $- in
+    *i*) ;;
+      *) return;;
+esac
+
 # Prompt:
 txtblk='\[\033[0;30m\]' # Black - Regular
 txtred='\[\033[0;31m\]' # Red
@@ -55,7 +61,19 @@ alias mv='mv -i'
 alias rm='rm -i'
 
 # Save more lines of history than normal
-export HISTSIZE=2000
+HISTSIZE=1000
+HISTFILESIZE=2000
+
+# Append to history instead of overwriting it
+shopt -s histappend
+
+# check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
+shopt -s checkwinsize
+
+# If set, the pattern "**" used in a pathname expansion context will
+# match all files and zero or more directories and subdirectories.
+#shopt -s globstar
 
 # Make SVN use vim as the default editor
 export SVN_EDITOR=vim
@@ -148,11 +166,17 @@ elif [ $(uname) == "Linux" ]; then
     }
     bashwrap
 
-    function _exit()              # Function to run upon exit of shell.
-    {
-            echo -e "${BRed}Hasta la vista, baby${NC}"
-    }
-    trap _exit EXIT
+    # Some things from the default .bashrc
+    ##
+    ##
+    ##
+
+    # A silly function to run when the terminal exits
+    #function _exit()
+    #{
+    #        echo -e "${BRed}Hasta la vista, baby${NC}"
+    #}
+    #trap _exit EXIT
 
     # Aliases
     alias ls="ls -F --color"
