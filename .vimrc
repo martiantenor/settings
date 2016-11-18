@@ -21,19 +21,18 @@ if !exists("g:os")
     endif
 endif
 
-"If on a Mac, load Vundle plugins
-if g:os == "Darwin"
+"If on a Mac or Linux, load Vundle plugins
+if g:os == "Darwin" || g:os == "Linux"
     ""Vundle settings
-    "filetype off
-    "set rtp+=~/.vim/bundle/Vundle.vim
-    "call vundle#begin()
-
-    ""Vundle plugins
-    "Plugin 'VundleVim/Vundle.vim'   "required
-    "Plugin 'vim-pandoc/vim-pandoc-syntax'
+    set nocompatible                "required, done earlier too
+    filetype off                    "required
+    set rtp+=~/.vim/bundle/Vundle.vim "runtime path
+    call vundle#begin()             "required, can also have path specified
+    Plugin 'VundleVim/Vundle.vim'   "required
+    Plugin 'vim-pandoc/vim-pandoc-syntax'
     "Plugin 'jdonaldson/vaxe'        "for Haxe, and HaxeFlixel
-    "call vundle#end()
-    "filetype plugin indent on
+    call vundle#end()               "required after all plugins loaded
+    filetype plugin indent on       "required
 endif
 
 " If on Linux or Mac, do line break stuff
@@ -199,12 +198,10 @@ if has("unix")
     let s:uname = system("uname")
     if s:uname == "Darwin\n"
         "map <F5> <ESC>:!open -a "Marked 2" "%"<CR><CR>
-        map <F5> <ESC>:!pandoc -s "%" > foo.html<CR><CR>
+        map <F5> <ESC>:!pandoc -s "%" > ~/pandoc_output.html; open ~/pandoc_output.html<CR><CR>
     elseif s:uname == "Linux\n"
-        "markdown.pl
-        "map <F5> <ESC>:!/project/taylor/a/dave/Dropbox/Code/bin-3rdparty/markdown.pl "%" > foo_mmd_output.html; firefox foo_mmd_output.html<CR>
-        "multimarkdown
-        map <F5> <ESC>:!/project/taylor/a/dave/Dropbox/Code/bin-3rdparty/multimarkdown "%" > foo_mmd_output.html; firefox foo_mmd_output.html<CR>
+        "Pandoc markdown processing
+        map <F5> <ESC>:!pandoc -s "%" > ~/pandoc_output.html; firefox ~/pandoc_output.html<CR>
     endif
 endif
 
