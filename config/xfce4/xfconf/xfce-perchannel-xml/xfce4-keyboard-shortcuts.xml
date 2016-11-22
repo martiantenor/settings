@@ -20,14 +20,15 @@
     <property name="custom" type="empty">
       <property name="&lt;Alt&gt;F1" type="string" value="xfce4-popup-applicationsmenu"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;Delete" type="string" value="xflock4"/>
-      <property name="XF86Mail" type="string" value="exo-open --launch MailReader"/>
-      <property name="XF86Display" type="string" value="xfce4-display-settings --minimal"/>
-      <property name="XF86WWW" type="string" value="exo-open --launch WebBrowser"/>
-      <property name="&lt;Super&gt;p" type="string" value="xfce4-display-settings --minimal"/>
-      <property name="&lt;Primary&gt;Escape" type="string" value="xfdesktop --menu"/>
       <property name="override" type="bool" value="true"/>
-      <property name="&lt;Alt&gt;&lt;Super&gt;space" type="string" value="xfce4-appfinder"/>
-      <property name="&lt;Super&gt;space" type="string" value="xfce4-appfinder --collapsed"/>
+      <property name="&lt;Alt&gt;&lt;Super&gt;space" type="string" value="xfce4-appfinder">
+        <property name="startup-notify" type="bool" value="true"/>
+      </property>
+      <property name="&lt;Super&gt;space" type="string" value="xfce4-appfinder --collapsed">
+        <property name="startup-notify" type="bool" value="true"/>
+      </property>
+      <property name="XF86Launch9" type="string" value="exo-open --launch MailReader"/>
+      <property name="F19" type="string" value="exo-open --launch WebBrowser"/>
       <property name="&lt;Primary&gt;&lt;Shift&gt;Return" type="string" value="x-terminal-emulator"/>
     </property>
   </property>
@@ -125,15 +126,15 @@
       <property name="&lt;Super&gt;Tab" type="string" value="cycle_windows_key"/>
       <property name="&lt;Super&gt;grave" type="string" value="switch_window_key"/>
       <property name="&lt;Shift&gt;&lt;Super&gt;ISO_Left_Tab" type="string" value="cycle_reverse_windows_key"/>
-      <property name="&lt;Super&gt;w" type="string" value="close_window_key"/>
       <property name="F11" type="string" value="fullscreen_key"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;d" type="string" value="show_desktop_key"/>
-      <property name="&lt;Super&gt;Up" type="string" value="fill_vert_key"/>
       <property name="&lt;Primary&gt;&lt;Shift&gt;&lt;Alt&gt;Up" type="string" value="move_window_up_workspace_key"/>
       <property name="&lt;Primary&gt;&lt;Shift&gt;&lt;Alt&gt;Down" type="string" value="move_window_down_workspace_key"/>
       <property name="&lt;Primary&gt;&lt;Shift&gt;&lt;Alt&gt;Left" type="string" value="move_window_left_workspace_key"/>
       <property name="&lt;Primary&gt;&lt;Shift&gt;&lt;Alt&gt;Right" type="string" value="move_window_right_workspace_key"/>
       <property name="&lt;Super&gt;m" type="string" value="hide_window_key"/>
+      <property name="&lt;Super&gt;q" type="string" value="close_window_key"/>
+      <property name="&lt;Super&gt;Up" type="string" value="maximize_vert_key"/>
     </property>
   </property>
   <property name="providers" type="array">
