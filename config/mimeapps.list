@@ -2,8 +2,12 @@
 application/x-deb=synaptic.desktop
 text/plain=gvim.desktop
 image/svg+xml=inkscape.desktop
+image/png=ristretto.desktop
+image/x-apple-ios-png=ristretto.desktop
 
 [Added Associations]
 application/x-deb=synaptic.desktop;
 text/plain=gvim.desktop;
 image/svg+xml=inkscape.desktop;
+image/png=ristretto.desktop;
+image/x-apple-ios-png=ristretto.desktop;

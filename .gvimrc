@@ -57,7 +57,7 @@ endif
 " Scroll bars
 set guioptions+=LlRrb
 set guioptions-=LlRrb
-"set guioptions-=T
+set guioptions-=T
 
 " Fullscreen options
 "set fuoptions=maxvert,maxhorz

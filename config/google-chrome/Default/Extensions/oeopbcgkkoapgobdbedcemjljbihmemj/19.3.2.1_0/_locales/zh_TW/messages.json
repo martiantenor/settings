@@ -1,0 +1,1808 @@
+{
+   "24hourMode": {
+      "message": "顯示 24 小時製"
+   },
+   "24hourModeTitle": {
+      "message": "時間將以 24 小時製顯示。如18:00"
+   },
+   "DND": {
+      "message": "勿擾"
+   },
+   "DNDisEnabled": {
+      "message": "請勿打擾啟用"
+   },
+   "EOM": {
+      "message": "EOM"
+   },
+   "EOMToolTip": {
+      "message": "結束的消息 - 電子郵件結束標記"
+   },
+   "LAST_ITEM_DO_NOT_REMOVE": {
+      "message": "請勿刪除"
+   },
+   "NAME_says": {
+      "message": "$1說："
+   },
+   "XNewEmails": {
+      "message": "$1 的新郵件"
+   },
+   "Xattachments": {
+      "message": "$1 附件"
+   },
+   "Xday": {
+      "message": "天"
+   },
+   "Xdays": {
+      "message": "$1 天"
+   },
+   "Xhour": {
+      "message": "$1 小時"
+   },
+   "Xhours": {
+      "message": "$1 小時"
+   },
+   "Xline": {
+      "message": "$1 行"
+   },
+   "Xlines": {
+      "message": "$1 行"
+   },
+   "Xminute": {
+      "message": "$1 分鍾"
+   },
+   "Xminutes": {
+      "message": "$1 分鍾"
+   },
+   "Xseconds": {
+      "message": "$1秒"
+   },
+   "Xuser": {
+      "message": "$1 用戶"
+   },
+   "Xusers": {
+      "message": "$1 個用戶"
+   },
+   "aboutMe": {
+      "message": "作者信息"
+   },
+   "accessDetails": {
+      "message": "訪問細節"
+   },
+   "account": {
+      "message": "賬戶"
+   },
+   "accounts": {
+      "message": "帳戶"
+   },
+   "accountsAndLabels": {
+      "message": "賬戶 / 標簽"
+   },
+   "actionButtons": {
+      "message": "彈出窗口和高級桌麵通知窗口中的按鈕"
+   },
+   "addAccount": {
+      "message": "新增帳戶"
+   },
+   "addAccountsStaySignedIn": {
+      "message": "添加帳戶，並保持登錄狀態"
+   },
+   "addEmailAlias": {
+      "message": "為您的電子郵件地址添加別名"
+   },
+   "addEmailAliasToolTip": {
+      "message": "在彈出窗口中添加昵稱，如使用 \u003Cb>傑森的電子郵件\u003C/b> 取代 blah@gmail.com"
+   },
+   "addSkinsOrThemes": {
+      "message": "外觀和主題"
+   },
+   "addSpeechEngines": {
+      "message": "添加語音引擎"
+   },
+   "addToGoogleCalendar": {
+      "message": "添加到穀歌日曆"
+   },
+   "added": {
+      "message": "添加"
+   },
+   "admin": {
+      "message": "管理"
+   },
+   "alias": {
+      "message": "別名"
+   },
+   "all": {
+      "message": "所有"
+   },
+   "allMail": {
+      "message": "所有郵件"
+   },
+   "alreadyDonated": {
+      "message": "已經捐過款了？"
+   },
+   "alsoExtraFeaturesForGoogleCalendar": {
+      "message": "一次捐贈，您同時可以使用另一擴展程序的額外功能： $1"
+   },
+   "alsoExtraFeaturesForGoogleCalendar2": {
+      "message": "檢查加上穀歌日曆"
+   },
+   "alsoTryMy": {
+      "message": "試用我的另一款擴展程序"
+   },
+   "alwaysDisplayExternalContent": {
+      "message": "始終顯示外部內容 （如圖像）"
+   },
+   "alwaysSpeak": {
+      "message": "始終講"
+   },
+   "amount": {
+      "message": "金額"
+   },
+   "anyAmount": {
+      "message": "任何金額"
+   },
+   "archiveLink": {
+      "message": "存檔"
+   },
+   "archiveLinkTitle": {
+      "message": "存檔該郵件"
+   },
+   "archive_read": {
+      "message": "標記已存檔郵件為已讀"
+   },
+   "archive_readToolTip": {
+      "message": "當您在彈出窗口將郵件存檔時，會將其標記為已讀"
+   },
+   "autoAdjust": {
+      "message": "自動調整"
+   },
+   "autoAdjustAndImages": {
+      "message": "自動調整並顯示圖片"
+   },
+   "autoAdvanceTo": {
+      "message": "自動提前"
+   },
+   "autoDetectAccounts": {
+      "message": "此擴展程序將自動檢測您已登錄的帳戶。"
+   },
+   "autoDetectAccountsStaySignedIn": {
+      "message": "自動檢測應收簽署"
+   },
+   "available": {
+      "message": "可用的"
+   },
+   "back": {
+      "message": "返回"
+   },
+   "backToInbox": {
+      "message": "返回到收件箱"
+   },
+   "backgroundColor": {
+      "message": "背景顏色"
+   },
+   "blue": {
+      "message": "藍色"
+   },
+   "brightness": {
+      "message": "亮度"
+   },
+   "button": {
+      "message": "按鈕"
+   },
+   "buttonClickAction": {
+      "message": "點擊擴展圖標時的操作"
+   },
+   "buttonIcon": {
+      "message": "按鈕圖標"
+   },
+   "by": {
+      "message": "由"
+   },
+   "cancel": {
+      "message": "取消"
+   },
+   "changeButtonClickActionToOpenGmail": {
+      "message": "更改按鈕點擊動作 '打開 Gmail'"
+   },
+   "changeLabels": {
+      "message": "更改標簽"
+   },
+   "changeSummary": {
+      "message": "更改摘要格式"
+   },
+   "changeTheme": {
+      "message": "更改主題"
+   },
+   "changeThisDomain": {
+      "message": "現在更改此電子郵件域 $1"
+   },
+   "changeThisDomain2": {
+      "message": "退出，改用其他賬戶登錄"
+   },
+   "changelog": {
+      "message": "更新日誌"
+   },
+   "checkPrimaryOrMore": {
+      "message": "檢查主或多個標簽"
+   },
+   "checkerPlusPopupWindow": {
+      "message": "檢查加上彈出窗口"
+   },
+   "chime": {
+      "message": "鈴聲"
+   },
+   "chooseEndColor": {
+      "message": "設置結束顏色"
+   },
+   "chooseNoUnreadEmail": {
+      "message": "選擇未讀郵件圖標"
+   },
+   "choosePaymentMethod": {
+      "message": "選擇信用卡付款方式"
+   },
+   "chooseSignedOutIcon": {
+      "message": "選擇退出圖標"
+   },
+   "chooseStartColor": {
+      "message": "設置起始顏色"
+   },
+   "chooseUnreadEmail": {
+      "message": "選擇未讀郵件圖標"
+   },
+   "chromePlaced2ButtonLimit": {
+      "message": "Chrome 限製使用 2 個按鈕 ！"
+   },
+   "clickForMoreInfo": {
+      "message": "點擊查看更多的信息"
+   },
+   "clickToPreviewEmail": {
+      "message": "單擊以預覽電子郵件"
+   },
+   "clickToolbarIconToContinue": {
+      "message": "單擊工具欄圖標以繼續"
+   },
+   "clickingAnywhereOnNotification": {
+      "message": "單擊任意位置通知"
+   },
+   "clickingCheckerPlusLogo": {
+      "message": "單擊檢查器加為 Gmail 標誌"
+   },
+   "close": {
+      "message": "關閉"
+   },
+   "closeAfterX": {
+      "message": "在設定的時間以後關閉"
+   },
+   "closeAfterX_andThen": {
+      "message": "接著"
+   },
+   "closesPopupWindow": {
+      "message": "關閉彈出窗口"
+   },
+   "collapseEmailAccounts": {
+      "message": "默認情況下崩潰的電子郵件帳戶"
+   },
+   "collapseEmailAccountsToolTip": {
+      "message": "使用此選項可以給你更好的概述的所有未讀電子郵件帳戶，以便您可以選擇哪些擴展箭頭"
+   },
+   "colorMessage": {
+      "message": "捐贈用戶才能保存這些顏色！"
+   },
+   "colorSubject": {
+      "message": "用顏色標識的電子郵件示例"
+   },
+   "colors": {
+      "message": "顏色"
+   },
+   "comfortable": {
+      "message": "自在"
+   },
+   "commaSeparatedEmails": {
+      "message": "用逗號分隔，例如："
+   },
+   "compact": {
+      "message": "緊湊"
+   },
+   "compose": {
+      "message": "撰寫"
+   },
+   "composeLinkTitle": {
+      "message": "寫新郵件"
+   },
+   "contacts": {
+      "message": "聯係人"
+   },
+   "contactsHome": {
+      "message": "家庭電話"
+   },
+   "contactsLoaded": {
+      "message": "加載聯係人!"
+   },
+   "contactsMessage": {
+      "message": "鼠標懸停於照片可放大"
+   },
+   "contactsMobile": {
+      "message": "移動電話"
+   },
+   "contactsOther": {
+      "message": "其他"
+   },
+   "contactsWork": {
+      "message": "單位電話"
+   },
+   "continue": {
+      "message": "繼續"
+   },
+   "continueToOptions": {
+      "message": "繼續設置選項"
+   },
+   "continueWithoutFeatures": {
+      "message": "繼續使用此擴展程序，但沒有以上額外功能"
+   },
+   "continueWithoutFeaturesHeader": {
+      "message": "繼續使用沒有額外功能的擴展程序"
+   },
+   "contrast": {
+      "message": "對比度"
+   },
+   "contribute": {
+      "message": "更多功能"
+   },
+   "contributeToContinue": {
+      "message": "捐贈"
+   },
+   "conversationList": {
+      "message": "會話列表"
+   },
+   "conversationView": {
+      "message": "會話視圖"
+   },
+   "conversationViewToolTip": {
+      "message": "設置是否相同主題的郵件在一起顯示"
+   },
+   "copyEmailAddress": {
+      "message": "複製電子郵件地址"
+   },
+   "cozy": {
+      "message": "舒適"
+   },
+   "custom": {
+      "message": "自定義"
+   },
+   "customButtonsToolTip": {
+      "message": "設置您的個性顏色"
+   },
+   "customToThisExtension": {
+      "message": "預定義"
+   },
+   "customizeNotifications": {
+      "message": "自定義通知"
+   },
+   "dark": {
+      "message": "黑暗"
+   },
+   "darkToolTip": {
+      "message": "黑暗的對比"
+   },
+   "dayAgo": {
+      "message": "$1 天前"
+   },
+   "daysAgo": {
+      "message": "$1 天前"
+   },
+   "daysArray": {
+      "message": "周日,周一,周二,周三,周四,周五,周六"
+   },
+   "daysArrayShort": {
+      "message": "日,一,二,三,四,五,六"
+   },
+   "default": {
+      "message": "默認"
+   },
+   "delete": {
+      "message": "刪除"
+   },
+   "deleteLink": {
+      "message": "刪除"
+   },
+   "deleteLinkTitle": {
+      "message": "刪除該郵件"
+   },
+   "deletingMarksAsRead": {
+      "message": "標記已刪除郵件為已讀"
+   },
+   "deletingMarksAsReadToolTip": {
+      "message": "當您刪除郵件時，標記其為已讀"
+   },
+   "description": {
+      "message": "顯示 穀歌郵箱 收件箱中的新郵件和聯係人照片；通過桌麵通知獲得新郵件提醒；不打開Gmail網頁就能收取、閱讀和刪除郵件。更多功能待你發現！"
+   },
+   "developingMore": {
+      "message": "和更多根據你們建議而正在開發的新功能..."
+   },
+   "developingMoreSuggestions": {
+      "message": "和我的工作更多的你 $1"
+   },
+   "developingMoreSuggestions_suggestions": {
+      "message": "建議"
+   },
+   "differentSounds": {
+      "message": "聽起來針對不同的賬戶，標簽或人"
+   },
+   "differentSoundsToolTip": {
+      "message": "你已經可以選擇所有的電子郵件賬戶的聲音，但這個功能可以讓你選擇每個電子郵件帳戶，標簽或個人不同的聲音!"
+   },
+   "ding": {
+      "message": "叮"
+   },
+   "dir": {
+      "message": "ltr"
+   },
+   "disableAll": {
+      "message": "禁用所有"
+   },
+   "discoverMyApps": {
+      "message": "發現我的應用程序"
+   },
+   "dismiss": {
+      "message": "解除"
+   },
+   "display": {
+      "message": "顯示"
+   },
+   "displayDensity": {
+      "message": "顯示密度"
+   },
+   "displayImagesBelow": {
+      "message": "在下麵顯示圖像"
+   },
+   "displaySenders_1": {
+      "message": "發件人信息"
+   },
+   "dndInFullscreenMode": {
+      "message": "DND在全屏模式下"
+   },
+   "doNotDisturb": {
+      "message": "請勿打擾"
+   },
+   "doNotDisturbForTodayToolTip": {
+      "message": "請勿打擾，直到早上7點明天"
+   },
+   "doNotDisturbIndefinitelyToolTip": {
+      "message": "啟用請勿打擾，直到你把它關掉"
+   },
+   "doNotDisturbToolTip": {
+      "message": "從這個擴展關閉聲音，語音和桌麵通知"
+   },
+   "doNotNotifyMeOfUpdates": {
+      "message": "不再通知更新"
+   },
+   "doNotShowNotificationIfGmailTabActive": {
+      "message": "Gmail標簽激活時，不顯示通知"
+   },
+   "doNotShowNotificationIfGmailTabActiveToolTip": {
+      "message": "當Gmail窗口激活時生效，:)你將在收到新郵件的同時看到我的通知"
+   },
+   "doTheSameThing": {
+      "message": "做同樣的事情"
+   },
+   "donate": {
+      "message": "捐贈"
+   },
+   "donationRequired": {
+      "message": "僅限捐贈用戶"
+   },
+   "done": {
+      "message": "做"
+   },
+   "download": {
+      "message": "下載"
+   },
+   "dropshadow": {
+      "message": "陰影"
+   },
+   "duplicateLabelWarning": {
+      "message": "我建議在3個主標簽 （收件箱、重要郵件、所有郵件）中僅選擇1個，否則您可能得到重複提醒 ！"
+   },
+   "email": {
+      "message": "電郵地址"
+   },
+   "emailAccounts": {
+      "message": "電子郵件帳戶"
+   },
+   "emailFrom_NAME": {
+      "message": "來自$1的電子郵件"
+   },
+   "emailPreview": {
+      "message": "電子郵件預覽"
+   },
+   "emailPreviewToolTip": {
+      "message": "如果此選項被 \u003Cb>選中\u003C/b> ，單擊彈出窗口中郵件的任意位置 （如:摘要），一個較大的電子郵件預覽區域將會打開。如果 \u003Cb>未選中\u003C/b> ，單擊將打開Gmail網頁 \u003Cbr>"
+   },
+   "emailSummary": {
+      "message": "電子郵件摘要"
+   },
+   "emailSummaryToolTip": {
+      "message": "在彈出窗口中顯示每封電子郵件的前幾行文本"
+   },
+   "email_from": {
+      "message": "發件人"
+   },
+   "email_message": {
+      "message": "正文"
+   },
+   "email_subject": {
+      "message": "主題"
+   },
+   "enable": {
+      "message": "啟用"
+   },
+   "enableLanguageDetection": {
+      "message": "啟用語言檢測"
+   },
+   "enableLanguageDetectionToolTip": {
+      "message": "通過語言檢測服務，使用相應的語言朗讀您的提醒！"
+   },
+   "enableVoiceInputToolTip": {
+      "message": "在添加新信息或回複框底部的麥克風在Gmail網頁"
+   },
+   "enjoyingThisApp": {
+      "message": "覺得我的擴展程序好用嗎？那就 $1"
+   },
+   "enter": {
+      "message": "回車(確定) 鍵"
+   },
+   "enterAnAmount": {
+      "message": "您必須輸入金額！"
+   },
+   "esc": {
+      "message": "Esc 鍵"
+   },
+   "example": {
+      "message": "示例"
+   },
+   "exceptionsToChooseFrom": {
+      "message": "可選"
+   },
+   "extensionUpdated": {
+      "message": "擴展更新 ！"
+   },
+   "extensionUpdates": {
+      "message": "擴展的更新"
+   },
+   "extraFeatures": {
+      "message": "額外功能"
+   },
+   "extraFeaturesClicked": {
+      "message": "您試圖使用這些額外功能之一......"
+   },
+   "extraFeaturesMonthlyBlurb": {
+      "message": "此功能需要 \u003Cb>月刊\u003C/b> 支付任何款項，因為Gmail的API強加給我的配額.\u003Cbr>\u003Cbr>注意：大多數的額外功能隻需要一次性支付給支持我."
+   },
+   "extraFeaturesPopup1": {
+      "message": "這些變暗了選項是額外的功能，我花了很多時間開發."
+   },
+   "extraFeaturesPopup2": {
+      "message": "要解鎖這些功能，在我工作的支持提供任何金額."
+   },
+   "failureWithPayPalPurchase": {
+      "message": "已取消或交易失敗 ！試試 $1 來代替呢？"
+   },
+   "feedback": {
+      "message": "反饋"
+   },
+   "fetchContactsEvery": {
+      "message": "讀取聯係人頻率，每"
+   },
+   "fetchContactsIntervalToolTip": {
+      "message": "如果你有很多聯係人或網速較慢時，請設置為較高的值，即較低頻率。"
+   },
+   "finance": {
+      "message": "財務"
+   },
+   "firstAndLastName": {
+      "message": "顯示姓名"
+   },
+   "firstNameOnly": {
+      "message": "隻顯示姓"
+   },
+   "followMe": {
+      "message": "關注作者"
+   },
+   "forever": {
+      "message": "永遠"
+   },
+   "forums": {
+      "message": "論壇"
+   },
+   "from": {
+      "message": "從"
+   },
+   "fullLinkTitle": {
+      "message": "顯示全文"
+   },
+   "general": {
+      "message": "一般"
+   },
+   "grantAccess": {
+      "message": "授予訪問權限"
+   },
+   "grantAccessAgain": {
+      "message": "再次授予訪問權限"
+   },
+   "grantAccessAgainToolTip": {
+      "message": "僅適用於您登錄多個帳戶，並希望為每個賬戶均授予訪問權限的情況。"
+   },
+   "grantedTo": {
+      "message": "權限授予"
+   },
+   "grayscale": {
+      "message": "灰色"
+   },
+   "green": {
+      "message": "綠色"
+   },
+   "greenToolTip": {
+      "message": "我回收的主題 ！"
+   },
+   "groupByLabels": {
+      "message": "按標簽分組郵件"
+   },
+   "groupByLabelsToolTip": {
+      "message": "按您選擇監視的標簽來分組和排序未讀郵件。這將在彈出窗口和高級桌麵通知窗口中為您的電子郵件添加標簽名，如“收件箱”等等"
+   },
+   "guideForInboxByGmail": {
+      "message": "指南由Gmail用戶的收件箱"
+   },
+   "guideForInboxByGmailToolTip": {
+      "message": "使用這個隻有當您通過Gmail的收件箱激活"
+   },
+   "guideForPrimaryCategory": {
+      "message": "指南主要類別"
+   },
+   "guideForPrimaryCategoryToolTip": {
+      "message": "監控特定標簽：主，社會，更新，收件箱等."
+   },
+   "hearEmail": {
+      "message": "聽到電子郵件"
+   },
+   "hearEmailMessage": {
+      "message": "朗讀電子郵件正文"
+   },
+   "hearEmailSubject": {
+      "message": "朗讀電子郵件主題"
+   },
+   "hearEmailToolTip": {
+      "message": "選擇你想要聽到郵件部分...，發件人、 主題或郵件內容"
+   },
+   "height": {
+      "message": "高度"
+   },
+   "help": {
+      "message": "幫助"
+   },
+   "hideButton": {
+      "message": "隱藏按鈕"
+   },
+   "hideByJason": {
+      "message": "隱藏 '由 JasonSavard.com'"
+   },
+   "hideByJasonToolTip": {
+      "message": "在彈出窗口中隱藏  \u003Ci>由 JasonSavard.com\u003C/i "
+   },
+   "hideMyName": {
+      "message": "隱藏我的名字 '由 傑森 爾德 '"
+   },
+   "hideReadEmails": {
+      "message": "隱藏已讀電子郵件"
+   },
+   "hideSentFrom": {
+      "message": "在郵件摘要中隱藏簽名 如“發送自我的 … … ”"
+   },
+   "hideSentFromToolTip": {
+      "message": "勾選此項來隱藏設備自動添加的簽名，如 “發送自我的 iPhone 或 黑莓”等等。"
+   },
+   "hideUnreadCount": {
+      "message": "隱藏未讀郵件的計數"
+   },
+   "hideUnreadCountToolTip": {
+      "message": "在擴展圖標中隱藏未讀郵件的計數"
+   },
+   "hourAgo": {
+      "message": "$1 小時前"
+   },
+   "hours": {
+      "message": "小時"
+   },
+   "hoursAgo": {
+      "message": "$1 小時前"
+   },
+   "icon": {
+      "message": "擴展圖標"
+   },
+   "identifyEmailAccountsWithColors": {
+      "message": "用顏色標識您的電子郵件帳戶"
+   },
+   "ifNoUnreadMail": {
+      "message": "如果沒有未讀郵件"
+   },
+   "ignoreTheseAccounts": {
+      "message": "忽略這些帳戶"
+   },
+   "ignoreThisAccount": {
+      "message": "忽略此帳戶"
+   },
+   "ignored": {
+      "message": "忽略"
+   },
+   "imagesAreNotDisplayed": {
+      "message": "圖像未顯示"
+   },
+   "important": {
+      "message": "重要"
+   },
+   "importantMail": {
+      "message": "重要郵件"
+   },
+   "inbox": {
+      "message": "收件箱"
+   },
+   "inboxFor": {
+      "message": "$1"
+   },
+   "indefinitely": {
+      "message": "無限期"
+   },
+   "invert": {
+      "message": "反相"
+   },
+   "keyboardShortcuts": {
+      "message": "快捷鍵"
+   },
+   "keys": {
+      "message": "快捷鍵"
+   },
+   "label": {
+      "message": "標簽"
+   },
+   "labelAdded": {
+      "message": "添加標簽"
+   },
+   "labelRemoved": {
+      "message": "標簽移除"
+   },
+   "labels": {
+      "message": "標簽"
+   },
+   "language": {
+      "message": "語言"
+   },
+   "languageName": {
+      "message": "簡體中文"
+   },
+   "languageToolTip": {
+      "message": "更改顯示和語音通知語言。注1： 擴展程序中您可能同時看到多種語言，因為：它將顯示由您選擇的語言已翻譯的部分，如果還沒有翻譯，它將優先選擇您的瀏覽器語言，其餘的將顯示為英語。注2： 要更改彈出式窗口中日曆的語言，使用穀歌日曆設置。"
+   },
+   "licenseOnlyValidFor": {
+      "message": "許可僅在用戶登錄到他們自己的穀歌日曆時有效"
+   },
+   "linesInSummary": {
+      "message": "摘要格式"
+   },
+   "linesInSummaryToolTip": {
+      "message": "\u003Cb>不顯示\u003C/b>-將隱藏桌麵提醒窗口及彈出窗口中的郵件摘要。\u003Cbr>\u003Cb>\u003Cb># 行\u003C/b> - 顯示行數\u003Cbr>\u003Cb>自動調整\u003C/b> - 在彈出窗口中盡可能多地顯示未讀郵件摘要，並根據需要添加迷你滾動條\u003Cbr>\u003Cb>自動調整並顯示圖片\u003C/b> - 將同時顯示圖片。 出於保護隱私考慮，不推薦！ 由於在桌麵提醒窗口及彈出窗口中圖片將被 \u003Cspan style='text-decoration:underline'>自動\u003C/span> 顯示，發件人可能由此獲悉您已閱讀了郵件。"
+   },
+   "listenToYourEmail": {
+      "message": "朗讀郵件"
+   },
+   "loadOptions": {
+      "message": "加載選項"
+   },
+   "loading": {
+      "message": "載入中..."
+   },
+   "loadingSettings": {
+      "message": "加載設置"
+   },
+   "mailtoLinks": {
+      "message": "使用 Gmail 打開 發郵件 鏈接"
+   },
+   "mailtoLinksToolTip": {
+      "message": "單擊 發郵件 鏈接 （電子郵件鏈接） 將打開 Gmail 而不是您的郵件客戶端。需要額外的權限來分析在您正訪問網站上的這些鏈接。"
+   },
+   "makeButtonOpenGmail": {
+      "message": "使按鈕打開Gmail"
+   },
+   "makeButtonOpenGmailGuideToolTip": {
+      "message": "不推薦，因為它會取代彈出窗口"
+   },
+   "makeThisAMonthlyContribution": {
+      "message": "使這個每月供款"
+   },
+   "makeThisAMonthlyContributionTooltip": {
+      "message": "幫助維持我的用戶支持和更新"
+   },
+   "man": {
+      "message": "男聲"
+   },
+   "markAllAsDone": {
+      "message": "標記全部為已完成"
+   },
+   "markAllAsRead": {
+      "message": "標記所有為已讀"
+   },
+   "markAllAsReadTitle": {
+      "message": "標記所有為已讀"
+   },
+   "markAsReadInNotificationWindow": {
+      "message": "馬克在電子郵件通知窗口為已讀"
+   },
+   "markAsReadR": {
+      "message": "標記為已讀"
+   },
+   "markDone": {
+      "message": "標為處理完畢"
+   },
+   "markedAsDone": {
+      "message": "標示為完成"
+   },
+   "markedAsRead": {
+      "message": "標記為已讀"
+   },
+   "maxEmailsToShowPerAccount": {
+      "message": "最大電子郵件到每個帳戶顯示"
+   },
+   "me": {
+      "message": "我"
+   },
+   "meetMe": {
+      "message": "和我見麵"
+   },
+   "meetMeTitle": {
+      "message": "通過視頻和我見麵 ！"
+   },
+   "message": {
+      "message": "消息"
+   },
+   "mini": {
+      "message": "迷你"
+   },
+   "minimumAmount": {
+      "message": "你至少需捐 $1"
+   },
+   "minutesAgo": {
+      "message": "$1 分鍾前"
+   },
+   "monitor": {
+      "message": "監控"
+   },
+   "monitorThisLabel": {
+      "message": "監視這些標簽"
+   },
+   "monitorThisLabelToolTip": {
+      "message": "確定擴展程序會監視貼有哪些標簽的新郵件"
+   },
+   "month": {
+      "message": "月"
+   },
+   "monthlyContribution": {
+      "message": "每月供款"
+   },
+   "monthsArray": {
+      "message": "一月,二月,三月,四月,五月,六月,七月,八月,九月,十月,十一月,十二月"
+   },
+   "monthsArrayShort": {
+      "message": "1月,2月,3月,4月,5月,6月,7月,8月,9月,10月,11月,12月"
+   },
+   "more": {
+      "message": "更多"
+   },
+   "moreInfo": {
+      "message": "更多信息"
+   },
+   "morning": {
+      "message": "早上"
+   },
+   "moveLabel": {
+      "message": "移動到"
+   },
+   "movedToTrash": {
+      "message": "移到回收站"
+   },
+   "multipleSelectionMac": {
+      "message": "按住按鈕 (ctrl) 以選擇多個選項"
+   },
+   "multipleSelectionWindows": {
+      "message": "按住控製 (ctrl) 按鈕以選擇多個選項。"
+   },
+   "multipleUserLicense": {
+      "message": "為您的團隊購買多用戶許可"
+   },
+   "multipleUserLicenseFor": {
+      "message": "對於多用戶許可 $1"
+   },
+   "mustSignInToPay": {
+      "message": "您必須登錄到穀歌日曆，然後等待此擴展加載 ！"
+   },
+   "muteVoice": {
+      "message": "我睡覺時使語音通知靜音"
+   },
+   "muteVoiceForToday": {
+      "message": "今天都靜音"
+   },
+   "muteVoiceForTodayToolTip": {
+      "message": "直到明天上午7點都靜音"
+   },
+   "muteVoiceForXh": {
+      "message": "靜音 $1 h"
+   },
+   "muteVoiceForXm": {
+      "message": "靜音 $1 m"
+   },
+   "muteVoiceWhileSleeping": {
+      "message": "我睡覺時靜音"
+   },
+   "muteVoiceWhileSleepingToolTip": {
+      "message": "適用於您在晚間離開電腦但語音通知卻依然打開的情況。您可以選擇此選項，使語音通知在設定的時間內靜音"
+   },
+   "nameNoTM": {
+      "message": "檢查加上的Gmail"
+   },
+   "native": {
+      "message": "默認"
+   },
+   "never": {
+      "message": "從不"
+   },
+   "newEmail": {
+      "message": "新郵件"
+   },
+   "newFeature": {
+      "message": "新功能 ！"
+   },
+   "newer": {
+      "message": "較新"
+   },
+   "next": {
+      "message": "前進"
+   },
+   "nickname": {
+      "message": "昵稱"
+   },
+   "night": {
+      "message": "晚"
+   },
+   "noSubject": {
+      "message": "無主題"
+   },
+   "noUnreadText": {
+      "message": "無未讀郵件"
+   },
+   "noUpdateNotifications": {
+      "message": "沒有更新通知"
+   },
+   "none": {
+      "message": "不顯示"
+   },
+   "notSignedIn": {
+      "message": "未登錄"
+   },
+   "notWorking": {
+      "message": "沒有正常工作？"
+   },
+   "notification": {
+      "message": "通知"
+   },
+   "notificationButton1": {
+      "message": "通知按鈕"
+   },
+   "notificationButton2": {
+      "message": "通知按鈕"
+   },
+   "notificationSound": {
+      "message": "通知音效"
+   },
+   "notificationTextToSpeech": {
+      "message": "語音通知"
+   },
+   "notificationTryItOutInstructions": {
+      "message": "標記至少一封未讀郵件，然後單擊此處，等待查看通知窗口 ！"
+   },
+   "notifications": {
+      "message": "通知"
+   },
+   "notificationsGuideToolTip": {
+      "message": "聲音，聲音，桌麵通知"
+   },
+   "of": {
+      "message": "的"
+   },
+   "off": {
+      "message": "關"
+   },
+   "ok": {
+      "message": "確定"
+   },
+   "older": {
+      "message": "年長"
+   },
+   "oneUnreadText": {
+      "message": "封新郵件"
+   },
+   "open": {
+      "message": "打開"
+   },
+   "openComposeInTab": {
+      "message": "在新標簽頁撰寫郵件"
+   },
+   "openComposeInTabToolTip": {
+      "message": "打開一個新標簽頁（而不是在彈出窗口中）撰寫新郵件，也適用於 發郵件 鏈接。"
+   },
+   "openComposeReplyAction": {
+      "message": "點擊撰寫或回複按鈕時"
+   },
+   "openComposeReplyActionInPopupWindow": {
+      "message": "在彈出窗口中打開"
+   },
+   "openComposeReplyActionInTab": {
+      "message": "在新標簽頁中打開"
+   },
+   "openEmailDisplayedInNotificationWindow": {
+      "message": "打開電子郵件顯示在通知窗口"
+   },
+   "openGmailPopupWIndowToolTip": {
+      "message": "全功能的Gmail在彈出窗口中，查看任何標簽，而不是定製的，不推薦使用多個帳戶."
+   },
+   "openGmailPopupWindow": {
+      "message": "在彈出的窗口中打開 Gmail 收件箱"
+   },
+   "openGmailTab": {
+      "message": "打開 Gmail 網頁"
+   },
+   "openGmailTabToolTip": {
+      "message": "禁用彈出窗口預覽 （不推薦）。而是新建或在第一個已打開的 Gmail 標簽頁中顯示未讀郵件"
+   },
+   "openHelp": {
+      "message": "打開幫助"
+   },
+   "openInNewTab": {
+      "message": "在打開新標簽"
+   },
+   "openInPopup": {
+      "message": "打開彈出式窗口中"
+   },
+   "openInboxByGmail": {
+      "message": "通過Gmail的收件箱打開"
+   },
+   "openLabel": {
+      "message": "打開標簽"
+   },
+   "openLinkTitle": {
+      "message": "在網頁中打開"
+   },
+   "openLinksToInboxByGmailWarning": {
+      "message": "使用此選項 \u003Cb>隻要\u003C/b> 如果您已激活 '通過Gmail收件箱'.\u003Cbr>為了減少通知，監控 \u003Cb>主\u003C/b> 標簽的收件箱，而不是.\u003C/span>"
+   },
+   "openPopout": {
+      "message": "打開彈出"
+   },
+   "openPopupPreview": {
+      "message": "打開彈出窗口預覽"
+   },
+   "openPopupPreviewToolTip": {
+      "message": "總是顯示彈出窗口"
+   },
+   "openReply": {
+      "message": "打開 (回複)"
+   },
+   "openThisLabel": {
+      "message": "打開此頁麵"
+   },
+   "openThisLabelToolTip": {
+      "message": "確定單擊電子郵件帳戶或擴展圖標時，打開哪個指定頁麵"
+   },
+   "option": {
+      "message": "選項"
+   },
+   "options": {
+      "message": "選項"
+   },
+   "or": {
+      "message": "或"
+   },
+   "original": {
+      "message": "默認"
+   },
+   "origins_googleusercontent": {
+      "message": "*://*.googleusercontent.com/*"
+   },
+   "origins_languageDetection": {
+      "message": "*://*.detectlanguage.com/*"
+   },
+   "origins_mailtoLinks": {
+      "message": "*://*/*"
+   },
+   "otherAmount": {
+      "message": "其他金額"
+   },
+   "otherPlans": {
+      "message": "其他計劃"
+   },
+   "otherPlansDescription": {
+      "message": "教育定價，每年 ..."
+   },
+   "paragraph": {
+      "message": "第一段"
+   },
+   "password": {
+      "message": "密碼"
+   },
+   "pitch": {
+      "message": "音高"
+   },
+   "playVideosInsideGmail": {
+      "message": "在Gmail視頻"
+   },
+   "pollNow": {
+      "message": "現在更新"
+   },
+   "pollingAccounts": {
+      "message": "查收郵件"
+   },
+   "pollingInterval": {
+      "message": "更新頻率"
+   },
+   "pollingIntervalTooltip": {
+      "message": "從 穀歌郵箱更新郵件信息的時間間隔"
+   },
+   "popout": {
+      "message": "彈出"
+   },
+   "popupText": {
+      "message": "您有新郵件 !"
+   },
+   "popupWindowZoom": {
+      "message": "彈出窗口縮放"
+   },
+   "popupWindowZoomToolTip": {
+      "message": "變化的整體縮放，彈出窗口 (不電子郵件預覽或通知)"
+   },
+   "positionFromLeft": {
+      "message": "距離左側"
+   },
+   "positionFromTop": {
+      "message": "距離頂部"
+   },
+   "pressCtrlToOpenInBackground": {
+      "message": "按 $1，然後單擊鏈接到一個新的標簽在後台打開."
+   },
+   "preview": {
+      "message": "預覽"
+   },
+   "previewingMarksAsRead": {
+      "message": "標記已預覽郵件為已讀"
+   },
+   "previewingMarksAsReadToolTip": {
+      "message": "當您在彈出窗口預覽郵件時，會將其標記為已讀"
+   },
+   "previous": {
+      "message": "往前"
+   },
+   "primary": {
+      "message": "主要"
+   },
+   "primarySocialPromotionsEtc": {
+      "message": "小學，社會和促銷活動選項卡等。"
+   },
+   "priorityInbox": {
+      "message": "智能收件箱"
+   },
+   "profileLoaded": {
+      "message": "簡介裝!"
+   },
+   "promotions": {
+      "message": "促銷活動"
+   },
+   "purchases": {
+      "message": "購買"
+   },
+   "quickComposeEmail": {
+      "message": "快速聯係"
+   },
+   "rate": {
+      "message": "語速"
+   },
+   "rateTitle": {
+      "message": "語速: 每分鍾朗讀單詞數"
+   },
+   "read": {
+      "message": "讀"
+   },
+   "readLink": {
+      "message": "已讀"
+   },
+   "readLinkTitle": {
+      "message": "標記為已讀"
+   },
+   "readLinkTitleShort": {
+      "message": ""
+   },
+   "recommended": {
+      "message": "推薦"
+   },
+   "recordSound": {
+      "message": "錄製聲音"
+   },
+   "reducedDonationAd_notification": {
+      "message": "好消息！老用戶們!演員隻是 $1 點擊見/隱藏這。"
+   },
+   "reducedDonationAd_popup": {
+      "message": "好消息很長時間用戶!\u003Cbr>你可以獲取最新信息 $1 隻有 50美分"
+   },
+   "referToAlreadyDonated": {
+      "message": "請參閱 $1"
+   },
+   "referToAlreadyDonated2": {
+      "message": "已經捐款"
+   },
+   "refresh": {
+      "message": "更新"
+   },
+   "refreshLinkTitle": {
+      "message": "刷新"
+   },
+   "removeAccount": {
+      "message": "刪除帳戶"
+   },
+   "removeAccountIcon": {
+      "message": "刪除帳戶圖標"
+   },
+   "removeFromSystemTray": {
+      "message": "從係統托盤中刪除"
+   },
+   "removeShareLinks": {
+      "message": "刪除臉书,推特分享鏈接"
+   },
+   "removeShareLinksTooltip": {
+      "message": "刪除彈出式窗口中日曆下麵的臉譜,推特分享鏈接"
+   },
+   "reply": {
+      "message": "回複"
+   },
+   "replyInPopup": {
+      "message": "回複在彈出"
+   },
+   "replyLinkTitle": {
+      "message": "回複"
+   },
+   "replyR": {
+      "message": "回複"
+   },
+   "replyToAll": {
+      "message": "全部回複"
+   },
+   "replyingMarksAsRead": {
+      "message": "標記已回複郵件為已讀"
+   },
+   "replyingMarksAsReadToolTip": {
+      "message": "當您在彈出窗口單擊打開（回複）按鈕時，會將其標記為已讀"
+   },
+   "revertAutoSizing": {
+      "message": "恢複自動調整大小"
+   },
+   "richNotification": {
+      "message": "詳細通知"
+   },
+   "richNotificationToolTip": {
+      "message": "采取了可操作的彈出窗口，但非突兀，因為他們會消失幾秒鍾後自己如果不采取行動。他們想在智能手機上的通知。他們提供相關的實時信息，但您可以選擇忽略任何進一步的行動，直到後來。"
+   },
+   "runInBackground": {
+      "message": "穀歌瀏覽器關閉時，在後台運行"
+   },
+   "runInBackgroundToolTip": {
+      "message": "在您的瀏覽器關閉時，繼續接收通知。僅推薦高級用戶使用。"
+   },
+   "runInBackgroundWarning1": {
+      "message": "請仔細閱讀 $1"
+   },
+   "runInBackgroundWarning1b": {
+      "message": "後台應用"
+   },
+   "runInBackgroundWarning2": {
+      "message": "如果您禁用後台應用，可以通過閱讀 $1 重新啟用"
+   },
+   "runInBackgroundWarning2b": {
+      "message": "後台應用的最後一節"
+   },
+   "runInBackgroundWarning3": {
+      "message": "您可能需要在 Gmail 登錄頁麵啟用 $1 "
+   },
+   "runInBackgroundWarning3b": {
+      "message": "保持登錄狀態"
+   },
+   "saturation": {
+      "message": "飽和度"
+   },
+   "save": {
+      "message": "保存"
+   },
+   "saveOptions": {
+      "message": "保存選項"
+   },
+   "saving": {
+      "message": "保存中..."
+   },
+   "schedule": {
+      "message": "時間表"
+   },
+   "search": {
+      "message": "搜索"
+   },
+   "seeUpdates": {
+      "message": "查看更新"
+   },
+   "seeVideo": {
+      "message": "觀賞影片"
+   },
+   "selectEmailAccount": {
+      "message": "選擇一個電子郵件帳戶"
+   },
+   "selectQuickActionButtons": {
+      "message": "顯示或隱藏操作按鈕"
+   },
+   "selectQuickActionButtonsToolTip": {
+      "message": "注意： 這不會隱藏郵件全文視圖中的按鈕 ！"
+   },
+   "send": {
+      "message": "發送"
+   },
+   "sendPageLinkTitle": {
+      "message": "發送頁麵鏈接"
+   },
+   "sendVoiceOrVideoEmails": {
+      "message": "發送語音或視頻電子郵件"
+   },
+   "sending": {
+      "message": "正在發送"
+   },
+   "sent": {
+      "message": "已發送"
+   },
+   "sepia": {
+      "message": "烏賊墨"
+   },
+   "setAccountIcon": {
+      "message": "設置帳戶圖標"
+   },
+   "setPositionAndSize": {
+      "message": "設置彈出窗口的位置和大小"
+   },
+   "setPositionAndSizeToolTip": {
+      "message": "覆蓋彈出窗口參數的係統默認值，重新設置位置和大小（以像素為單位）"
+   },
+   "severalUnreadText": {
+      "message": "封新郵件"
+   },
+   "share": {
+      "message": "共享"
+   },
+   "shareIntro": {
+      "message": "試一下這個令人驚歎的的 Chrome 擴展"
+   },
+   "shareTitle": {
+      "message": "單擊此處，通過社交網站共享按鈕把這個優秀的擴展程序告訴你的朋友們。注意： 此消息後單擊此處會消失。"
+   },
+   "shortcutKeysHeader": {
+      "message": "這些密鑰申請 \u003Cb>隻要\u003C/b> 對於由按鈕激活的頂部彈出窗口"
+   },
+   "showActionButtonsOnHover": {
+      "message": "隻在鼠標懸停於通知窗口時才顯示操作按鈕"
+   },
+   "showActionButtonsOnHoverToolTip": {
+      "message": "我建議勾選此選項。但如果您使用的是 Mac，你可能要取消選中而總是顯示操作按鈕。因為當焦點不在 Chrome 窗口時，懸停顯示將無法正常工作。"
+   },
+   "showAllEmails": {
+      "message": "顯示所有電子郵件"
+   },
+   "showButtonTooltip": {
+      "message": "將鼠標懸停在圖標按鈕顯示的時候提示"
+   },
+   "showCheckerPlusButtonsOnlyOnHover": {
+      "message": "僅顯示上懸停按鈕"
+   },
+   "showCheckerPlusButtonsOnlyOnHoverToolTip": {
+      "message": "不建議如果你正在使用觸摸設備，而無需使用鼠標"
+   },
+   "showConsoleMessages": {
+      "message": "登錄JavaScript控製台消息"
+   },
+   "showConsoleMessagesTitle": {
+      "message": "僅僅是用來調試和可擴展性稍微慢一點!"
+   },
+   "showContactPhoto": {
+      "message": "顯示電子郵件聯係人的照片"
+   },
+   "showContactPhotoToolTip": {
+      "message": "如果您的聯係人有照片，它將被顯示。您可以在 Gmail “聯係人”頁麵中為他們添加照片，或者鼠標懸停他們的空白照片時選擇“添加照片”。如果沒有照片將顯示默認圖標。獲取您的聯係人照片需要權限。"
+   },
+   "showContactPhotos": {
+      "message": "查看用戶圖片"
+   },
+   "showContextMenuItem": {
+      "message": "右鍵單擊顯示上下文菜單項"
+   },
+   "showDesktopNotifications": {
+      "message": "顯示桌麵通知"
+   },
+   "showDetails": {
+      "message": "顯示詳細信息"
+   },
+   "showEOM": {
+      "message": "添加電子郵件結束標記"
+   },
+   "showEOMToolTip": {
+      "message": "EOM - 完消息. 當您在收到大量簡短的郵件時特別有用，使您可以避免點擊郵件摘要去查看是否還有更多的文本。"
+   },
+   "showEmailAccount": {
+      "message": "總是顯示收到新郵件的電子郵件帳戶"
+   },
+   "showEmailAccountToolTip": {
+      "message": "如果您已登錄到 2個 或多個帳戶時很有用。總是顯示收到了新的未讀郵件的帳戶"
+   },
+   "showGrayIconInDND": {
+      "message": "始終顯示托盤圖標"
+   },
+   "showHideEmailPreview": {
+      "message": "顯示/隱藏電子郵件預覽"
+   },
+   "showIconAnimation": {
+      "message": "顯示擴展圖標動畫"
+   },
+   "showIconAnimationToolTip": {
+      "message": "當有新郵件時，顯示動畫效果"
+   },
+   "showLabelsTitle": {
+      "message": "顯示標簽"
+   },
+   "showLeftColumnWhenPreviewingEmail": {
+      "message": "在彈出窗口預覽郵件時，顯示左側邊欄"
+   },
+   "showLeftColumnWhenPreviewingEmailToolTip": {
+      "message": "注意： 如果電子郵件太寬而需要更多空間顯示時，左側邊欄會自動隱藏。"
+   },
+   "showNotificationEmailImagePreview": {
+      "message": "顯示電子郵件中的第一幅圖像的預覽"
+   },
+   "showNotificationsForOlderDateEmails": {
+      "message": "顯示過時的未讀郵件通知（僅用適用於 POP3 帳戶）"
+   },
+   "showNotificationsForOlderDateEmailsToolTip": {
+      "message": "如果未選中，隻有收到未讀郵件為最新時才會顯示桌麵通知（在多數情況下建議使用）。但使用POP3收取郵件時，收到郵件的發送時間會早於最新已讀郵件，而使其位列於收件箱中間。您選中此選項，桌麵通知也會顯示這些郵件，但最多顯示20封。注意： 如果您將已讀郵件重新標記為未讀，它將再次出現在桌麵通知中！"
+   },
+   "showOptionsButton": {
+      "message": "顯示選項按鈕"
+   },
+   "showSendAndArchiveButton": {
+      "message": "顯示'發送並存檔'按鈕"
+   },
+   "showSendAndDeleteButton": {
+      "message": "顯示 \"提交 & 刪除\" 按鈕"
+   },
+   "showTransitions": {
+      "message": "開啟翻譯"
+   },
+   "showTransitionsToolTip": {
+      "message": "在彈出窗口顯示預覽或關閉電子郵件時的動畫"
+   },
+   "showUpdateNotificationsForEvertyhing": {
+      "message": "顯示所有的補丁和更新的通知"
+   },
+   "showUpdateNotificationsForInterestingUpdates": {
+      "message": "隻顯示有趣的更新通知"
+   },
+   "signIn": {
+      "message": "登錄"
+   },
+   "signInAsUserOfOrg": {
+      "message": "你必須退出，並改用您組織的電子郵件 $1 "
+   },
+   "signInAsUserOfOrg2": {
+      "message": "登錄到您的日曆"
+   },
+   "signInToYourAccount": {
+      "message": "先登錄到您的帳戶，然後重新加載此頁 ！"
+   },
+   "signOutAndIn": {
+      "message": "退出/登錄"
+   },
+   "skin": {
+      "message": "皮膚"
+   },
+   "skins": {
+      "message": "皮膚"
+   },
+   "social": {
+      "message": "社交"
+   },
+   "sound": {
+      "message": "聲音"
+   },
+   "spamLink": {
+      "message": "垃圾郵件"
+   },
+   "spamLinkTitle": {
+      "message": "標記為垃圾郵件"
+   },
+   "speechEngine": {
+      "message": "語音引擎"
+   },
+   "spokenWordsLimit": {
+      "message": "僅限朗讀"
+   },
+   "spokenWordsLimitToolTip": {
+      "message": "您可以通過單擊鼠標或將鼠標懸停在通知窗口上來隨時停止朗讀。注： 某些語音引擎可能會使用自己的獨立設置。"
+   },
+   "standard": {
+      "message": "標準"
+   },
+   "starAndArchive": {
+      "message": "加星並存檔"
+   },
+   "starLinkTitle": {
+      "message": "加星"
+   },
+   "starringAppliesInboxLabel": {
+      "message": "主演適用收件箱標簽"
+   },
+   "stayInTray": {
+      "message": "在係統托盤中保留"
+   },
+   "subject": {
+      "message": "主題"
+   },
+   "summary": {
+      "message": "摘要"
+   },
+   "summaryLinkTitle": {
+      "message": "顯示摘要"
+   },
+   "switchToCheckerPlus": {
+      "message": "切換到檢查加"
+   },
+   "switchToInbox": {
+      "message": "切換到Inbox"
+   },
+   "switchToInboxToolTip": {
+      "message": "單擊右鍵獲得更多的信息......"
+   },
+   "syncContacts": {
+      "message": "同步通訊錄"
+   },
+   "syncDND": {
+      "message": "同步DNS設置，所有的檢查以及其擴展"
+   },
+   "syncSignInOrder": {
+      "message": "為了同步標誌"
+   },
+   "syncSignInOrderToolTip": {
+      "message": "在Gmail '網頁' 賬戶的次序的符號可能會比在這裏，有時打開列在我的擴展將開到錯誤的收件箱鏈接這些帳戶的不同。使用此功能來重新同步賬戶."
+   },
+   "tab": {
+      "message": "選項卡"
+   },
+   "tabToolTip": {
+      "message": "在 Gmail 收件箱中彈出窗口中添加選項卡"
+   },
+   "testIt": {
+      "message": "測試一下 ！"
+   },
+   "testOutPopupWindow": {
+      "message": "測試出彈出窗口 ！"
+   },
+   "textNotification": {
+      "message": "文本通知窗口"
+   },
+   "textNotificationToolTip": {
+      "message": "通知您的最後一個未讀郵件."
+   },
+   "thankYouForYourContribution": {
+      "message": "額外功能現在已解鎖。謝謝你的貢獻 ！"
+   },
+   "thankYouForYourContribution2": {
+      "message": "關閉此窗口並開始使用 ！"
+   },
+   "theme": {
+      "message": "主題"
+   },
+   "tip": {
+      "message": "小費"
+   },
+   "to": {
+      "message": "至"
+   },
+   "toNeverHide": {
+      "message": "為了從不掩飾：選擇上麵的文本通知"
+   },
+   "today": {
+      "message": "今天"
+   },
+   "toggleNotificationCheckboxes": {
+      "message": "切換通知複選框"
+   },
+   "tomorrow": {
+      "message": "明天"
+   },
+   "tooManyUnread": {
+      "message": "對不起，本程序至多標記 $1 封電子郵件。想標記更多郵件，請使用 Gmail 網站。"
+   },
+   "transparent": {
+      "message": "透明"
+   },
+   "tryCheckerPlusWindowFirst": {
+      "message": "保持檢查加彈出窗口第幾天，它的功能更強大 :)"
+   },
+   "turnOff": {
+      "message": "關掉"
+   },
+   "turnOffRegularGmailChecking": {
+      "message": "關閉 Gmail 檢查，隻檢查 穀歌 企業應用套件中的郵件"
+   },
+   "turnOffRegularGmailCheckingToolTip": {
+      "message": "這將會忽略你的 @gmail.com 帳戶 ！"
+   },
+   "uncheckInboxLabel": {
+      "message": "取消選中收件箱標簽"
+   },
+   "undo": {
+      "message": "撤消"
+   },
+   "unknownSender": {
+      "message": "未知發件人"
+   },
+   "unlimited": {
+      "message": "無限"
+   },
+   "unlockFeatures": {
+      "message": "隻要捐贈一次（無論金額多少），您便能使用已有的和未來將新增的額外功能。立即生效！"
+   },
+   "unlockHeader": {
+      "message": "獲得額外的功能，並支持您的開發人員"
+   },
+   "unmuteVoice": {
+      "message": "解除靜音"
+   },
+   "unread": {
+      "message": "未讀"
+   },
+   "unreadLink": {
+      "message": "未讀"
+   },
+   "unreadLinkTitle": {
+      "message": "標記為未讀"
+   },
+   "unreadLinkTitleShort": {
+      "message": "未讀"
+   },
+   "unreadMail": {
+      "message": "未讀郵件"
+   },
+   "update": {
+      "message": "更新"
+   },
+   "updates": {
+      "message": "更新"
+   },
+   "uploadSound": {
+      "message": "上傳聲音"
+   },
+   "useBasicHTMLView": {
+      "message": "使用基本的 HTML 視圖"
+   },
+   "useInboxByGmail": {
+      "message": "使用收件箱通過Gmail的"
+   },
+   "useTheseColors": {
+      "message": "啟用顏色標識"
+   },
+   "useTheseColorsToolTip": {
+      "message": "為Gmail賬戶設置相同或者不同的顏色標識。可嚐試使用您Gmail主題或公司徽標的顏色，然後勾選該選項框來激活設置。此設置將應用於彈出窗口和高級桌麵通知窗口。"
+   },
+   "videoEmail": {
+      "message": "視頻郵件"
+   },
+   "videoMessage": {
+      "message": "視頻信息"
+   },
+   "voice": {
+      "message": "聲音"
+   },
+   "voiceEmail": {
+      "message": "語音郵件"
+   },
+   "voiceInput": {
+      "message": "語音輸入"
+   },
+   "voiceInputSuggestions": {
+      "message": "建議啟用"
+   },
+   "voiceMessage": {
+      "message": "語音留言"
+   },
+   "voiceNotificationOnlyIfIdle": {
+      "message": "隻有當你離開電腦旁最少"
+   },
+   "voiceNotificationOnlyIfIdleTooltip": {
+      "message": "推薦使用此選項。如果您不在電腦前或者電腦空閑時，您可以聽到語音通知。"
+   },
+   "voiceTest": {
+      "message": "測試消息"
+   },
+   "volume": {
+      "message": "音量"
+   },
+   "voythas": {
+      "message": "Voythas"
+   },
+   "voythasToolTip": {
+      "message": "由 VoYtHAs 創建的圖標"
+   },
+   "welcome": {
+      "message": "歡迎"
+   },
+   "wholeEmail": {
+      "message": "整封電子郵件"
+   },
+   "whyContribute": {
+      "message": "我為什麼應該捐贈？"
+   },
+   "whyContributeReason1": {
+      "message": "我每周工作數小時來維護和更新 $1 ，以回應你們的建議"
+   },
+   "whyContributeReason1_1": {
+      "message": "我所有的擴展程序"
+   },
+   "whyContributeReason2": {
+      "message": "我仔細閱讀你們的每一條評論和建議，並在第一時間給予反饋 :）"
+   },
+   "whyContributeReason3": {
+      "message": "你可以貢獻任何款額，我都將表示感激 ！"
+   },
+   "whyContributeReason4": {
+      "message": "此擴展程序持續收到 $1，謝謝 ！"
+   },
+   "whyContributeReason4_1": {
+      "message": "熱心人士的評論"
+   },
+   "whyContributeReason5": {
+      "message": "了解更多有關我的情況，請訪問 $1"
+   },
+   "whyContributeReason5_1": {
+      "message": "JasonSavard.com/bio"
+   },
+   "whyContributeToCalendarReason1": {
+      "message": "使您或您的團隊成為更高效的穀歌用戶"
+   },
+   "whyContributeToCalendarReason2": {
+      "message": "相比於 $1 實惠多了！"
+   },
+   "whyContributeToCalendarReason2_1": {
+      "message": "微軟Outlook"
+   },
+   "width": {
+      "message": "寬度"
+   },
+   "woman": {
+      "message": "女聲"
+   },
+   "yellow": {
+      "message": "黃色"
+   },
+   "yesterday": {
+      "message": "昨天"
+   },
+   "youMustChooseTheCheckerPlusPopupWindow": {
+      "message": "您必須切換到 \u003Ci>檢查加上\u003C/i> 彈出窗口，以查看這些選項。"
+   },
+   "zoom": {
+      "message": "縮放"
+   }
+}

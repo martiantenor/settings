@@ -1,0 +1,38 @@
+{
+   "checksum": "6a1cad4091d9c565b75fca3c8e503c6e",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13110640362411725",
+            "id": "6",
+            "name": "Gmail",
+            "sync_transaction_version": "1",
+            "type": "url",
+            "url": "https://mail.google.com/mail/u/0/#inbox"
+         } ],
+         "date_added": "13124306399155845",
+         "date_modified": "13110640362411725",
+         "id": "1",
+         "name": "Bookmarks bar",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13124306399155851",
+         "date_modified": "0",
+         "id": "2",
+         "name": "Other bookmarks",
+         "type": "folder"
+      },
+      "sync_transaction_version": "1",
+      "synced": {
+         "children": [  ],
+         "date_added": "13124306399155852",
+         "date_modified": "0",
+         "id": "3",
+         "name": "Mobile bookmarks",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}

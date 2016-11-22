@@ -26,12 +26,13 @@
         <value type="int" value="16"/>
         <value type="int" value="18"/>
         <value type="int" value="9"/>
+        <value type="int" value="3"/>
         <value type="int" value="11"/>
         <value type="int" value="28"/>
         <value type="int" value="1"/>
       </property>
       <property name="background-style" type="uint" value="0"/>
-      <property name="background-alpha" type="uint" value="50"/>
+      <property name="background-alpha" type="uint" value="100"/>
       <property name="enter-opacity" type="uint" value="100"/>
       <property name="leave-opacity" type="uint" value="100"/>
       <property name="background-color" type="array">
@@ -67,7 +68,11 @@
     </property>
     <property name="plugin-6" type="string" value="systray">
       <property name="names-visible" type="array">
+        <value type="string" value="vlc"/>
         <value type="string" value="networkmanager applet"/>
+        <value type="string" value="sylpheed"/>
+        <value type="string" value="google-chrome"/>
+        <value type="string" value="gmail"/>
       </property>
       <property name="show-frame" type="bool" value="false"/>
       <property name="size-max" type="uint" value="24"/>
@@ -130,6 +135,11 @@
       <property name="base-directory" type="string" value="/home/dblair/Dropbox/Notes"/>
       <property name="icon-name" type="string" value="text-x-generic"/>
       <property name="file-pattern" type="string" value="*"/>
+    </property>
+    <property name="plugin-3" type="string" value="launcher">
+      <property name="items" type="array">
+        <value type="string" value="14798314701.desktop"/>
+      </property>
     </property>
   </property>
 </channel>

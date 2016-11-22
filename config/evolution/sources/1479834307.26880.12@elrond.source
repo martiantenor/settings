@@ -1,0 +1,19 @@
+[Data Source]
+DisplayName=david_blair@brown.edu
+Enabled=true
+Parent=
+
+[Collection]
+BackendName=google
+CalendarEnabled=true
+ContactsEnabled=true
+Identity=david_blair@brown.edu
+MailEnabled=true
+
+[Authentication]
+Host=
+Method=none
+Port=0
+ProxyUid=system-proxy
+RememberPassword=true
+User=

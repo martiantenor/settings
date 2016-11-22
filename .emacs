@@ -4,6 +4,9 @@
 ;; Don't display a startup message
 (setq inhibit-startup-message t)
 
+;; Don't show the toolbar
+(setq tool-bar-mode nil)
+
 ;; Something with region highlighting???
 (setq-default transient-mark-mode t)
 
