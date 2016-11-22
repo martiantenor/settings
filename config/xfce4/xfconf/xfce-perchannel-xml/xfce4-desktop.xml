@@ -29,8 +29,9 @@
   </property>
   <property name="desktop-icons" type="empty">
     <property name="icon-size" type="uint" value="32"/>
-    <property name="style" type="int" value="2"/>
+    <property name="style" type="int" value="1"/>
     <property name="show-thumbnails" type="bool" value="true"/>
     <property name="use-custom-font-size" type="bool" value="false"/>
+    <property name="single-click" type="bool" value="false"/>
   </property>
 </channel>

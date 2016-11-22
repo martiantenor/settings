@@ -1,5 +1,9 @@
 [Default Applications]
 application/x-deb=synaptic.desktop
+text/plain=gvim.desktop
+image/svg+xml=inkscape.desktop
 
 [Added Associations]
 application/x-deb=synaptic.desktop;
+text/plain=gvim.desktop;
+image/svg+xml=inkscape.desktop;

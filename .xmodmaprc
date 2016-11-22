@@ -1,0 +1,6 @@
+! Remap Caps Lock to Left Control
+clear Control_L
+keycode 66 = Control_L
+
+!remove lock = Caps_Lock
+!add lock = Control_L

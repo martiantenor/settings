@@ -1,8 +1,4 @@
-[Deinonychus]
-row=2
-col=0
-
-[Eru]
+[Notes]
 row=6
 col=0
 
@@ -14,8 +10,8 @@ col=0
 row=1
 col=0
 
-[12 GB Volume]
-row=7
+[Deinonychus]
+row=2
 col=0
 
 [Trash]
