@@ -26,7 +26,6 @@
         <value type="int" value="16"/>
         <value type="int" value="18"/>
         <value type="int" value="9"/>
-        <value type="int" value="8"/>
         <value type="int" value="3"/>
         <value type="int" value="2"/>
         <value type="int" value="11"/>
@@ -71,10 +70,13 @@
     <property name="plugin-6" type="string" value="systray">
       <property name="names-visible" type="array">
         <value type="string" value="vlc"/>
-        <value type="string" value="networkmanager applet"/>
-        <value type="string" value="sylpheed"/>
         <value type="string" value="google-chrome"/>
+        <value type="string" value="networkmanager applet"/>
+        <value type="string" value="google-chrome-stable"/>
+        <value type="string" value="task manager"/>
         <value type="string" value="gmail"/>
+        <value type="string" value="sylpheed"/>
+        <value type="string" value="mail notification"/>
       </property>
       <property name="show-frame" type="bool" value="false"/>
       <property name="size-max" type="uint" value="24"/>
@@ -118,10 +120,18 @@
       <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
     </property>
     <property name="plugin-20" type="string" value="showdesktop"/>
-    <property name="plugin-25" type="string" value="separator"/>
-    <property name="plugin-26" type="string" value="separator"/>
-    <property name="plugin-27" type="string" value="separator"/>
-    <property name="plugin-28" type="string" value="separator"/>
+    <property name="plugin-25" type="string" value="separator">
+      <property name="style" type="uint" value="1"/>
+    </property>
+    <property name="plugin-26" type="string" value="separator">
+      <property name="style" type="uint" value="1"/>
+    </property>
+    <property name="plugin-27" type="string" value="separator">
+      <property name="style" type="uint" value="1"/>
+    </property>
+    <property name="plugin-28" type="string" value="separator">
+      <property name="style" type="uint" value="1"/>
+    </property>
     <property name="plugin-29" type="string" value="directorymenu">
       <property name="base-directory" type="string" value="/home/dblair/Dropbox/Notes/Brown"/>
       <property name="icon-name" type="string" value="text-x-generic"/>
@@ -146,11 +156,6 @@
     <property name="plugin-2" type="string" value="launcher">
       <property name="items" type="array">
         <value type="string" value="14798409663.desktop"/>
-      </property>
-    </property>
-    <property name="plugin-8" type="string" value="launcher">
-      <property name="items" type="array">
-        <value type="string" value="14798410274.desktop"/>
       </property>
     </property>
   </property>
