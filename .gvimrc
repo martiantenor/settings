@@ -9,8 +9,10 @@ set lines=60
 "colorscheme wombat
 "set transparency=0
 " Solarized
-set background=light
-colorscheme solarized
+"set background=light
+"colorscheme solarized
+" Newsprint
+colorscheme newsprint
 
 " Fonts
 

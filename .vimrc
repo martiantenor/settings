@@ -30,6 +30,7 @@ if g:os == "Darwin" || g:os == "Linux"
     call vundle#begin()             "required, can also have path specified
     Plugin 'VundleVim/Vundle.vim'   "required
     Plugin 'vim-pandoc/vim-pandoc-syntax'
+    Plugin 'reedes/vim-pencil'
     "Plugin 'jdonaldson/vaxe'        "for Haxe, and HaxeFlixel
     call vundle#end()               "required after all plugins loaded
     filetype plugin indent on       "required
@@ -142,11 +143,15 @@ set expandtab       "spaces instead of tabs
 set tabstop=4       "tabs are 4 spaces
 set softtabstop=4   "keep things lined up to 4-width tabs
 set shiftwidth=4
-set textwidth=80    "start new lines when you hit 80 characters
-set nowrap          "do not wrap lines that are past that 80-character limit
 set smartindent     "Automatically indents new lines in code (intelligently)
 set smarttab        "Goes to the nearest 4th space when you hit tab, instead of
                     "just adding four spaces
+
+"Line wrapping
+"set textwidth=80    "start new lines when you hit 80 characters
+"set nowrap          "do not wrap lines that are past that 80-character limit
+set textwidth=0     "unlimited textwidth
+set wrap            "wrap lines that are past the edge of the screen
 
 "Tabs and spaces in Makefiles
 autocmd FileType make setlocal noexpandtab  "don't change Tabs if it's a Makefile
