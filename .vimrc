@@ -34,20 +34,32 @@ if g:os == "Darwin" || g:os == "Linux"
     "Plugin 'jdonaldson/vaxe'        "for Haxe, and HaxeFlixel
     call vundle#end()               "required after all plugins loaded
     filetype plugin indent on       "required
-endif
 
-" If on Linux or Mac, do line break stuff
-if g:os == "Darwin"  || g:os == "Linux"
-
-    "Line break/wrapping settings
-    if v:version >= 704
-        set breakindent
-        set breakindentopt=shift:2
-        set lbr
+    " Making line wrapping prettier
+    if g:os == "Darwin"  || g:os == "Linux"
+        if v:version >= 704
+            set breakindent
+            set breakindentopt=shift:2
+            set lbr
+        endif
     endif
 endif
 
-"Fix the delete key, if on an OS X host (including MacVim)
+"General line wrapping settings
+"set textwidth=80    "start new lines when you hit 80 characters
+"set nowrap          "do not wrap lines that are past that 80-character limit
+set textwidth=0     "unlimited textwidth
+set wrapmargin=0    "unlimited wrapping margin
+set wrap            "wrap lines that are past the edge of the screen
+
+"Pandoc markdown processing in macOS/Linux
+if g:os == "Darwin"
+    map <F5> <ESC>:!pandoc -s "%" > ~/pandoc_output.html; open ~/pandoc_output.html<CR><CR>
+elseif g:os == "Linux"
+    map <F5> <ESC>:!pandoc -s "%" > ~/pandoc_output.html; firefox ~/pandoc_output.html<CR>
+endif
+
+"Fix the delete key, if on an macOS host (including MacVim)
 "if has("unix")
 "    let s:uname = system("uname")
 "    if s:uname == "Darwin\n"
@@ -55,7 +67,7 @@ endif
 "    endif
 "endif
 
-"Fix delete key in OS X and BSD
+"Fix delete key in macOS and BSD
 if g:os == "Darwin" || g:os == "FreeBSD"
     fixdel
 endif
@@ -147,12 +159,6 @@ set smartindent     "Automatically indents new lines in code (intelligently)
 set smarttab        "Goes to the nearest 4th space when you hit tab, instead of
                     "just adding four spaces
 
-"Line wrapping
-"set textwidth=80    "start new lines when you hit 80 characters
-"set nowrap          "do not wrap lines that are past that 80-character limit
-set textwidth=0     "unlimited textwidth
-set wrap            "wrap lines that are past the edge of the screen
-
 "Tabs and spaces in Makefiles
 autocmd FileType make setlocal noexpandtab  "don't change Tabs if it's a Makefile
 
@@ -199,16 +205,16 @@ map <SPACE> <ESC>zz
 "Process the current file using MultiMarkdown, and display the output. On OS X
 "hosts, this will use the nice GUI application Marked, while on Linux hosts
 "it'll create an HTML file using markdown.pl or multimarkdown.pl and open it in Firefox
-if has("unix")
-    let s:uname = system("uname")
-    if s:uname == "Darwin\n"
-        "map <F5> <ESC>:!open -a "Marked 2" "%"<CR><CR>
-        map <F5> <ESC>:!pandoc -s "%" > ~/pandoc_output.html; open ~/pandoc_output.html<CR><CR>
-    elseif s:uname == "Linux\n"
-        "Pandoc markdown processing
-        map <F5> <ESC>:!pandoc -s "%" > ~/pandoc_output.html; firefox ~/pandoc_output.html<CR>
-    endif
-endif
+"if has("unix")
+"    let s:uname = system("uname")
+"    if s:uname == "Darwin\n"
+"        "map <F5> <ESC>:!open -a "Marked 2" "%"<CR><CR>
+"        map <F5> <ESC>:!pandoc -s "%" > ~/pandoc_output.html; open ~/pandoc_output.html<CR><CR>
+"    elseif s:uname == "Linux\n"
+"        "Pandoc markdown processing
+"        map <F5> <ESC>:!pandoc -s "%" > ~/pandoc_output.html; firefox ~/pandoc_output.html<CR>
+"    endif
+"endif
 
 " Turn on relative line numbers by default if you're not using the below Write
 " and Code commands
