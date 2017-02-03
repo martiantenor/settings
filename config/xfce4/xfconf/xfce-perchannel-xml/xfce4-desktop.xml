@@ -34,4 +34,10 @@
     <property name="use-custom-font-size" type="bool" value="false"/>
     <property name="single-click" type="bool" value="false"/>
   </property>
+  <property name="desktop-menu" type="empty">
+    <property name="show" type="bool" value="true"/>
+  </property>
+  <property name="windowlist-menu" type="empty">
+    <property name="show" type="bool" value="true"/>
+  </property>
 </channel>

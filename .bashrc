@@ -256,7 +256,7 @@ function wiki() { $browsercommand http://en.wikipedia.org/w/index.php?search="`e
 ######## Machine-Specific Settings #############################################
 
 
-######## gc166-alderaan ########################################################
+######## gc166-alderaan & gc166-elrond #########################################
 if [ "$machine" == "gc166-alderaan" ]; then
 
     # Terminal
@@ -268,11 +268,19 @@ if [ "$machine" == "gc166-alderaan" ]; then
     # Aliases
     alias sbcl="rlwrap sbcl"
 
+
+elif [ "$machine" == "elrond" ]; then
+
+    # Terminal
+    export PATH="/usr/local/miniconda2/bin:$PATH"
+
+
 ######## vm_asag ################################################################
 elif [ "$machine" == "vm_asag" ]; then
 
     ## Test
     echo "BSD 4EVA!!"
+
 
 ######## Arrakis ###############################################################
 elif [ "$machine" == "Arrakis" ]; then

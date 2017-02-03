@@ -30,6 +30,10 @@ if g:os == "Darwin" || g:os == "Linux"
     call vundle#begin()             "required, can also have path specified
     Plugin 'VundleVim/Vundle.vim'   "required
     Plugin 'vim-pandoc/vim-pandoc-syntax'
+    Plugin 'godlygeek/tabular'
+    "Plugin 'plasticboy/vim-markdown'
+    "Bundle 'gabrielelana/vim-markdown'
+    Plugin 'junegunn/goyo.vim'
     Plugin 'reedes/vim-pencil'
     "Plugin 'jdonaldson/vaxe'        "for Haxe, and HaxeFlixel
     call vundle#end()               "required after all plugins loaded
@@ -124,20 +128,22 @@ else
     set t_Co=256                "DEBUG: Added this from Taylor's .vimrc file!
 
     "colorscheme wombat          " ...otherwise, load a colorscheme
-
     "set background=dark
     "set background=light
     "colorscheme solarized
-
     colorscheme ir_black
-
 endif
+
+" Syntax, search, and speciail character highlighting, language-specific settings
 syntax on                       "turns on syntax highlighting
 set hlsearch                    "highlights search results
 set list                        "shows the following whitespace characters:
 set listchars=tab:>-,trail:-    "    tabs and trailing space
 let g:tex_fold_enabled=1        "automatic text folding in LaTeX documents
 let g:tex_flavor="latex"        "makes vim recognize all .tex files as LaTeX
+set conceallevel=0              "don't 'conceal' special characters/syntax
+
+" Other options
 "au BufWinLeave ?* mkview        "saves view on exiting vim
 "au BufWinEnter ?* silent loadview   "reloads view when you re-open a file
                                     "(NOTE: sometimes this raises errors for new files)
@@ -159,6 +165,10 @@ set smartindent     "Automatically indents new lines in code (intelligently)
 set smarttab        "Goes to the nearest 4th space when you hit tab, instead of
                     "just adding four spaces
 
+"Text width for code vs. text:
+set textwidth=80    "start new lines when you hit 80 characters
+
+
 "Tabs and spaces in Makefiles
 autocmd FileType make setlocal noexpandtab  "don't change Tabs if it's a Makefile
 
@@ -167,7 +177,7 @@ set laststatus=2  "always show status line
 ""Complete w/ column & line info
 set statusline=%f%y%m%=[%0.3c,%0.9l/%0.9L][%p%%]
 ""Sparser
-set statusline=%f%y%m%=[%p%%]
+"set statusline=%f%y%m%=[%p%%]
 " %f - full path to file in current buffer, relative to working directory
 " %y - type of file in buffer ([vim], [python], [matlab]...)
 " %m - displays [+] if the file is modified, [-] if non-modifiable
@@ -265,7 +275,7 @@ iab bmc Barringer Meteorite Crater
 
 
 "Extras
-""Treat txt as markdown
+""Treat txt as markdown.pandoc
 "au BufNewFile,BufFilePre,BufRead *.txt set filetype=markdown
 au BufRead,BufNewFile,BufFilePre *.txt set filetype=markdown
 
