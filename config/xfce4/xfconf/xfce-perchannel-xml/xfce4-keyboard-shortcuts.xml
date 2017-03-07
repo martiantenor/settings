@@ -25,14 +25,13 @@
       <property name="&lt;Super&gt;space" type="string" value="xfce4-appfinder --collapsed">
         <property name="startup-notify" type="bool" value="true"/>
       </property>
-      <property name="&lt;Primary&gt;&lt;Shift&gt;Return" type="string" value="x-terminal-emulator"/>
       <property name="F19" type="string" value="exo-open --launch WebBrowser"/>
       <property name="XF86Launch9" type="string" value="exo-open --launch MailReader"/>
-      <property name="XF86Launch8" type="string" value="x-terminal-emulator"/>
       <property name="XF86Launch7" type="string" value="gvim"/>
       <property name="&lt;Alt&gt;F1" type="string" value="xfce4-popup-applicationsmenu"/>
       <property name="&lt;Shift&gt;&lt;Super&gt;q" type="string" value="xfce4-session-logout"/>
       <property name="&lt;Super&gt;l" type="string" value="xflock4"/>
+      <property name="&lt;Primary&gt;&lt;Shift&gt;Return" type="string" value="urxvt"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">
