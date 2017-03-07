@@ -1,0 +1,22 @@
+# Use auto-indentation
+set autoindent
+
+# Backup files to "filename~"
+set backup
+
+# Don't convert files from other formats
+set noconvert
+
+# Don't display bottom-of-screen help
+#set nohelp
+
+# Don't wrap text at all
+set nowrap
+
+# Set spell-checker
+set speller "aspell -c"
+
+# Syntax highlighting
+syntax "HTML" "\.html$"
+color blue start="<" end=">"
+color red "&[^;        ]*;"
