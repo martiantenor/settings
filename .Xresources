@@ -1,0 +1,44 @@
+// Colors
+// PICO-8 theme
+*color0: #000000
+*color1: #7e2553
+*color2: #008751
+*color3: #ffa300
+*color4: #1d2b53
+*color5: #83769c
+*color6: #ab5236
+*color7: #c2c3c7
+*color8: #5f574f
+*color9: #ff004d
+*color10: #00e436
+*color11: #ffec27
+*color12: #29adff
+*color13: #ff77ab
+*color14: #ffccaa
+*color15: #fff1e8
+
+// Terminal color setup
+URxvt*background: black
+URxvt*foreground: white
+
+// Fonts & text appearance
+Xft.antialias: False
+URxvt*font: xft:ProggyCleanTT:size=12
+URxvt*boldFont: xft:ProggyCleanTT:size=12
+//URxvt*font: xft:PRNumber3:size=12
+//URxvt*boldFont: xft:PRNumber3:size=12
+
+// Other settings
+URxvt*scrollstyle: plain
+URxvt*scrollBar_right: True
+URxvt*cursorColor: red
+URxvt*intensityStyles: True
+
+//PLUGINS
+URxvt.perl-lib: /home/dblair/.urxvt/ext/
+
+//font-size
+URxvt.perl-ext-common: ...,font-size
+URXvt.keysym.C-Up: perl:font-size:increase
+URXvt.keysym.C-Down: perl:font-size:decrease
+URXvt.keysym.C-equal: perl:font-size:reset
