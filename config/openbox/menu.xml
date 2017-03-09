@@ -6,11 +6,38 @@
                 file:///usr/share/openbox/menu.xsd">
 
 <menu id="root-menu" label="Openbox 3">
+  <!--APPLICATIONS-->
   <item label="Terminal emulator">
     <action name="Execute"><execute>x-terminal-emulator</execute></action>
   </item>
+
+  <item label="gvim">
+    <action name="Execute"><execute>gvim</execute></action>
+  </item>
+  <item label="nano">
+    <action name="Execute"><execute>urxvt -e nano</execute></action>
+  </item>
+  <!--
   <item label="Web browser">
     <action name="Execute"><execute>x-www-browser</execute></action>
+  </item>
+  -->
+  <item label="Google Chrome">
+    <action name="Execute"><execute>google-chrome-stable</execute></action>
+  </item>
+  <item label="qutebrowser">
+    <action name="Execute"><execute>qutebrowser</execute></action>
+  </item>
+  <!--FOLDERS-->
+  <separator />
+  <item label="~/">
+    <action name="Execute"><execute>thunar ~</execute></action>
+  </item>
+  <item label="Notes">
+    <action name="Execute"><execute>thunar ~/.notes</execute></action>
+  </item>
+  <item label="Brown">
+      <action name="Execute"><execute>thunar ~/.notes/Brown</execute></action>
   </item>
   <!-- This requires the presence of the 'menu' package to work -->
   <menu id="/Debian" />
