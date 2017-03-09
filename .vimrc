@@ -40,21 +40,19 @@ if g:os == "Darwin" || g:os == "Linux"
     filetype plugin indent on       "required
 
     " Making line wrapping prettier
-    if g:os == "Darwin"  || g:os == "Linux"
-        if v:version >= 704
-            set breakindent
-            set breakindentopt=shift:2
-            set lbr
-        endif
+    if v:version >= 704
+        set breakindent
+        set breakindentopt=shift:2
+        set lbr
     endif
 endif
 
 "General line wrapping settings
 "set textwidth=80    "start new lines when you hit 80 characters
-"set nowrap          "do not wrap lines that are past that 80-character limit
-set textwidth=0     "unlimited textwidth
-set wrapmargin=0    "unlimited wrapping margin
-set wrap            "wrap lines that are past the edge of the screen
+set nowrap          "do not wrap lines that are past that 80-character limit
+"set textwidth=0     "unlimited textwidth
+"set wrapmargin=0    "unlimited wrapping margin
+"set wrap            "wrap lines that are past the edge of the screen
 
 "Pandoc markdown processing in macOS/Linux
 if g:os == "Darwin"
@@ -134,12 +132,12 @@ else
     colorscheme ir_black
 endif
 
-" Syntax, search, and speciail character highlighting, language-specific settings
+" Syntax, search, and special character highlighting, language-specific settings
 syntax on                       "turns on syntax highlighting
 set hlsearch                    "highlights search results
 set list                        "shows the following whitespace characters:
 set listchars=tab:>-,trail:-    "    tabs and trailing space
-let g:tex_fold_enabled=1        "automatic text folding in LaTeX documents
+"let g:tex_fold_enabled=1        "automatic text folding in LaTeX documents
 let g:tex_flavor="latex"        "makes vim recognize all .tex files as LaTeX
 set conceallevel=0              "don't 'conceal' special characters/syntax
 
@@ -165,22 +163,21 @@ set smartindent     "Automatically indents new lines in code (intelligently)
 set smarttab        "Goes to the nearest 4th space when you hit tab, instead of
                     "just adding four spaces
 
-"Text width for code vs. text:
-set textwidth=80    "start new lines when you hit 80 characters
 
 
 "Tabs and spaces in Makefiles
 autocmd FileType make setlocal noexpandtab  "don't change Tabs if it's a Makefile
 
 "Status bar
-set laststatus=2  "always show status line
+set laststatus=2  "show status line for each of multiple open windows (panes)
 ""Complete w/ column & line info
-set statusline=%f%y%m%=[%0.3c,%0.9l/%0.9L][%p%%]
+set statusline=%f%y%m%r%=[%0.3c,%0.9l/%0.9L][%p%%]
 ""Sparser
 "set statusline=%f%y%m%=[%p%%]
 " %f - full path to file in current buffer, relative to working directory
 " %y - type of file in buffer ([vim], [python], [matlab]...)
 " %m - displays [+] if the file is modified, [-] if non-modifiable
+" %r - displays [RO] if the file is read-only
 " %= - switches to right-aligned items
 " %0.3c - current column number, minimum width 0, max width 3
 " %0.9l - current line, minimum width 0, max width 9
@@ -191,13 +188,10 @@ set statusline=%f%y%m%=[%0.3c,%0.9l/%0.9L][%p%%]
 
 "Keyboard Mappings
 
-""Remap the Esc key to be activated a couple of other ways
-""(Eventually I'll decide on one!)
+""Remap the Esc key to be activated with ";;" as well
 map  ;; <Esc>
 map! ;; <Esc>
-"map  `` <Esc>
-"map! `` <Esc>
-
+ 
 ""Use the spacebar to center screen on the current line
 map <SPACE> <ESC>zz
 ""Tabs! F7 = new, F8 = close, F5 = previous, F6 = next
@@ -228,8 +222,8 @@ map <SPACE> <ESC>zz
 
 " Turn on relative line numbers by default if you're not using the below Write
 " and Code commands
-set number
-set relativenumber
+"set number
+"set relativenumber
 
 ""Commands to enter 'writing' and 'coding' modes, which switch line numbers on
 ""and off and change the 'scrolloff' (vertical centering) behavior
@@ -276,12 +270,12 @@ iab bmc Barringer Meteorite Crater
 
 "Extras
 ""Treat txt as markdown.pandoc
-"au BufNewFile,BufFilePre,BufRead *.txt set filetype=markdown
 au BufRead,BufNewFile,BufFilePre *.txt set filetype=markdown
-
 au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
 ""Treat Arduino .ino files as C
 au BufNewFile,BufFilePre,BufRead *.ino set filetype=C
+""Treat .p8 files as Lua
+au BufNewFIle,BufFilePre,BufRead *.p8 set filetype=lua
 ""Initiate the thesaurus
 "set thesaurus+=~/.vim/moby_thesaurus/mthesaur.txt
 ""SuperTab completion
