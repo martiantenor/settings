@@ -2,7 +2,7 @@
 set autoindent
 
 # Backup files to "filename~"
-set backup
+#set backup
 
 # Don't convert files from other formats
 set noconvert
@@ -16,7 +16,39 @@ set nowrap
 # Set spell-checker
 set speller "aspell -c"
 
+# Use undo feature in all versions, even <2.3.5 when it became standard
+set undo
+
 # Syntax highlighting
+
+## HTML
 syntax "HTML" "\.html$"
 color blue start="<" end=">"
 color red "&[^;        ]*;"
+
+## Markdown
+syntax "markdown" "\.txt$" "\.markdown$" "\.md.txt$" "\.md$"
+### Emphasis
+color green "_[^_]*_"
+color green "\*[^\*]*\*"
+### Strong emphasis
+color brightgreen "\*\*[^\*]*\*\*"
+color brightgreen "__[\_]*__"
+### Underline headers
+color brightblue "^====(=*)"
+color brightblue "^----(-*)"
+### Hash headers
+color brightblue "^#.*"
+### Linkified URLs (and inline html tags)
+color brightmagenta start="<" end=">"
+### Links
+color brightmagenta "\[.*\](\([^\)]*\))?"
+### Link id's:
+color brightmagenta "^\[.*\]:( )+.*"
+### Code spans
+color brightyellow "`[^`]*`"
+### Links and inline images
+color brightmagenta start="!\[" end="\]"
+color brightmagenta start="\[" end="\]"
+### Lists
+color yellow "^( )*(\*|\+|\-|[0-9]+\.) "
