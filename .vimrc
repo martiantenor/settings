@@ -40,11 +40,9 @@ if g:os == "Darwin" || g:os == "Linux"
     filetype plugin indent on       "required
 
     " Making line wrapping prettier
-    if v:version >= 704
-        set breakindent
-        set breakindentopt=shift:2
-        set lbr
-    endif
+    set breakindent
+    set breakindentopt=shift:2
+    set lbr
 endif
 
 "General line wrapping settings
