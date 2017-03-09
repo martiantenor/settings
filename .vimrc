@@ -133,8 +133,8 @@ endif
 " Syntax, search, and special character highlighting, language-specific settings
 syntax on                       "turns on syntax highlighting
 set hlsearch                    "highlights search results
-set list                        "shows the following whitespace characters:
-set listchars=tab:>-,trail:-    "    tabs and trailing space
+set nolist                      "don't show the following unless ":set list" explicitly:
+set listchars=eol:¬,tab:>-,trail:~,extends:>,precedes:<,nbsp:␣ 
 "let g:tex_fold_enabled=1        "automatic text folding in LaTeX documents
 let g:tex_flavor="latex"        "makes vim recognize all .tex files as LaTeX
 set conceallevel=0              "don't 'conceal' special characters/syntax
