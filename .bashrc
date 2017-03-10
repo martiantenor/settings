@@ -51,6 +51,8 @@ export LANGUAGE=en_US.UTF-8
 # VIM-mode in the prompt (vs. Emacs mode)
 #set -o vi
 
+# Set nano as the default editor (since I can always call "vim" by name)
+export EDITOR=nano
 
 ## Recreates the handy-dandy <C-l> for "clear"
 bind -m vi-insert "\C-l":clear-screen
