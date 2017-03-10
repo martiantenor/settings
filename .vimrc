@@ -169,7 +169,9 @@ autocmd FileType make setlocal noexpandtab  "don't change Tabs if it's a Makefil
 "Status bar
 set laststatus=2  "show status line for each of multiple open windows (panes)
 ""Complete w/ column & line info
-set statusline=%f%y%m%r%=[%0.3c,%0.9l/%0.9L][%p%%]
+"set statusline=%f%y%m%r%=[%0.3c,%0.9l/%0.9L][%p%%]
+""Complete w/ column & line info, plus a clock!
+set statusline=%f%y%m%r%=[%0.3c,%0.9l/%0.9L][%p%%]\ \ %{strftime('%a\ %b\ %e\ %H:%M')}\ \ 
 ""Sparser
 "set statusline=%f%y%m%=[%p%%]
 " %f - full path to file in current buffer, relative to working directory
