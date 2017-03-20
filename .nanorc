@@ -17,7 +17,7 @@ set nowrap
 set speller "aspell -c"
 
 # Use undo feature in all versions, even <2.3.5 when it became standard
-set undo
+#set undo
 
 # Syntax highlighting
 
