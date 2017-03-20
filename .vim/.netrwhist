@@ -1,5 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_cnt =9
 let g:netrw_dirhist_1='/usr/share/X11/xorg.conf.d'
 let g:netrw_dirhist_2='/home/dblair/.config/openbox'
 let g:netrw_dirhist_3='/etc/network/interfaces.d'
@@ -7,3 +7,5 @@ let g:netrw_dirhist_4='/etc/network'
 let g:netrw_dirhist_5='/home/dblair/Dropbox/Notes'
 let g:netrw_dirhist_6='/home/dblair/.local/share/applications'
 let g:netrw_dirhist_7='/home/dblair/Dropbox/Code/bin'
+let g:netrw_dirhist_8='/home/dblair/.dosbox'
+let g:netrw_dirhist_9='/media/dblair/THE ARCHIVE/DOS (Boxer)/Windows 3.11.boxer/C.harddisk'

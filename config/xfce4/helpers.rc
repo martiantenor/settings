@@ -1,4 +1,4 @@
 FileManager=Thunar
 MailReader=mutt
+WebBrowser=custom-WebBrowser
 
-WebBrowser=google-chrome
