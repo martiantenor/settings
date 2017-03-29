@@ -266,8 +266,27 @@ map <SPACE> <ESC>zz
 "Autocorrect Rules
 iab teh the
 iab bmc Barringer Meteorite Crater
-iab sharp# ♯ 
-iab flatb ♭
+iab Cnatural C♮
+iab Dnatural D♮
+iab Enatural E♮
+iab Fnatural F♮
+iab Gnatural G♮
+iab Anatural A♮
+iab Bnatural B♮
+iab Csharp C♯
+iab Dsharp D♯
+iab Esharp E♯
+iab Fsharp F♯
+iab Gsharp G♯
+iab Asharp A♯
+iab Bsharp B♯
+iab Cflat C♭
+iab Dflat D♭
+iab Eflat E♭
+iab Fflat F♭
+iab Gflat G♭
+iab Aflat A♭
+iab Bflat B♭
 
 
 "Extras
