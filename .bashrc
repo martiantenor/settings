@@ -181,7 +181,7 @@ elif [ $(uname) == "Linux" ]; then
     #trap _exit EXIT
 
     # Paths (universal)
-    echo PATH="~/local/bin/:$PATH"
+    export PATH="/home/dblair/local/bin:$PATH"
 
     # Aliases
     alias ls="ls -F --color"
