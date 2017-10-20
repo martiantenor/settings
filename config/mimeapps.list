@@ -1,0 +1,17 @@
+[Default Applications]
+application/x-deb=synaptic.desktop
+text/plain=gvim.desktop
+image/svg+xml=ristretto.desktop
+image/png=ristretto.desktop
+image/x-apple-ios-png=ristretto.desktop
+application/octet-stream=google-chrome.desktop
+image/jpeg=ristretto.desktop
+
+[Added Associations]
+application/x-deb=synaptic.desktop;
+text/plain=gvim.desktop;
+image/svg+xml=inkscape.desktop;ristretto.desktop;
+image/png=ristretto.desktop;
+image/x-apple-ios-png=ristretto.desktop;
+application/octet-stream=google-chrome.desktop;
+image/jpeg=ristretto.desktop;
