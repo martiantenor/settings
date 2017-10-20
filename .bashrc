@@ -115,37 +115,8 @@ alias :q="echo You\'re not in VIM, dammit!"
 
 ######## OS-Specific Settings ##################################################
 
-######## macOS (Mac OS X) ######################################################
-if [ $(uname) == "Darwin" ]; then
-
-    machine=$(scutil --get ComputerName)
-
-    # Prompt
-    # Hostname variant
-    #export PS1="$txtcyn[\A]$bldgrn\u@\h:$bldblu\W$txtrst$ "
-    # ComputerName variant
-    export PS1="$txtcyn[\A]$bldgrn\u@$machine:$bldblu\W$txtrst$ "
-    #                           [time]    user@host:  working dir $
-    #Rainbow variant
-    #export PS1="$bldred"▯"$bldylw"▯"$bldgrn"▯"$bldcyn"▯"$bldblu"▯"$bldpur"▯"$bldblk \A $bldgrn\u@\h:$bldblu\W$txtrst$ "
-    #Todo: use □ or ▯ instead?
-
-    # Weird two-line prompt:
-    #export PS1="┌─[ \[\e[1;32m\]\w\[\e[0m\] ]\n└─$ "
-
-    # Aliases
-    alias ls='ls -pG'
-    alias la='ls -paG'
-    alias ll='ls -pohGa'
-
-    # Colors
-    export TERM='xterm-256color'
-    LSCOLORS='ExGxxxxxCxxxxxxxxxxxxx'
-    export LSCOLORS
-    browsercommand="open -a Safari"
-
 ######## Linux #################################################################
-elif [ $(uname) == "Linux" ]; then
+if [ $(uname) == "Linux" ]; then
 
     machine=$(hostname)
 
@@ -205,6 +176,35 @@ elif [ $(uname) == "Linux" ]; then
         export DISPLAY=localhost:0.0
     fi
 
+######## macOS (Mac OS X) ######################################################
+elif [ $(uname) == "Darwin" ]; then
+
+    machine=$(scutil --get ComputerName)
+
+    # Prompt
+    # Hostname variant
+    #export PS1="$txtcyn[\A]$bldgrn\u@\h:$bldblu\W$txtrst$ "
+    # ComputerName variant
+    export PS1="$txtcyn[\A]$bldgrn\u@$machine:$bldblu\W$txtrst$ "
+    #                           [time]    user@host:  working dir $
+    #Rainbow variant
+    #export PS1="$bldred"▯"$bldylw"▯"$bldgrn"▯"$bldcyn"▯"$bldblu"▯"$bldpur"▯"$bldblk \A $bldgrn\u@\h:$bldblu\W$txtrst$ "
+    #Todo: use □ or ▯ instead?
+
+    # Weird two-line prompt:
+    #export PS1="┌─[ \[\e[1;32m\]\w\[\e[0m\] ]\n└─$ "
+
+    # Aliases
+    alias ls='ls -pG'
+    alias la='ls -paG'
+    alias ll='ls -pohGa'
+
+    # Colors
+    export TERM='xterm-256color'
+    LSCOLORS='ExGxxxxxCxxxxxxxxxxxxx'
+    export LSCOLORS
+    browsercommand="open -a Safari"
+
 
 ######## FreeBSD ###############################################################
 elif [ $(uname) == "FreeBSD" ]; then
@@ -224,20 +224,6 @@ elif [ $(uname) == "FreeBSD" ]; then
 
     # Other
     browsercommand="midori"
-
-######## Windows+Cygwin ########################################################
-elif [ $(uname) == "CYGWIN_NT-10.0" ]; then
-
-    # Prompt
-    echo "Running from Cygwin"
-    export PS1="$bldwht[\A]$bldgrn\u@\h:$bldblu\W$txtrst$ "
-
-    # Colors
-    if [ -e /usr/share/terminfo/x/xterm-256color ]; then
-        export TERM="xterm-256color"
-    else
-        export TERM="xterm-color"
-    fi
 
 ######## haiku #################################################################
 elif [ $(uname) == "Haiku" ]; then
