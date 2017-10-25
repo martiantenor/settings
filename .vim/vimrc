@@ -23,11 +23,11 @@ endif
 
 "For mouse scrolling in ConEmu/Cmder
 ""NOT CURRENTLY WORKING (2017-10-20)
-"if !has("gui_running")
-"    set term=xterm
-"    set mouse=a
+if !has("gui_running")
+    set term=xterm
+    set mouse=a
 "    set nocompatible
-"endif
+endif
 
 ""If on a Mac or Linux, load Vundle plugins
 ""DEPRECATED?
