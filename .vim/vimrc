@@ -24,7 +24,7 @@ endif
 "For mouse scrolling in ConEmu/Cmder
 ""NOT CURRENTLY WORKING (2017-10-20)
 if !has("gui_running")
-    set term=xterm
+    set term=xterm-256color
     set mouse=a
 "    set nocompatible
 endif
@@ -276,29 +276,29 @@ map <SPACE> <ESC>zz
 
 
 "Autocorrect Rules
-iab teh the
-iab bmc Barringer Meteorite Crater
-iab Cnatural C♮
-iab Dnatural D♮
-iab Enatural E♮
-iab Fnatural F♮
-iab Gnatural G♮
-iab Anatural A♮
-iab Bnatural B♮
-iab Csharp C♯
-iab Dsharp D♯
-iab Esharp E♯
-iab Fsharp F♯
-iab Gsharp G♯
-iab Asharp A♯
-iab Bsharp B♯
-iab Cflat C♭
-iab Dflat D♭
-iab Eflat E♭
-iab Fflat F♭
-iab Gflat G♭
-iab Aflat A♭
-iab Bflat B♭
+"iab teh the
+"iab bmc Barringer Meteorite Crater
+"iab Cnatural C♮
+"iab Dnatural D♮
+"iab Enatural E♮
+"iab Fnatural F♮
+"iab Gnatural G♮
+"iab Anatural A♮
+"iab Bnatural B♮
+"iab Csharp C♯
+"iab Dsharp D♯
+"iab Esharp E♯
+"iab Fsharp F♯
+"iab Gsharp G♯
+"iab Asharp A♯
+"iab Bsharp B♯
+"iab Cflat C♭
+"iab Dflat D♭
+"iab Eflat E♭
+"iab Fflat F♭
+"iab Gflat G♭
+"iab Aflat A♭
+"iab Bflat B♭
 
 
 "Extras

@@ -87,6 +87,7 @@ solaria="Dave@solaria.53964783.members.btmm.icloud.com"
 arrakis="Dave@arrakis.53964783.members.btmm.icloud.com"
 
 ## Brown machines
+orch="dblair@outreach-test.geo.brown.edu"
 casey="rialb1091@casey.brown.edu"
 geops="dblair@geops.geo.brown.edu"
 ted="dblair@ted.hetchem.brown.edu"
@@ -171,7 +172,10 @@ if [ $(uname) == "Linux" ]; then
 
 ######## Windows Subsystem for Linux / Bash on Ubuntu on Windows ###############
     if grep -q Microsoft /proc/version; then
-        
+
+        # Fix window title in wsltty
+
+
         # X11 forwarding
         export DISPLAY=localhost:0.0
     fi

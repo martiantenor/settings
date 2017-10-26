@@ -4,8 +4,11 @@ set autoindent
 # Backup files to "filename~"
 #set backup
 
-# Live cursuor position
+# Live cursor position
 set constantshow
+
+# Use the mouse!
+set mouse
 
 # Don't convert files from other formats
 set noconvert
