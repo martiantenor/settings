@@ -95,6 +95,8 @@ daniel="dblair@daniel.geo.brown.edu"
 numbers="dblair@numbers.geo.brown.edu"
 samuel="dblair@samuel.geo.brown.edu"
 sarah="dblair@sarah.geo.brown.edu"
+gansett="-oHostKeyAlgorithms=+ssh-dss dblair@gansett.eci.brown.edu"
+tycho="dblair@tycho.geo.brown.edu"
 
 ## Old work machines
 cirrus="dblair@cirrus.haystack.mit.edu"
@@ -178,6 +180,8 @@ if [ $(uname) == "Linux" ]; then
 
         # X11 forwarding
         export DISPLAY=localhost:0.0
+
+        export PATH="/home/dblair/miniconda3/bin:$PATH"
     fi
 
 ######## macOS (Mac OS X) ######################################################

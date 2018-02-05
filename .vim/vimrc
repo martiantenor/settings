@@ -12,6 +12,11 @@ set nomodeline
 
 set enc=utf-8
 
+set nobackup
+
+"Change backup location
+
+
 "OS detection
 if !exists("g:os")
     if has("win64") || has("win32") || has("win16")
@@ -23,11 +28,11 @@ endif
 
 "For mouse scrolling in ConEmu/Cmder
 ""NOT CURRENTLY WORKING (2017-10-20)
-if !has("gui_running")
-    set term=xterm-256color
-    set mouse=a
+"if !has("gui_running")
+"    set term=xterm-256color
+"    set mouse=a
 "    set nocompatible
-endif
+"endif
 
 ""If on a Mac or Linux, load Vundle plugins
 ""DEPRECATED?
@@ -276,8 +281,13 @@ map <SPACE> <ESC>zz
 
 
 "Autocorrect Rules
-"iab teh the
-"iab bmc Barringer Meteorite Crater
+"" "Check Mark" (actually a radical symbol; Opt-v on a Mac)
+"ab #$v √
+"" Actual check mark (U+2713)
+ab #$v ✓
+"" Correcting mistyped words
+iab teh the
+"" Musical unicode
 "iab Cnatural C♮
 "iab Dnatural D♮
 "iab Enatural E♮

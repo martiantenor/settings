@@ -14,6 +14,15 @@ set lines=60
 " Newsprint
 colorscheme newsprint
 
+" Backup crap for windows
+if g:os == "Windows"
+    set backup
+    set backupdir=C:\Users\dblair\vimfiles\temp
+    set backupskip=C:\Users\dblair\vimfiles\temp\*
+    set directory=C:\Users\dblair\vimfiles\temp
+    set undodir=C:\Users\dblair\vimfiles\temp
+    set writebackup
+
 " Fonts
 
 "OS detection
