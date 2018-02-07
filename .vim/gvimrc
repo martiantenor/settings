@@ -1,6 +1,3 @@
-"Set working Directory
-"cd /Users/dblair/Documents
-
 " Window setup
 set columns=90
 set lines=60

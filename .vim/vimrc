@@ -150,14 +150,14 @@ if g:os == "Windows"
 
 	" Fix backup location
     set backup
-    set backupdir="$HOME\vimfiles\temp"
-    set backupskip="$HOME\vimfiles\temp\*"
-    set directory="$HOME\vimfiles\temp"
-    set undodir="$HOME\vimfiles\temp"
+    set backupdir=C:\\Users\\dblair\\vimfiles\\temp
+    set backupskip=C:\\Users\\dblair\\vimfiles\\temp\\*
+    set undodir=C:\\Users\\dblair\\vimfiles\\temp"
     set writebackup
 	
 	" Fix _viminfo location
-    set viminfo="$HOME\vimfiles\_viminfo"
+    "set viminfo=C:\\Users\\dblair\\vimfiles\\_viminfo
+    set viminfo='100,nC:\vimfiles\_viminfo'
 
     set diffexpr=MyDiff()
     function MyDiff()
