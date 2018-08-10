@@ -198,6 +198,14 @@ elif [ $(uname) == "Linux" ]; then
     fi
     browsercommand="firefox"
 
+######## Windows Subsystem for Linux / Bash on Ubuntu on Windows ###############
+    if grep -q Microsoft /proc/version; then
+        
+        # X11 forwarding
+        export DISPLAY=localhost:0.0
+    fi
+
+
 ######## FreeBSD ###############################################################
 elif [ $(uname) == "FreeBSD" ]; then
 
