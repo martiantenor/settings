@@ -174,7 +174,6 @@ if [ $(uname) == "Linux" ]; then
 
 ######## Windows Subsystem for Linux / Bash on Ubuntu on Windows ###############
     if grep -q Microsoft /proc/version; then
-<<<<<<< HEAD
         
         # X11 forwarding
         export DISPLAY=localhost:0.0
@@ -183,7 +182,6 @@ if [ $(uname) == "Linux" ]; then
 
 ######## FreeBSD ###############################################################
 elif [ $(uname) == "FreeBSD" ]; then
-=======
 
         # Fix window title in wsltty
 
@@ -192,13 +190,11 @@ elif [ $(uname) == "FreeBSD" ]; then
         export DISPLAY=localhost:0.0
 
         export PATH="/home/dblair/miniconda3/bin:$PATH"
-    fi
 
 ######## macOS (Mac OS X) ######################################################
 elif [ $(uname) == "Darwin" ]; then
 
     machine=$(scutil --get ComputerName)
->>>>>>> 5280f65d14edd4e88efe8939f967ebf6ecff21b9
 
     # Prompt
     # Hostname variant
