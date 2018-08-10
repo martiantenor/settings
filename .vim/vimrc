@@ -172,9 +172,6 @@ if g:os == "Windows"
     "set viminfo=C:\\Users\\dblair\\vimfiles\\_viminfo
     set viminfo='100,nC:\vimfiles\_viminfo'
 
-    " Set starting folder
-    "cd "C:\Users\dblair\Dropbox\ (Personal)\Notes"
-
     set diffexpr=MyDiff()
     function MyDiff()
       let opt = '-a --binary '
