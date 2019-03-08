@@ -107,10 +107,11 @@ ab qqrho ᴩ
 "" Correcting mistyped words
 iab teh the
 "" Degrees
-ab qqd °
+ab qqdeg °
 "" Musical unicode
 iab qqflat ♭
 iab qqsharp ♯
+iab qqnat ♮
 "iab Cnatural C♮
 "iab Dnatural D♮
 "iab Enatural E♮
@@ -210,10 +211,15 @@ endif
 
 "Pandoc markdown processing in macOS/Linux
 if g:os == "Darwin"
-    map <F5> <ESC>:!pandoc -s "%" > ~/pandoc_output.html; open ~/pandoc_output.html<CR><CR>
+    command Pandoc execute "!pandoc -s --from markdown+blank_before_header \"%\" > ~/pandoc_output.html; open ~/pandoc_output.html"
+    "map <F5> <ESC>:!pandoc -s "%" > ~/pandoc_output.html; open ~/pandoc_output.html<CR><CR>
 elseif g:os == "Linux"
-    map <F5> <ESC>:!pandoc -s "%" > ~/pandoc_output.html; firefox ~/pandoc_output.html<CR>
+    command Pandoc execute "!pandoc -s --from markdown+blank_before_header \"%\" > ~/pandoc_output.html; firefox ~/pandoc_output.html"
+    "map <F5> <ESC>:!pandoc -s "%" > ~/pandoc_output.html; firefox ~/pandoc_output.html<CR>
+elseif g:os == "Windows"
+    command Pandoc execute "!pandoc.exe -s --from markdown+blank_before_header \"%\" > C:\\Users\\dblair\\Desktop\\foo.html"
 endif
+map <F5> :Pandoc<CR>
 
 "If in Haiku, change runtimepath
 if g:os == "Haiku"

@@ -97,6 +97,8 @@ samuel="dblair@samuel.geo.brown.edu"
 sarah="dblair@sarah.geo.brown.edu"
 gansett="-oHostKeyAlgorithms=+ssh-dss dblair@gansett.eci.brown.edu"
 tycho="dblair@tycho.geo.brown.edu"
+moho="Administrator@gc114-moho.geo.brown.edu"
+gutenberg="Admin@gc114-gutenberg.geo.brown.edu"
 
 ## Old work machines
 cirrus="dblair@cirrus.haystack.mit.edu"
@@ -105,9 +107,6 @@ chilmark="dblair@chilmark.eaps.purdue.edu"
 dogfish="dblair@dogfish.eaps.purdue.edu"
 vineyard="dblair@vineyard.eaps.purdue.edu"
 maven="dblair@maven.itap.purdue.edu"
-
-## Specific folders on other machines
-lava_vineyard="$vineyard:/project/vineyard/a/dave/lavatubes"
 
 # Silly stuff
 alias untar='echo "I AM UNTAR, LORD OF THE UNIVERSE!"'
@@ -121,6 +120,7 @@ alias :q="echo You\'re not in VIM, dammit!"
 ######## Linux #################################################################
 if [ $(uname) == "Linux" ]; then
 
+    # Get machine name for machine-specific stuff later
     machine=$(hostname)
 
     # Prompt
@@ -141,11 +141,6 @@ if [ $(uname) == "Linux" ]; then
         tput rmam
     }
     bashwrap
-
-    # Some things from the default .bashrc
-    ##
-    ##
-    ##
 
     # A silly function to run when the terminal exits
     #function _exit()
@@ -170,30 +165,30 @@ if [ $(uname) == "Linux" ]; then
     else
         export TERM="xterm-color"
     fi
+
+    # Set up browser command for use in functions 
     browsercommand="firefox"
 
 ######## Windows Subsystem for Linux / Bash on Ubuntu on Windows ###############
     if grep -q Microsoft /proc/version; then
-        
+
         # X11 forwarding
         export DISPLAY=localhost:0.0
+
+        # Miniconda3
+        export PATH="/home/dblair/local/miniconda3/bin:$PATH"
+
+        # Windows "start" command (for opening files, the Explorer, websites, etc.)
+        alias start="cmd.exe /c start"
+
+        # Set up browser command for use in functions 
+        browsercommand="cmd.exe /c start"
     fi
-
-
-######## FreeBSD ###############################################################
-elif [ $(uname) == "FreeBSD" ]; then
-
-        # Fix window title in wsltty
-
-
-        # X11 forwarding
-        export DISPLAY=localhost:0.0
-
-        export PATH="/home/dblair/miniconda3/bin:$PATH"
 
 ######## macOS (Mac OS X) ######################################################
 elif [ $(uname) == "Darwin" ]; then
 
+    # Get machine name for machine-specific stuff later
     machine=$(scutil --get ComputerName)
 
     # Prompt
@@ -218,6 +213,8 @@ elif [ $(uname) == "Darwin" ]; then
     export TERM='xterm-256color'
     LSCOLORS='ExGxxxxxCxxxxxxxxxxxxx'
     export LSCOLORS
+
+    # Set up browser command for use in functions 
     browsercommand="open -a Safari"
 
 
@@ -237,7 +234,7 @@ elif [ $(uname) == "FreeBSD" ]; then
     LSCOLORS='ExGxxxxxCxxxxxxxxxxxxx'
     export LSCOLORS
 
-    # Other
+    # Set up browser command for use in functions 
     browsercommand="midori"
 
 ######## haiku #################################################################
@@ -251,12 +248,16 @@ elif [ $(uname) == "Haiku" ]; then
     #    export TERM="xterm-color"
     #fi
 
+    # Set up browser command for use in functions 
     browsercommand="WebPositive"
 
 ######## Other unsupported OSes ################################################
 else
     echo "OS not found in .bashrc"
 fi
+
+
+######## Custom Functions ######################################################
 
 # Commands for searching from command line
 function encode() { echo -n $@ | perl -pe's/([^-_.~A-Za-z0-9])/sprintf("%%%02X", ord($1))/seg'; }
