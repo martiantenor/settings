@@ -1,0 +1,59 @@
+﻿# for Emacs: -*- coding: utf-8 -*-
+#
+# User-defined key sequences for WinCompose
+# by Sam Hocevar <sam@hocevar.net>
+#
+
+# Key sequences have the following form:
+#
+# <Multi_key> <key>… : "resulting text"
+#
+# All key names must be enclosed in <angle brackets>.
+# The first key must be <Multi_key>.
+# The remaining keys can be single characters, like <a>, <B>, <7>,
+# <.>, <@>, or from the following list:
+#
+#     Up, Down, Left, Right (the arrow keys), space, exclam, quotedbl,
+#     numbersign, dollar, percent, ampersand, apostrophe, parenleft,
+#     parenright, asterisk, plus, comma, minus, period, slash, colon,
+#     semicolon, less, equal, greater, at, bracketleft, backslash,
+#     bracketright, asciicircum, underscore, grave, braceleft, bar,
+#     braceright, asciitilde.
+#
+# For more definitions, see the files in C:\Program Files\WinCompose\res.
+
+#<Multi_key> <h> <w> : "Hello, world!"
+
+# Konami code
+# <Multi_key> <Multi_key> <Up> <Up> <Down> <Down> <Left> <Right> <Left> <Right> <b> <a> : "ᕙ༼ຈل͜ຈ༽ᕗ" # Mighty Donger
+
+# Russian Ruble sign
+# <Multi_key> <P> <minus> : "₽"    U20bd # RUBLE SIGN
+# <Multi_key> <p> <minus> : "₽"    U20bd # RUBLE SIGN
+
+# Minus sign
+# <Multi_key> <minus> <minus> <equal> : "−"    U2212 # MINUS SIGN
+
+# Various tests
+# <Multi_key> <t> <f> : "(ﾉಥ益ಥ）ﾉ彡┻━┻"  # Table flip like a boss
+# <Multi_key> <l> <f> : "( ͡° ͜ʖ ͡°)"        # Lenny face
+# <Multi_key> <s> <f> : "¯\\_(ツ)_/¯"     # Shrug face
+
+### My additions
+#
+#### Slightly easier eñe
+<Multi_key> <n> <n> : "ñ"
+<Multi_key> <N> <N> : "Ñ"
+
+#### More intuitive card suits (instead of 3-, E>, and 33 for ♠, ♥, and ♣, and no shortcut for ♦)
+##### First, override the "white diamond suit" currently assigned to <Compose> < >
+<Multi_key> <less> <greater> : "♦"
+##### Then give both shorter and longer versions that might be easier to remember
+<Multi_key> <s> <u> <i> <t> <s> : "♠"
+<Multi_key> <s> <u> <i> <t> <h> : "♥"
+<Multi_key> <s> <u> <i> <t> <d> : "♦"
+<Multi_key> <s> <u> <i> <t> <c> : "♣"
+<Multi_key> <Multi_key> <s> <p> <a> <d> <e> <s> : "♠"
+<Multi_key> <Multi_key> <h> <e> <a> <r> <t> <s> : "♥"
+<Multi_key> <Multi_key> <d> <i> <a> <m> <o> <n> <d> <s> : "♦"
+<Multi_key> <Multi_key> <c> <l> <u> <b> <s> : "♣"
