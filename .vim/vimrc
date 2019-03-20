@@ -108,10 +108,17 @@ ab qqrho ᴩ
 iab teh the
 "" Degrees
 ab qqdeg °
+"" International symbols
+iab qqrs ₹
 "" Musical unicode
 iab qqflat ♭
 iab qqsharp ♯
 iab qqnat ♮
+"" Card suits
+iab qqspades ♠
+iab qqhearts ♥
+iab qqdiamonds ♦
+iab qqclubs ♣
 "iab Cnatural C♮
 "iab Dnatural D♮
 "iab Enatural E♮
@@ -217,7 +224,8 @@ elseif g:os == "Linux"
     command Pandoc execute "!pandoc -s --from markdown+blank_before_header \"%\" > ~/pandoc_output.html; firefox ~/pandoc_output.html"
     "map <F5> <ESC>:!pandoc -s "%" > ~/pandoc_output.html; firefox ~/pandoc_output.html<CR>
 elseif g:os == "Windows"
-    command Pandoc execute "!pandoc.exe -s --from markdown+blank_before_header \"%\" > C:\\Users\\dblair\\Desktop\\foo.html"
+    "command Pandoc execute "!pandoc.exe -s --from markdown+blank_before_header \"%\" > C:\\Users\\dblair\\Desktop\\foo.html"
+    command Pandoc execute "!pandoc.exe -s --from markdown+blank_before_header \"%\" > \"C:\\Users\\dblair\\Dropbox (Personal)\\Notes\\foo.html\""
 endif
 map <F5> :Pandoc<CR>
 
