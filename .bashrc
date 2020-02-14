@@ -176,13 +176,30 @@ if [ $(uname) == "Linux" ]; then
         export DISPLAY=localhost:0.0
 
         # Miniconda3
-        export PATH="/home/dblair/local/miniconda3/bin:$PATH"
+# export PATH="/home/dblair/local/miniconda3/bin:$PATH"  # commented out by conda initialize
 
         # Windows "start" command (for opening files, the Explorer, websites, etc.)
         alias start="cmd.exe /c start"
 
         # Set up browser command for use in functions 
         browsercommand="cmd.exe /c start"
+
+        # Conda setup
+        # >>> conda initialize >>>
+        # !! Contents within this block are managed by 'conda init' !!
+        __conda_setup="$('/home/dblair/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+        if [ $? -eq 0 ]; then
+            eval "$__conda_setup"
+        else
+            if [ -f "/home/dblair/miniconda3/etc/profile.d/conda.sh" ]; then
+                . "/home/dblair/miniconda3/etc/profile.d/conda.sh"
+            else
+                export PATH="/home/dblair/miniconda3/bin:$PATH"
+            fi
+        fi
+        unset __conda_setup
+        # <<< conda initialize <<<
+        conda activate dev
     fi
 
 ######## macOS (Mac OS X) ######################################################
@@ -326,3 +343,5 @@ elif [ "$machine" == "Solaria" ]; then
 #    echo "Machine not recognized in .bashrc"
 
 fi
+
+

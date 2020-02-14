@@ -9,8 +9,10 @@ set backspace=2     "makes it so backspace can edit old text
 set backspace=indent,eol,start  "make baskspace more flexible
 set nocompatible    "turn off wonky vi-style behavior
 set nofoldenable    "turn off folding
-set nomodeline      "ignore special 'modelines' in files which would give VIM some behavior cues
 set enc=utf-8       "use UTF-8 encoding
+set modeline        "read special 'modelines' in the first or last lines of a file
+                    "for Markdown, the syntax is as below, without the ":
+                    "<!-- vim: set nowrap: -->
 
 "Keyboard Mappings
 ""Remap the Esc key to be activated with ";;" as well
@@ -74,15 +76,6 @@ set statusline=%f%y%m%r%=[%0.3c,%0.9l/%0.9L][%p%%]\ \ %{strftime('%a\ %b\ %e\ %H
 " %p - percent of file at which the cursor resides
 " %% - a literal percent sign
 
-"File handling
-""Treat txt as markdown.pandoc
-au BufRead,BufNewFile,BufFilePre *.txt set filetype=markdown
-au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
-""Treat Arduino .ino files as C
-au BufNewFile,BufFilePre,BufRead *.ino set filetype=C
-""Treat .p8 files as Lua
-au BufNewFIle,BufFilePre,BufRead *.p8 set filetype=lua
-
 "Tabs and spaces
 set expandtab       "spaces instead of tabs
 set tabstop=4       "tabs are 4 spaces
@@ -92,8 +85,8 @@ set smartindent     "Automatically indents new lines in code (intelligently)
 set smarttab        "Goes to the nearest 4th space when you hit tab, instead of
                     "just adding four spaces
 
-"Tabs and spaces in Makefiles
-autocmd FileType make setlocal noexpandtab  "don't change Tabs if it's a Makefile
+"Load filetype plugins; these are in ~/.vim/ftplugin/, or "$HOME/vimfiles/ftplugin
+filetype plugin on
 
 "Autocorrect Rules
 "" various symbols
@@ -103,7 +96,8 @@ ab qqg ɢ
 ab qqp π
 ab qq$ ¤
 ab qqud ↕
-ab qqrho ᴩ
+ab qqha ✱
+ab qqp ᴘ
 "" Correcting mistyped words
 iab teh the
 "" Degrees
@@ -161,6 +155,19 @@ if !exists("g:os")
     endif
 endif
 
+"Pandoc markdown processing
+if g:os == "Windows"
+    "command Pandoc execute "!pandoc.exe -s --from markdown+blank_before_header \"%\" > C:\\Users\\dblair\\Desktop\\foo.html"
+    command Pandoc execute "!pandoc.exe -s --from markdown+blank_before_header -c \"css\\buttondown.css\" \"%\" > \"C:\\Users\\dblair\\Dropbox (Personal)\\Notes\\foo.html\""
+elseif g:os == "Linux"
+    command Pandoc execute "!pandoc -s --from markdown+blank_before_header \"%\" > ~/pandoc_output.html; firefox ~/pandoc_output.html"
+    "map <F5> <ESC>:!pandoc -s "%" > ~/pandoc_output.html; firefox ~/pandoc_output.html<CR>
+elseif g:os == "Darwin"
+    command Pandoc execute "!pandoc -s --from markdown+blank_before_header \"%\" > ~/pandoc_output.html; open ~/pandoc_output.html"
+    "map <F5> <ESC>:!pandoc -s "%" > ~/pandoc_output.html; open ~/pandoc_output.html<CR><CR>
+endif
+map <F5> :Pandoc<CR>
+
 "Various settings for Windows
 if g:os == "Windows"
     
@@ -216,19 +223,6 @@ if g:os == "Darwin" || g:os == "FreeBSD"
     fixdel
 endif
 
-"Pandoc markdown processing in macOS/Linux
-if g:os == "Darwin"
-    command Pandoc execute "!pandoc -s --from markdown+blank_before_header \"%\" > ~/pandoc_output.html; open ~/pandoc_output.html"
-    "map <F5> <ESC>:!pandoc -s "%" > ~/pandoc_output.html; open ~/pandoc_output.html<CR><CR>
-elseif g:os == "Linux"
-    command Pandoc execute "!pandoc -s --from markdown+blank_before_header \"%\" > ~/pandoc_output.html; firefox ~/pandoc_output.html"
-    "map <F5> <ESC>:!pandoc -s "%" > ~/pandoc_output.html; firefox ~/pandoc_output.html<CR>
-elseif g:os == "Windows"
-    "command Pandoc execute "!pandoc.exe -s --from markdown+blank_before_header \"%\" > C:\\Users\\dblair\\Desktop\\foo.html"
-    command Pandoc execute "!pandoc.exe -s --from markdown+blank_before_header \"%\" > \"C:\\Users\\dblair\\Dropbox (Personal)\\Notes\\foo.html\""
-endif
-map <F5> :Pandoc<CR>
-
 "If in Haiku, change runtimepath
 if g:os == "Haiku"
     set runtimepath+=/boot/home/config/settings/vim
@@ -282,3 +276,12 @@ endif
 "    set breakindentopt=shift:2
 "    set lbr
 "endif
+"
+"File handling - now handled by vimfiles/ftdetect and vimfiles/ftplugin directories
+""Treat txt as markdown.pandoc
+"au BufRead,BufNewFile,BufFilePre *.txt set filetype=markdown
+"au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
+""Treat Arduino .ino files as C
+"au BufNewFile,BufFilePre,BufRead *.ino set filetype=C
+""Treat .p8 files as Lua
+"au BufNewFIle,BufFilePre,BufRead *.p8 set filetype=lua

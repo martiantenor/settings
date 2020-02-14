@@ -1,6 +1,11 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='C:/Users/dblair/dotfiles/.git'
-let g:netrw_dirhist_2='C:/Users/dblair/dotfiles/.git/logs'
-let g:netrw_dirhist_3='C:/Users/dblair/dotfiles/.git/logs/refs'
-let g:netrw_dirhist_4='C:/Users/dblair/dotfiles/.git/logs/refs/heads'
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/mnt/c/Users/dblair/Dropbox (Brown)'
+let g:netrw_dirhist_2='C:/Users/dblair/Dropbox (Personal)/Notes'
+let g:netrw_dirhist_3='C:/Users/dblair'
+let g:netrw_dirhist_4='C:/Users/dblair/Dropbox (Personal)'
+let g:netrw_dirhist_5='C:/Users/dblair/Dropbox (Personal)/Notes'
+let g:netrw_dirhist_6='C:/Users/dblair/Dropbox (Personal)/Notes/Journal'
+let g:netrw_dirhist_7='C:/Users/dblair/Dropbox (Personal)/Notes'
+let g:netrw_dirhist_8='C:/Users/dblair/Dropbox (Personal)/Notes/Brown'
+let g:netrw_dirhist_9='C:/Users/dblair/Desktop'
