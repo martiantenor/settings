@@ -8,7 +8,7 @@ set noerrorbells    "don't make any damn noise!
 set backspace=2     "makes it so backspace can edit old text
 set backspace=indent,eol,start  "make baskspace more flexible
 set nocompatible    "turn off wonky vi-style behavior
-set nofoldenable    "turn off folding
+"set nofoldenable    "turn off folding
 set enc=utf-8       "use UTF-8 encoding
 set modeline        "read special 'modelines' in the first or last lines of a file
                     "for Markdown, the syntax is as below, without the ":
