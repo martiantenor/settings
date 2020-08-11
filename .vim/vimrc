@@ -1,19 +1,3 @@
-"~~~~ VIM Configuration File ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-"~~~~ Universal Settings ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-"Basic settings
-set mouse=a         "allows use of the mouse!
-set noerrorbells    "don't make any damn noise!
-set backspace=2     "makes it so backspace can edit old text
-set backspace=indent,eol,start  "make baskspace more flexible
-set nocompatible    "turn off wonky vi-style behavior
-"set nofoldenable    "turn off folding
-set enc=utf-8       "use UTF-8 encoding
-set modeline        "read special 'modelines' in the first or last lines of a file
-                    "for Markdown, the syntax is as below, without the ":
-                    "<!-- vim: set nowrap: -->
-
 "Keyboard Mappings
 ""Remap the Esc key to be activated with ";;" as well
 map  ;; <Esc>
@@ -30,10 +14,9 @@ map <F6> <ESC>:tabn<CR>
 ino <C-A> <C-O>yiW<End>=<C-R>=<C-R>0<CR>
 
 "Syntax, search, and special character highlighting, language-specific settings
-syntax on                       "turns on syntax highlighting
-let g:tex_fold_enabled=1        "automatic text folding in LaTeX documents
-let g:tex_flavor="latex"        "makes vim recognize all .tex files as LaTeX
-set conceallevel=0              "don't 'conceal' special characters/syntax
+set encoding=utf-8  "turns on UTF-8 encoding by default
+syntax on           "turns on syntax highlighting
+set conceallevel=0  "don't conceal special characters/syntax
 set hlsearch        "highlights search results
 set incsearch       "starts finding things in search while you type, including
                     "regexp. You can then do :%s//[replace-with]/g, since the //
@@ -41,12 +24,15 @@ set incsearch       "starts finding things in search while you type, including
 set smartcase       "makes searches case-insensitive UNLESS the search string
                     "contains a capital letter
 
-"General line wrapping settings
+"General line wrapping and scrolling settings
 "set textwidth=80    "start new lines when you hit 80 characters
 set nowrap          "do not wrap lines that are past that 80-character limit
 "set textwidth=0     "unlimited textwidth
 "set wrapmargin=0    "unlimited wrapping margin
 "set wrap            "wrap lines that are past the edge of the screen
+set scrolloff=0      "makes it so the top and bottom lines of the screen are valid
+                     "cursor positions (instead of there being N lines that
+                     "serve as visual padding)
 
 "Colors and themes; different if done via SSH
 if exists("SSH_CONNECTION")
@@ -88,6 +74,10 @@ set smarttab        "Goes to the nearest 4th space when you hit tab, instead of
 "Load filetype plugins; these are in ~/.vim/ftplugin/, or "$HOME/vimfiles/ftplugin
 filetype plugin on
 
+"Options for different filetypes
+let g:tex_fold_enabled=1        "automatic text folding in LaTeX documents
+let g:tex_flavor="latex"        "makes vim recognize all .tex files as LaTeX
+
 "Autocorrect Rules
 "" various symbols
 ab #$v ✓
@@ -98,6 +88,7 @@ ab qq$ ¤
 ab qqud ↕
 ab qqha ✱
 ab qqp ᴘ
+ab -em- —
 "" Correcting mistyped words
 iab teh the
 "" Degrees

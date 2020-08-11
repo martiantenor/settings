@@ -87,18 +87,22 @@ solaria="Dave@solaria.53964783.members.btmm.icloud.com"
 arrakis="Dave@arrakis.53964783.members.btmm.icloud.com"
 
 ## Brown machines
-orch="dblair@outreach-test.geo.brown.edu"
 casey="rialb1091@casey.brown.edu"
 geops="dblair@geops.geo.brown.edu"
 ted="dblair@ted.hetchem.brown.edu"
+orch="dblair@outreach-test.geo.brown.edu"
 daniel="dblair@daniel.geo.brown.edu"
 numbers="dblair@numbers.geo.brown.edu"
 samuel="dblair@samuel.geo.brown.edu"
 sarah="dblair@sarah.geo.brown.edu"
 gansett="-oHostKeyAlgorithms=+ssh-dss dblair@gansett.eci.brown.edu"
 tycho="dblair@tycho.geo.brown.edu"
-moho="Administrator@gc114-moho.geo.brown.edu"
+taupo="dblair@gc111-taupo.geo.brown.edu"
+tambora="dblair@gc111-tambora.geo.brown.edu"
 gutenberg="Admin@gc114-gutenberg.geo.brown.edu"
+kalahari="Admin@gc114-kalahari.geo.brown.edu"
+moho="Administrator@gc114-moho.geo.brown.edu"
+superior="admin@gc114-superior.geo.brown.edu"
 
 ## Old work machines
 cirrus="dblair@cirrus.haystack.mit.edu"
@@ -343,5 +347,3 @@ elif [ "$machine" == "Solaria" ]; then
 #    echo "Machine not recognized in .bashrc"
 
 fi
-
-
