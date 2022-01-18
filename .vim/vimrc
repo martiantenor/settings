@@ -15,6 +15,7 @@ ino <C-A> <C-O>yiW<End>=<C-R>=<C-R>0<CR>
 
 "Syntax, search, and special character highlighting, language-specific settings
 set encoding=utf-8  "turns on UTF-8 encoding by default
+set ambiwidth=double "helps with displaying emoji and other sometimes-double-wide characters
 syntax on           "turns on syntax highlighting
 set conceallevel=0  "don't conceal special characters/syntax
 set hlsearch        "highlights search results
@@ -148,8 +149,7 @@ endif
 
 "Pandoc markdown processing
 if g:os == "Windows"
-    "command Pandoc execute "!pandoc.exe -s --from markdown+blank_before_header \"%\" > C:\\Users\\dblair\\Desktop\\foo.html"
-    command Pandoc execute "!pandoc.exe -s --from markdown+blank_before_header -c \"css\\buttondown.css\" \"%\" > \"C:\\Users\\dblair\\Dropbox (Personal)\\Notes\\foo.html\""
+    command Pandoc execute "!pandoc.exe -s --from markdown+blank_before_header -c \"css\\buttondown.css\" \"%\" > \"H:\\My\ Drive\\Notes\\foo.html\""
 elseif g:os == "Linux"
     command Pandoc execute "!pandoc -s --from markdown+blank_before_header \"%\" > ~/pandoc_output.html; firefox ~/pandoc_output.html"
     "map <F5> <ESC>:!pandoc -s "%" > ~/pandoc_output.html; firefox ~/pandoc_output.html<CR>
@@ -169,14 +169,14 @@ if g:os == "Windows"
 
 	" Fix backup location
     set backup
-    set backupdir=C:\\Users\\dblair\\vimfiles\\temp
-    set backupskip=C:\\Users\\dblair\\vimfiles\\temp\\*
-    set undodir=C:\\Users\\dblair\\vimfiles\\temp"
+    set backupdir=C:\\Users\\blair\\vimfiles\\temp
+    set backupskip=C:\\Users\\blair\\vimfiles\\temp\\*
+    set undodir=C:\\Users\\blair\\vimfiles\\temp"
     set writebackup
 	
 	" Fix _viminfo location
     "set viminfo=C:\\Users\\dblair\\vimfiles\\_viminfo
-    set viminfo='100,nC:\vimfiles\_viminfo'
+    set viminfo='100,nC:\\Users\blair\vimfiles\\_viminfo'
 
     set diffexpr=MyDiff()
     function MyDiff()

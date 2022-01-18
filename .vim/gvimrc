@@ -25,8 +25,9 @@ if g:os == "Windows"
 
     " Change current working directory to something useful
     "cd $HOME
-    cd C:\Users\dblair\Dropbox\ (Personal)\Notes
- 
+    "cd C:\Users\dblair\Dropbox\ (Personal)\Notes
+    cd H:\My\ Drive\Notes
+
     "" Fix backup location
     "set backup
     "set backupdir="$HOME\vimfiles\temp"
@@ -34,7 +35,7 @@ if g:os == "Windows"
     "set directory="$HOME\vimfiles\temp"
     "set undodir="$HOME\vimfiles\temp"
     "set writebackup
-	"
+
 	"" Fix _viminfo location
     "set viminfo="$HOME\vimfiles\_viminfo"
 endif
