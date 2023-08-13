@@ -173,9 +173,9 @@ if [ $(uname) == "Linux" ]; then
 
     # Aliases
     alias ls="ls -F --color=auto"
-    alias la="ls -Fa --color=auto"
+    alias la="ls -FA --color=auto"
     alias ll="ls -Ftoh --color=auto --time-style=long-iso"
-    alias lla="ls -Ftoha --color=auto --time-style=long-iso"
+    alias lla="ls -FtohA --color=auto --time-style=long-iso"
 
     # Colors
     if [ -e /usr/share/terminfo/x/xterm-256color ]; then
