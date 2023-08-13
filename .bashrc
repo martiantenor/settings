@@ -1,4 +1,6 @@
-#!/bin/bash
+# ~/.bashrc: executed by bash(1) for non-login shells.
+# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
+# for examples
 
 ######## Universal Options #####################################################
 
@@ -7,41 +9,6 @@ case $- in
     *i*) ;;
       *) return;;
 esac
-
-# Prompt:
-txtblk='\[\033[0;30m\]' # Black - Regular
-txtred='\[\033[0;31m\]' # Red
-txtgrn='\[\033[0;32m\]' # Green
-txtylw='\[\033[0;33m\]' # Yellow
-txtblu='\[\033[0;34m\]' # Blue
-txtpur='\[\033[0;35m\]' # Purple
-txtcyn='\[\033[0;36m\]' # Cyan
-txtwht='\[\033[0;37m\]' # White
-bldblk='\[\033[1;30m\]' # Black - Bold
-bldred='\[\033[1;31m\]' # Red
-bldgrn='\[\033[1;32m\]' # Green
-bldylw='\[\033[1;33m\]' # Yellow
-bldblu='\[\033[1;34m\]' # Blue
-bldpur='\[\033[1;35m\]' # Purple
-bldcyn='\[\033[1;36m\]' # Cyan
-bldwht='\[\033[1;37m\]' # White
-unkblk='\[\033[4;30m\]' # Black - Underline
-undred='\[\033[4;31m\]' # Red
-undgrn='\[\033[4;32m\]' # Green
-undylw='\[\033[4;33m\]' # Yellow
-undblu='\[\033[4;34m\]' # Blue
-undpur='\[\033[4;35m\]' # Purple
-undcyn='\[\033[4;36m\]' # Cyan
-undwht='\[\033[4;37m\]' # White
-bakblk='\[\033[7;40m\]'   # Black - Background
-bakred='\[\033[7;41m\]'   # Red
-badgrn='\[\033[7;42m\]'   # Green
-bakylw='\[\033[7;43m\]'   # Yellow
-bakblu='\[\033[7;44m\]'   # Blue
-bakpur='\[\033[7;45m\]'   # Purple
-bakcyn='\[\033[7;46m\]'   # Cyan
-bakwht='\[\033[7;47m\]'   # White
-txtrst='\[\033[0m\]'    # Text Reset
 
 # Make sure we're always using UTF8
 export LC_ALL=en_US.UTF-8
@@ -62,6 +29,10 @@ alias cp='cp -i'
 alias mv='mv -i'
 alias rm='rm -i'
 
+# don't put duplicate lines or lines starting with space in the history.
+# See bash(1) for more options
+HISTCONTROL=ignoreboth
+
 # Save more lines of history than normal
 HISTSIZE=1000
 HISTFILESIZE=2000
@@ -75,42 +46,18 @@ shopt -s checkwinsize
 
 # If set, the pattern "**" used in a pathname expansion context will
 # match all files and zero or more directories and subdirectories.
-#shopt -s globstar
+shopt -s globstar
 
 # Make SVN use vim as the default editor
 export SVN_EDITOR=vim
 
-# Machine shortcuts
+# make less more friendly for non-text input files, see lesspipe(1)
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
-## Home machines
-solaria="Dave@solaria.53964783.members.btmm.icloud.com"
-arrakis="Dave@arrakis.53964783.members.btmm.icloud.com"
-
-## Brown machines
-casey="rialb1091@casey.brown.edu"
-geops="dblair@geops.geo.brown.edu"
-ted="dblair@ted.hetchem.brown.edu"
-orch="dblair@outreach-test.geo.brown.edu"
-daniel="dblair@daniel.geo.brown.edu"
-numbers="dblair@numbers.geo.brown.edu"
-samuel="dblair@samuel.geo.brown.edu"
-sarah="dblair@sarah.geo.brown.edu"
-gansett="-oHostKeyAlgorithms=+ssh-dss dblair@gansett.eci.brown.edu"
-tycho="dblair@tycho.geo.brown.edu"
-taupo="dblair@gc111-taupo.geo.brown.edu"
-tambora="dblair@gc111-tambora.geo.brown.edu"
-gutenberg="Admin@gc114-gutenberg.geo.brown.edu"
-kalahari="Admin@gc114-kalahari.geo.brown.edu"
-moho="Administrator@gc114-moho.geo.brown.edu"
-superior="admin@gc114-superior.geo.brown.edu"
-
-## Old work machines
-cirrus="dblair@cirrus.haystack.mit.edu"
-taylor="dblair@taylor.eaps.purdue.edu"
-chilmark="dblair@chilmark.eaps.purdue.edu"
-dogfish="dblair@dogfish.eaps.purdue.edu"
-vineyard="dblair@vineyard.eaps.purdue.edu"
-maven="dblair@maven.itap.purdue.edu"
+# set variable identifying the chroot you work in (used in the prompt below)
+if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
+    debian_chroot=$(cat /etc/debian_chroot)
+fi
 
 # Silly stuff
 alias untar='echo "I AM UNTAR, LORD OF THE UNIVERSE!"'
@@ -118,6 +65,19 @@ alias y="echo I\'m sorry Dave, I can\'t do that."
 alias :w="echo You\'re not in VIM, dammit!"
 alias :wq="echo You\'re not in VIM, dammit!"
 alias :q="echo You\'re not in VIM, dammit!"
+ 
+ 
+ 
+######## Custom Functions ######################################################
+
+# Commands for searching from command line
+function encode() { echo -n $@ | perl -pe's/([^-_.~A-Za-z0-9])/sprintf("%%%02X", ord($1))/seg'; }
+function google() { $browsercommand http://www.google.com/search?hl=en#q="`encode $@`" ;}
+function yahoo() { $browsercommand http://search.yahoo.com/search?p="`encode $@`" ;}
+function bing() { $browsercommand http://www.bing.com/search?q="`encode $@`" ;}
+function amazon() { $browsercommand http://www.amazon.com/s/ref=nb_ss?field-keywords="`encode $@`" ;}
+function wiki() { $browsercommand http://en.wikipedia.org/w/index.php?search="`encode $@`" ;}
+
 
 ######## OS-Specific Settings ##################################################
 
@@ -127,12 +87,45 @@ if [ $(uname) == "Linux" ]; then
     # Get machine name for machine-specific stuff later
     machine=$(hostname)
 
-    # Prompt
-    #set_title='\[\033]0;\w - Terminal\007\]'
-    #export PS1=$set_title"$bldblk[\A]$bldgrn\u@\h:$bldblu\W$txtrst$ "
-    #export PS1="$bldblk[\A]$bldgrn\u@\h:$bldblu\W$txtrst$ "
-    export PS1="$bldwht[\A]$bldgrn\u@\h:$bldblu\W$txtrst$ "
-    #                           [time]    user@host:  working dir $
+    # set a fancy prompt (non-color, unless we know we "want" color)
+    case "$TERM" in
+        xterm-color|*-256color) color_prompt=yes;;
+    esac
+
+    # uncomment for a colored prompt, if the terminal has the capability; turned
+    # off by default to not distract the user: the focus in a terminal window
+    # should be on the output of commands, not on the prompt
+    #force_color_prompt=yes
+    
+    if [ -n "$force_color_prompt" ]; then
+        if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
+    	# We have color support; assume it's compliant with Ecma-48
+    	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+    	# a case would tend to support setf rather than setaf.)
+    	color_prompt=yes
+        else
+    	color_prompt=
+        fi
+    fi
+
+    if [ "$color_prompt" = yes ]; then
+        #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+        #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;90m\]\u@\h\[\033[00m\]:\[\033[01;37m\]\w\[\033[00;31m\] 🟊\[\033[00m\] '
+        PS1='${debian_chroot:+($debian_chroot)}\[\033[01;90m\]\u@\h:\[\033[01;37m\]\w\[\033[00;31m\] 🟊\[\033[00m\] '
+    else
+        #PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+        PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w 🟊'
+    fi
+    unset color_prompt force_color_prompt
+
+    # If this is an xterm set the title to user@host:dir
+    case "$TERM" in
+    xterm*|rxvt*)
+        PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+        ;;
+    *)
+        ;;
+    esac
 
     # Set up lines to wrap, by default, but also define functions to switch
     # back and forth
@@ -153,13 +146,36 @@ if [ $(uname) == "Linux" ]; then
     #}
     #trap _exit EXIT
 
+    # enable programmable completion features (you don't need to enable
+    # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
+    # sources /etc/bash.bashrc).
+    if ! shopt -oq posix; then
+      if [ -f /usr/share/bash-completion/bash_completion ]; then
+        . /usr/share/bash-completion/bash_completion
+      elif [ -f /etc/bash_completion ]; then
+        . /etc/bash_completion
+      fi
+    fi
     # Paths (universal)
     export PATH="/home/dblair/local/bin:$PATH"
 
+    # enable color support of ls and also add handy aliases
+    if [ -x /usr/bin/dircolors ]; then
+        test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+        alias ls='ls --color=auto'
+        #alias dir='dir --color=auto'
+        #alias vdir='vdir --color=auto'
+    
+        alias grep='grep --color=auto'
+        alias fgrep='fgrep --color=auto'
+        alias egrep='egrep --color=auto'
+    fi
+
     # Aliases
-    alias ls="ls -F --color"
-    alias la="ls -Fa --color"
-    alias ll="ls -Ftoh --color --time-style=long-iso"
+    alias ls="ls -F --color=auto"
+    alias la="ls -Fa --color=auto"
+    alias ll="ls -Ftoh --color=auto --time-style=long-iso"
+    alias lla="ls -Ftoha --color=auto --time-style=long-iso"
 
     # Colors
     if [ -e /usr/share/terminfo/x/xterm-256color ]; then
@@ -172,6 +188,21 @@ if [ $(uname) == "Linux" ]; then
 
     # Set up browser command for use in functions 
     browsercommand="firefox"
+
+######## haiku #################################################################
+elif [ $(uname) == "Haiku" ]; then
+
+    ## Colors
+    export TERM="xterm-256color"
+    #if [ -e /usr/share/terminfo/x/xterm-256color ]; then
+    #    export TERM="xterm-256color"
+    #else
+    #    export TERM="xterm-color"
+    #fi
+
+    # Set up browser command for use in functions 
+    browsercommand="WebPositive"
+
 
 ######## Windows Subsystem for Linux / Bash on Ubuntu on Windows ###############
     if grep -q Microsoft /proc/version; then
@@ -258,92 +289,16 @@ elif [ $(uname) == "FreeBSD" ]; then
     # Set up browser command for use in functions 
     browsercommand="midori"
 
-######## haiku #################################################################
-elif [ $(uname) == "Haiku" ]; then
-
-    ## Colors
-    export TERM="xterm-256color"
-    #if [ -e /usr/share/terminfo/x/xterm-256color ]; then
-    #    export TERM="xterm-256color"
-    #else
-    #    export TERM="xterm-color"
-    #fi
-
-    # Set up browser command for use in functions 
-    browsercommand="WebPositive"
-
 ######## Other unsupported OSes ################################################
 else
     echo "OS not found in .bashrc"
 fi
 
 
-######## Custom Functions ######################################################
-
-# Commands for searching from command line
-function encode() { echo -n $@ | perl -pe's/([^-_.~A-Za-z0-9])/sprintf("%%%02X", ord($1))/seg'; }
-function google() { $browsercommand http://www.google.com/search?hl=en#q="`encode $@`" ;}
-function yahoo() { $browsercommand http://search.yahoo.com/search?p="`encode $@`" ;}
-function bing() { $browsercommand http://www.bing.com/search?q="`encode $@`" ;}
-function amazon() { $browsercommand http://www.amazon.com/s/ref=nb_ss?field-keywords="`encode $@`" ;}
-function wiki() { $browsercommand http://en.wikipedia.org/w/index.php?search="`encode $@`" ;}
-
 
 ######## Machine-Specific Settings #############################################
 
-######## Arrakis ###############################################################
-if [ "$machine" == "Arrakis" ]; then
-
-    # Terminal
-    ## Paths
-    export PATH=""
-    export PATH="$PATH:/usr/local/bin"
-    export PATH="$PATH:/usr/local/share/python"
-    export PATH="$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
-    export PATH="$PATH:/Users/Dave/Code/bin:/Users/Dave/Code/lib:/Users/Dave/Code/bin-3rdparty"
-    export PATH="$PATH:/Users/Dave/Dropbox/Code"
-    export PATH="$PATH:/usr/local/texlive/2012/bin/x86_64-darwin/"
-    export PATH="$PATH:/Library/Frameworks/GDAL.framework/Versions/1.9/Programs"
-    export PATH="$PATH:."
-    export PYTHONPATH="$PYTHONPATH:/Users/Dave/Code/lib"
-
-    # Aliases
-    alias postgresup='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
-    alias postgresdown='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
-
-    # ISIS
-    export ISISROOT="/Applications/isis3/isis"
-    export ISIS3DATA="/Applications/isis3/data"
-    export ISIS3TESTDATA="/Applications/isis3/testData"
-    export PATH="$PATH:/Applications/isis3/isis/bin"
-
-    # Compiler flags
-    export ARCHFLAGS="-arch x86_64"
-
-    # Start Python with a script full of automatic imports, fixes, whatever
-    alias py='python -i $code/bin/python_init.py'
-
-
-######## Solaria ###############################################################
-elif [ "$machine" == "Solaria" ]; then
-
-    # Terminal
-    ## Paths
-    export PATH="$PATH:/bin"
-    export PATH="$PATH:/usr/bin"
-    export PATH="$PATH:/usr/local/bin"
-    export PATH="$PATH:/Users/Dave/Code"
-    export PATH="$PATH:~/Code/bin"
-    export PATH="$PATH:~/Code/local_solaria/bin"
-
-    # Compiler flags
-    export ARCHFLAGS="-arch x86_64"
-
-    # Start Python with a script full of automatic imports, fixes, whatever
-    alias py='python -i $code/bin/python_init.py'
-
-######## Other Machines ########################################################
-#else
-#    echo "Machine not recognized in .bashrc"
-
+######## rorybory ##############################################################
+if [ "$machine" == "rorybory" ]; then
+    echo /dev/null > /dev/null
 fi
