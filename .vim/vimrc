@@ -41,7 +41,7 @@ if exists("SSH_CONNECTION")
     colorscheme 3dglasses
 else
     set t_Co=256
-    colorscheme ir_black
+    colorscheme slate
 endif
 
 "Status bar
@@ -75,6 +75,17 @@ set smarttab        "Goes to the nearest 4th space when you hit tab, instead of
 "Load filetype plugins; these are in ~/.vim/ftplugin/, or "$HOME/vimfiles/ftplugin
 filetype plugin on
 
+"Filetype-specific prefs
+autocmd FileType edgeql setlocal tabstop=2 shiftwidth=0
+
+"File handling - now handled by vimfiles/ftdetect and vimfiles/ftplugin directories
+""Treat txt as markdown
+au BufRead,BufNewFile,BufFilePre *.txt set filetype=markdown
+"au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
+""Treat Arduino .ino files as C
+au BufNewFile,BufFilePre,BufRead *.ino set filetype=C
+""Treat .p8 files as Lua
+"au BufNewFIle,BufFilePre,BufRead *.p8 set filetype=lua
 "Options for different filetypes
 let g:tex_fold_enabled=1        "automatic text folding in LaTeX documents
 let g:tex_flavor="latex"        "makes vim recognize all .tex files as LaTeX
@@ -147,6 +158,12 @@ if !exists("g:os")
     endif
 endif
 
+"If in Haiku, change runtimepath
+if g:os == "Haiku"
+    set runtimepath+=/boot/home/config/settings/vim
+endif
+
+
 "Pandoc markdown processing
 if g:os == "Windows"
     command Pandoc execute "!pandoc.exe -s --from markdown+blank_before_header -c \"css\\buttondown.css\" \"%\" > \"H:\\My\ Drive\\Notes\\foo.html\""
@@ -209,23 +226,17 @@ if g:os == "Windows"
     endfunction
 endif
 
+"Show only the following characters in ":set list" mode
+""(Seems broken in Windows)
+"if g:os != "Windows"
+"    set nolist                      "don't show the following unless ":set list" explicitly:
+"    set listchars=eol:¬,tab:>-,trail:~,extends:>,precedes:<,nbsp:␣ 
+"endif
+
 "Fix delete key in macOS and BSD
 if g:os == "Darwin" || g:os == "FreeBSD"
     fixdel
 endif
-
-"If in Haiku, change runtimepath
-if g:os == "Haiku"
-    set runtimepath+=/boot/home/config/settings/vim
-endif
-
-"Show only the following characters in ":set list" mode
-"(Seems broken in Windows)
-if g:os != "Windows"
-    set nolist                      "don't show the following unless ":set list" explicitly:
-    set listchars=eol:¬,tab:>-,trail:~,extends:>,precedes:<,nbsp:␣ 
-endif
-
 
 "~~~~ Deprecated & Reference ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -268,11 +279,3 @@ endif
 "    set lbr
 "endif
 "
-"File handling - now handled by vimfiles/ftdetect and vimfiles/ftplugin directories
-""Treat txt as markdown.pandoc
-"au BufRead,BufNewFile,BufFilePre *.txt set filetype=markdown
-"au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
-""Treat Arduino .ino files as C
-"au BufNewFile,BufFilePre,BufRead *.ino set filetype=C
-""Treat .p8 files as Lua
-"au BufNewFIle,BufFilePre,BufRead *.p8 set filetype=lua

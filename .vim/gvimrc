@@ -9,7 +9,7 @@ set lines=60
 "set background=light
 "colorscheme solarized
 " Newsprint
-colorscheme newsprint
+colorscheme slate
 
 "OS detection
 if !exists("g:os")
