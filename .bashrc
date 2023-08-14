@@ -73,7 +73,6 @@ alias :q="echo You\'re not in VIM, dammit!"
 # Commands for searching from command line
 function encode() { echo -n $@ | perl -pe's/([^-_.~A-Za-z0-9])/sprintf("%%%02X", ord($1))/seg'; }
 function google() { $browsercommand http://www.google.com/search?hl=en#q="`encode $@`" ;}
-function yahoo() { $browsercommand http://search.yahoo.com/search?p="`encode $@`" ;}
 function bing() { $browsercommand http://www.bing.com/search?q="`encode $@`" ;}
 function amazon() { $browsercommand http://www.amazon.com/s/ref=nb_ss?field-keywords="`encode $@`" ;}
 function wiki() { $browsercommand http://en.wikipedia.org/w/index.php?search="`encode $@`" ;}
