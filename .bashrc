@@ -94,7 +94,7 @@ if [ $(uname) == "Linux" ]; then
     # off by default to not distract the user: the focus in a terminal window
     # should be on the output of commands, not on the prompt
     #force_color_prompt=yes
-    
+
     if [ -n "$force_color_prompt" ]; then
         if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
     	# We have color support; assume it's compliant with Ecma-48
@@ -178,6 +178,23 @@ if [ $(uname) == "Linux" ]; then
     # Set up browser command for use in functions 
     browsercommand="firefox"
 
+######## OS-specific settings: Windows Subsystem for Linux 2
+    # (add-on/changes to base Linux config)
+    if [ $(grep -c microsoft /proc/version) -eq 1 ]; then
+
+	# Set a more Windowsy/work-friendly prompt, lol
+        PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+
+        # X11 forwarding
+        export DISPLAY=localhost:0.0
+
+        # Windows "start" command (for opening files, the Explorer, websites, etc.)
+        alias start="cmd.exe /c start"
+
+        # Set up browser command for use in functions 
+        browsercommand="cmd.exe /c start"
+    fi
+
 ######## OS-specific settings: Haiku
 elif [ $(uname) == "Haiku" ]; then
 
@@ -234,17 +251,6 @@ elif [ $(uname) == "Darwin" ]; then
     browsercommand="open -a Safari"
 
 
-######## OS-specific settings: Windows Subsystem for Linux
-elif grep -q Microsoft /proc/version; then
-
-    # X11 forwarding
-    export DISPLAY=localhost:0.0
-
-    # Windows "start" command (for opening files, the Explorer, websites, etc.)
-    alias start="cmd.exe /c start"
-
-    # Set up browser command for use in functions 
-    browsercommand="cmd.exe /c start"
 
 ######## OS-specific settings: OS not detected
 else
