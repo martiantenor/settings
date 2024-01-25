@@ -1,2 +1,8 @@
 :.rwhist
+
+# machine-specific settings files
+:.bashrc_local
+
+# VIM temporary & swap files
 :.vim/temp/
+:*.swp

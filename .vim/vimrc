@@ -161,6 +161,12 @@ endif
 
 ""If on a Mac or Linux, load Vundle plugins
 if g:os == "Darwin" || g:os == "Linux"
+
+    "get swap files out of the way
+    set swapfile
+    set dir=$HOME/.vim/temp/
+
+    "enable mouse
     set mouse=a
 
     "vim-plug plugin management
