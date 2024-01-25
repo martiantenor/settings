@@ -4,5 +4,5 @@
 :.bashrc_local
 
 # VIM temporary & swap files
-:.vim/temp/
-:*.swp
+:/.vim/temp/
+:[._]*.sw[a-p]
