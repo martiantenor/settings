@@ -94,7 +94,6 @@ let g:tex_flavor="latex"        "makes vim recognize all .tex files as LaTeX
 
 "Autocorrect Rules
 "" various symbols
-ab #$v ✓
 ab qqv ✓
 ab qqg ɢ
 ab qqp π
@@ -160,8 +159,35 @@ if !exists("g:os")
     endif
 endif
 
-if g:os == "Linux"
+""If on a Mac or Linux, load Vundle plugins
+if g:os == "Darwin" || g:os == "Linux"
     set mouse=a
+
+    "vim-plug plugin management
+    call plug#begin()
+    Plug 'raghur/vim-ghost', {'do': ':GhostInstall'}
+    call plug#end()
+
+"    "Vundle settings
+"    set nocompatible                "required, done earlier too
+"    filetype off                    "required
+"    set rtp+=~/.vim/bundle/Vundle.vim "runtime path
+"    call vundle#begin()             "required, can also have path specified
+"    Plugin 'VundleVim/Vundle.vim'   "required
+"    Plugin 'vim-pandoc/vim-pandoc-syntax'
+"    Plugin 'godlygeek/tabular'
+"    "Plugin 'plasticboy/vim-markdown'
+"    "Bundle 'gabrielelana/vim-markdown'
+"    Plugin 'junegunn/goyo.vim'
+"    Plugin 'reedes/vim-pencil'
+"    Plugin 'jdonaldson/vaxe'        "for Haxe, and HaxeFlixel
+"    call vundle#end()               "required after all plugins loaded
+"    filetype plugin indent on       "required
+"
+"    " Making line wrapping prettier
+"    set breakindent
+"    set breakindentopt=shift:2
+"    set lbr
 endif
 
 "If in Haiku, change runtimepath

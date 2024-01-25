@@ -156,7 +156,7 @@ if [ $(uname) == "Linux" ]; then
       fi
     fi
     # Paths (universal)
-    export PATH="/home/dblair/local/bin:$PATH"
+    export PATH="/home/dave/local/bin:$PATH:/usr/local/sbin:/usr/sbin"
 
     # enable color support of ls and also add handy aliases
     if [ -x /usr/bin/dircolors ]; then
