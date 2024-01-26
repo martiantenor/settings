@@ -1,9 +1,9 @@
 # machine-specific settings files
-:.bashrc_local
+.bashrc_local
 
 # VIM temporary & swap files
-:.vim/temp/
-:[._]*.sw[a-p]
+.vim/temp/
+[._]*.sw[a-p]
 
 # VIM network r/w history
-:.netrwhist
+.netrwhist
