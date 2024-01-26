@@ -1,0 +1,15 @@
+#!/bin/sh
+
+if [ "$DISPLAY" = "" ]
+then
+	cacaview $@
+	#  Render images as ASCII art on the console.
+	#  aview is another image-as-text rendering
+	#  program.
+else
+	ristretto $@ > /dev/null &
+	#  Or whatever image viewer you like.
+fi
+
+#  End
+

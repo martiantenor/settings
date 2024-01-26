@@ -1,4 +1,3 @@
-:.rwhist
 
 # machine-specific settings files
 :.bashrc_local
@@ -6,3 +5,6 @@
 # VIM temporary & swap files
 :/.vim/temp/
 :[._]*.sw[a-p]
+
+# VIM network r/w history
+:.netrwhist
