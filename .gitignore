@@ -7,3 +7,21 @@
 
 # VIM network r/w history
 .netrwhist
+
+# LibreOffice locks
+.~lock.*#
+
+# Linux backup files (e.g. Gedit)
+*~
+
+# Windows thumbnail cache files
+Thumbs.db
+Thumbs.db:encryptable
+ethumbs.db
+ethumbs_vista.db
+
+# Windows folder config file
+[Dd]estkop.ini
+
+# Windows recycle bin on file shares
+$RECYCLE.BIN/
