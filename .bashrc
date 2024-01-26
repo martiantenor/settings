@@ -67,17 +67,6 @@ alias :w="echo You\'re not in VIM, dammit!"
 alias :wq="echo You\'re not in VIM, dammit!"
 alias :q="echo You\'re not in VIM, dammit!"
  
- 
-######## Custom functions
-
-# commands for searching from command line
-function google() { $browsercommand http://www.google.com/search?hl=en#q="`encode $@`" ;}
-function ddg() { $browsercommand https://duckduckgo.com/?t=h_&q="`encode $@`" ;}
-function wiki() { $browsercommand http://en.wikipedia.org/w/index.php?search="`encode $@`" ;}
-
-# not sure what this was for...
-#function encode() { echo -n $@ | perl -pe's/([^-_.~A-Za-z0-9])/sprintf("%%%02X", ord($1))/seg'; }
-
 
 ######## OS-specific settings: Linux
 if [ $(uname) == "Linux" ]; then
@@ -175,8 +164,8 @@ if [ $(uname) == "Linux" ]; then
         export TERM="xterm-color"
     fi
 
-    # Set up browser command for use in functions 
-    browsercommand="firefox"
+    # Set up 'file open' command for use in functions 
+    opencommand="xdg-open"
 
 ######## OS-specific settings: Windows Subsystem for Linux 2
     # (add-on/changes to base Linux config)
@@ -192,7 +181,7 @@ if [ $(uname) == "Linux" ]; then
         alias start="cmd.exe /c start"
 
         # Set up browser command for use in functions 
-        browsercommand="cmd.exe /c start"
+        opencommand="cmd.exe /c start"
     fi
 
 ######## OS-specific settings: Haiku
@@ -202,7 +191,7 @@ elif [ $(uname) == "Haiku" ]; then
     export TERM="xterm-256color"
 
     # Set up browser command for use in functions 
-    browsercommand="WebPositive"
+    opencommand="open"
 
 ######## OS-specific settings: FreeBSD
 elif [ $(uname) == "FreeBSD" ]; then
@@ -221,7 +210,7 @@ elif [ $(uname) == "FreeBSD" ]; then
     export LSCOLORS
 
     # Set up browser command for use in functions 
-    browsercommand="midori"
+    opencommand="open"
 
 ######## OS-specific settings: macOS / Mac OS X
 elif [ $(uname) == "Darwin" ]; then
@@ -248,7 +237,7 @@ elif [ $(uname) == "Darwin" ]; then
     alias ll='ls -pohGa'
 
     # Set up browser command for use in functions 
-    browsercommand="open -a Safari"
+    browsercommand="open"
 
 
 
@@ -263,3 +252,37 @@ fi
 if [ -f $HOME/.bashrc_local ]; then
     . $HOME/.bashrc_local
 fi
+ 
+######## Custom functions
+
+# commands for searching from command line
+google() {
+    search=""
+    echo "Googling: $@"
+    for term in $@; do
+        search="$search%20$term"
+    done
+    $opencommand "http://www.google.com/search?q=$search"
+    unset search
+}
+ddg() {
+    search=""
+    echo "Duck-Duck-Going: $@"
+    for term in $@; do
+        search="$search%20$term"
+    done
+    $opencommand "https://duckduckgo.com/?t=h_&q=$search"
+    unset search
+}
+wiki() {
+    search=""
+    echo "Searching Wikipedia: $@"
+    for term in $@; do
+        search="$search%20$term"
+    done
+    $opencommand "http://en.wikipedia.org/w/index.php?search=$search"
+    unset search
+}
+
+# not sure what this was for...
+#function encode() { echo -n $@ | perl -pe's/([^-_.~A-Za-z0-9])/sprintf("%%%02X", ord($1))/seg'; }
