@@ -148,7 +148,7 @@ if [ $(uname) == "Linux" ]; then
         test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
         alias ls="ls -F --color=auto"
         alias la="ls -aF --color=auto"
-        alias ll="ls -lahF --color=auto --time-style=long-iso"
+        alias ll="ls -lhF --color=auto --time-style=long-iso"
         alias lla="ls -lahF --color=auto --time-style=long-iso"
         alias grep='grep --color=auto'
         alias fgrep='fgrep --color=auto'
