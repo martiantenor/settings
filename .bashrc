@@ -68,8 +68,9 @@ alias :wq="echo You\'re not in VIM, dammit!"
 alias :q="echo You\'re not in VIM, dammit!"
  
 
-######## OS-specific settings: Linux
-if [ $(uname) == "Linux" ]; then
+######## OS-specific settings
+case $(uname) in
+Linux)
 
     # Get machine name for machine-specific stuff later
     machine=$(hostname)
@@ -95,9 +96,17 @@ if [ $(uname) == "Linux" ]; then
         fi
     fi
 
+    # get git branch status for prompt, using official script from git
+    source /usr/lib/git-core/git-sh-prompt
+
+    # prompt
     if [ "$color_prompt" = yes ]; then
+        # basic, with color
         #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-        PS1='${debian_chroot:+($debian_chroot)}\[\033[01;90m\]\u@\h:\[\033[01;37m\]\w\[\033[00;31m\] 🟊\[\033[00m\] '
+        # grey with red star
+        #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;90m\]\u@\h:\[\033[01;37m\]\w\[\033[00;31m\] 🟊\[\033[00m\] '
+        # grey with red star, plus git branch status
+        PS1='${debian_chroot:+($debian_chroot)}\[\033[01;90m\]\u@\h:\[\033[01;37m\]\w\[\033[01;93m\]$(__git_ps1 " (🌿%s)")\[\033[00;31m\] 🌀\[\033[00m\] '
     else
         #PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
         PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w 🟊'
@@ -166,12 +175,15 @@ if [ $(uname) == "Linux" ]; then
     # Set up 'file open' command for use in functions 
     opencommand="xdg-open"
 
-######## OS-specific settings: Windows Subsystem for Linux 2
+    ######## Specific settings for Windows Subsystem for Linux 2
     # (add-on/changes to base Linux config)
     if [ $(grep -c microsoft /proc/version) -eq 1 ]; then
 
 	# Set a more Windowsy/work-friendly prompt, lol
-        PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+        # Without git branch status
+        #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] 🌀 '
+        # With git branch status
+        PS1='${debian_chroot:+($debian_chroot)}\[\033[01;90m\]\u@\h:\[\033[01;37m\]\w\[\033[01;93m\]$(__git_ps1 " (🌿%s)")\[\033[00;31m\] 🌀\[\033[00m\] '
 
         # X11 forwarding
         export DISPLAY=localhost:0.0
@@ -183,8 +195,8 @@ if [ $(uname) == "Linux" ]; then
         opencommand="cmd.exe /c start"
     fi
 
-######## OS-specific settings: Haiku
-elif [ $(uname) == "Haiku" ]; then
+;;
+Haiku)
 
     ## Colors
     export TERM="xterm-256color"
@@ -192,8 +204,8 @@ elif [ $(uname) == "Haiku" ]; then
     # Set up browser command for use in functions 
     opencommand="open"
 
-######## OS-specific settings: FreeBSD
-elif [ $(uname) == "FreeBSD" ]; then
+;;
+FreeBSD)
 
     # Prompt
     export PS1="$txtcyn[\A]$bldgrn\u@$machine:$bldblu\W$txtrst$ "
@@ -211,8 +223,8 @@ elif [ $(uname) == "FreeBSD" ]; then
     # Set up browser command for use in functions 
     opencommand="open"
 
-######## OS-specific settings: macOS / Mac OS X
-elif [ $(uname) == "Darwin" ]; then
+;;
+Darwin)
 
     # Prompt; #TODO revise
     # Hostname variant
@@ -238,12 +250,10 @@ elif [ $(uname) == "Darwin" ]; then
     # Set up browser command for use in functions 
     browsercommand="open"
 
-
-
-######## OS-specific settings: OS not detected
-else
-    echo "OS not detected by .bashrc"
-fi
+;;
+*)
+    echo "OS not detected by .bashrc";;
+esac
 
 ######## Machine-specific additions
 #source another external local file for local additions to .bashrc;
