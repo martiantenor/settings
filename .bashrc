@@ -157,7 +157,7 @@ Linux)
         test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
         alias ls="ls -F --color=auto"
         alias la="ls -aF --color=auto"
-        alias ll="ls -lhF --color=auto --time-style=long-iso"
+        alias ll="ls -lhaF --color=auto --time-style=long-iso"
         alias grep='grep --color=auto'
         alias fgrep='fgrep --color=auto'
         alias egrep='egrep --color=auto'
@@ -175,7 +175,7 @@ Linux)
     # Set up 'file open' command for use in functions 
     opencommand="xdg-open"
 
-    ######## Specific settings for Windows Subsystem for Linux 2
+    ######## Specific settings for Windows Subsystem for Linux (WSL2)
     # (add-on/changes to base Linux config)
     if [ $(grep -c microsoft /proc/version) -eq 1 ]; then
 
