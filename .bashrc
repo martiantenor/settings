@@ -60,6 +60,24 @@ if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
 
+# Colors for prompts
+export C_RST="\[\e[00m\]" #reset all parameters
+export C_39="\[\e[39m\]" #default foreground color
+# 8/16-color codes
+export B_32="\[\e[01;32m\]" #bold green
+export B_34="\[\e[01;34m\]" #bold blue
+export C_31="\[\e[00;31m\]" #red
+export B_97="\[\e[01;97m\]" #bold white
+# 256-color codes
+export C_124="\[\e[00;38;5;124m\]" #darkish red, #AF0000
+export C_242="\[\e[00;38;5;242m\]" #dark gray, #6C6C6C
+export C_244="\[\e[00;38;5;244m\]" #mid-dark gray, #808080
+export C_246="\[\e[00;38;5;246m\]" #mid-lt gray, #949494
+export C_250="\[\e[00;38;5;250m\]" #light gray, #BCBCBC
+export B_250="\[\e[01;38;5;250m\]" #bold light gray
+# For unsetting later:
+export colorvars="C_RST C_39 B_32 B_34 C_31 B_97 C_124 C_242 C_244 C_246 C_250 B_250"
+
 # silly stuff
 alias untar='echo "I AM UNTAR, LORD OF THE UNIVERSE!"'
 alias y="echo I\'m sorry Dave, I can\'t do that."
@@ -103,13 +121,18 @@ Linux)
     if [ "$color_prompt" = yes ]; then
         # basic, with color
         #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-        # grey with red star
-        #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;90m\]\u@\h:\[\033[01;37m\]\w\[\033[00;31m\] 🟊\[\033[00m\] '
-        # grey with red star, plus git branch status
-        PS1='${debian_chroot:+($debian_chroot)}\[\033[01;90m\]\u@\h:\[\033[01;37m\]\w\[\033[01;93m\]$(__git_ps1 " (🌿%s)")\[\033[00;31m\] 🌀\[\033[00m\] '
+        #PS1="\${debian_chroot:+($debian_chroot)}${B_32}\u@\h${C_RST}:${B_34}\w${C_RST}\$ "
+        # grayscale with red star
+        #PS1="\${debian_chroot:+($debian_chroot)}${C_242}\u@\h${C_RST}:${C_246}\w ${C_31}🟊${C_RST} "
+        # grayscale with red star, plus git branch status using U+2F40 KANGXI RADICAL BRANCH
+        #PS1="\${debian_chroot:+($debian_chroot)}${C_242}\u@\h${C_RST}:${C_246}\w${B_97}\$(__git_ps1 ' (⽀%s)')${C_31} 🟊${C_RST} "
+        # grayscale with red star, plus git branch status using U+2387 ALTERNATIVE KEY SYMBOL
+        #PS1="\${debian_chroot:+($debian_chroot)}${C_242}\u@\h${C_RST}:${C_246}\w${B_97}\$(__git_ps1 ' (⎇ %s)')${C_31} 🟊${C_RST} "
+        # grayscale with red star, plus git branch status using "herb" emoji
+        PS1="\${debian_chroot:+($debian_chroot)}${C_242}\u@\h${C_RST}:${C_246}\w${B_97}\$(__git_ps1 ' (🌿%s)')${C_31} 🟊${C_RST} "
     else
         #PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
-        PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w 🟊'
+        PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$'
     fi
     unset color_prompt force_color_prompt
 
@@ -179,11 +202,11 @@ Linux)
     # (add-on/changes to base Linux config)
     if [ $(grep -c microsoft /proc/version) -eq 1 ]; then
 
-	# Set a more Windowsy/work-friendly prompt, lol
-        # Without git branch status
-        #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] 🌀 '
-        # With git branch status
-        PS1='${debian_chroot:+($debian_chroot)}\[\033[01;90m\]\u@\h:\[\033[01;37m\]\w\[\033[01;93m\]$(__git_ps1 " (🌿%s)")\[\033[00;31m\] 🌀\[\033[00m\] '
+        # Set a more Windowsy prompt
+        # grayscale with Debian swirl (via 'cyclone' emoji)
+        PS1="${C_242}\u@\h${C_RST}:${C_246}\w${B_97} 🌀${C_RST} "
+        # grayscale with Debian swirl (via 'cyclone' emoji), plus git branch status using "herb" emoji
+        PS1="${C_242}\u@\h${C_RST}:${C_246}\w${B_97}\$(__git_ps1 ' (🌿%s)') 🌀${C_RST} "
 
         # X11 forwarding
         export DISPLAY=localhost:0.0
@@ -295,3 +318,9 @@ wiki() {
 
 # not sure what this was for...
 #function encode() { echo -n $@ | perl -pe's/([^-_.~A-Za-z0-9])/sprintf("%%%02X", ord($1))/seg'; }
+
+######## Cleanup
+
+# Clean up variables for prompt colors
+for var in $colorvars; do unset $var; done
+unset colorvars
