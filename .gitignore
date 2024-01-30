@@ -25,3 +25,7 @@ ethumbs_vista.db
 
 # Windows recycle bin on file shares
 $RECYCLE.BIN/
+
+# ZSH (macOS default) temp files
+.zsh_history
+.zsh_sessions
