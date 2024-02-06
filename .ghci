@@ -1,0 +1,37 @@
+-- :set prompt "\ESC[01;36m\STX\x03BB\ESC[0;0m\STX> "
+
+-- Recommended defaults from [https://wiki.haskell.org/GHC/GHCi#Fancy_Prompts]()
+-- -- Turn off output for resource usage and types.  This is to reduce verbosity when reloading this file.
+:unset +s +t
+-- Turn on multi-line input and remove the distracting verbosity.
+:set +m -v0
+-- Turn off all compiler warnings and turn on OverloadedStrings for interactive input.
+:seti -w -XOverloadedStrings
+-- Set the preferred editor for use with the :e command.  I would recommend using an editor in a separate terminal, and using :r to reload, but :e can still be useful for quick edits from within GHCi.
+:set editor vim
+
+
+-- Pretty-prompt without dependencies, àla [https://wiki.haskell.org/GHC/GHCi#Fancy_Prompts]()
+-- color reference
+-- darkblue = "\ESC[38;5;27m\STX"
+-- darkteal = "\ESC[38;5;29m\STX"
+-- brightcyan = "\ESC[38;5;50m\STX"
+:{
+dotGHCI_myPrompt promptString ms _ = do
+  -- Get the current directory, replacing $HOME with a '~'.
+  pwd <- getpwd
+  -- Determine which is the main module.
+  let main_module = head' [ m' | (m:m') <- ms, m == '*' ]
+  -- Put together the final prompt string.
+  -- ANSI escape sequences allow for displaying colours in compatible terminals.  See [http://www.lihaoyi.com/post/BuildyourownCommandLinewithANSIescapecodes.html this guide] for help interpreting them.
+  return $ concat [ "\ESC[38;5;27m\STX", pwd, main_module, "\ESC[38;5;51m\STX", promptString, " \ESC[0m\STX" ]
+  where
+    head' (x:_) = " \ESC[38;5;29m\STX" ++ x
+    head' _     = ""
+    getpwd = getpwd' <$> System.Environment.getEnv "HOME" <*> System.Posix.getWorkingDirectory
+    getpwd' home pwd = if zipWith const pwd home == home
+                         then '~':drop (length home) pwd
+                         else pwd
+:}
+:set prompt-function dotGHCI_myPrompt "\ESC[38;5;122m\STX λ"
+:set prompt-cont-function dotGHCI_myPrompt " ∷"
