@@ -271,9 +271,10 @@ endif
 "    set listchars=eol:¬,tab:>-,trail:~,extends:>,precedes:<,nbsp:␣ 
 "endif
 
-"Fix delete key in macOS and BSD
+"Fix delete (backspacec) key in macOS and BSD
 if g:os == "Darwin" || g:os == "FreeBSD"
     fixdel
+    set backspace=indent,eol,start
 endif
 
 "~~~~ Deprecated & Reference ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
