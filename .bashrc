@@ -325,3 +325,5 @@ wiki() {
 # Clean up variables for prompt colors
 for var in $colorvars; do unset $var; done
 unset colorvars
+
+[ -f "/home/blair/.ghcup/env" ] && source "/home/blair/.ghcup/env" # ghcup-env
