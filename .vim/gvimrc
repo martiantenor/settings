@@ -11,6 +11,18 @@ set lines=60
 " Newsprint
 colorscheme slate
 
+"Syntax, search, and special character highlighting, language-specific settings
+set encoding=utf-8  "turns on UTF-8 encoding by default
+set ambiwidth=double "helps with displaying emoji and other sometimes-double-wide characters
+syntax on           "turns on syntax highlighting
+set conceallevel=0  "don't conceal special characters/syntax
+set hlsearch        "highlights search results
+set incsearch       "starts finding things in search while you type, including
+                    "regexp. You can then do :%s//[replace-with]/g, since the //
+                    "returns the last performed search!
+set smartcase       "makes searches case-insensitive UNLESS the search string
+                    "contains a capital letter
+
 "OS detection
 if !exists("g:os")
     if has("win64") || has("win32") || has("win16")
