@@ -201,13 +201,16 @@ Linux)
 
     ######## Specific settings for Windows Subsystem for Linux (WSL2)
     # (add-on/changes to base Linux config)
-    if [ $(grep -c microsoft /proc/version) -eq 1 ]; then
+    if [ $(grep -ic Microsoft /proc/version) -eq 1 ]; then
 
-        # Set a more Windowsy prompt
+        # basic prompt
+        #PS1="\${debian_chroot:+($debian_chroot)}${B_32}\u@\h$:${B_34}\w${C_RST}$ "
         # grayscale with Debian swirl (via 'cyclone' emoji)
-        PS1="${C_242}\u@\h:${C_246}\w${B_97} 🌀${C_RST} "
+        #PS1="${C_242}\u@\h:${C_246}\w${B_97} 🌀${C_RST} "
+        # grayscale with basic "$", plus git branch status using "herb" emoji
+        PS1="${C_242}\u@\h:${C_246}\w${B_97}\$(__git_ps1 ' (🌿%s)')\$${C_RST} "
         # grayscale with Debian swirl (via 'cyclone' emoji), plus git branch status using "herb" emoji
-        PS1="${C_242}\u@\h:${C_246}\w${B_97}\$(__git_ps1 ' (🌿%s)') 🌀${C_RST} "
+        #PS1="${C_242}\u@\h:${C_246}\w${B_97}\$(__git_ps1 ' (🌿%s)') 🌀${C_RST} "
 
         # X11 forwarding
         export DISPLAY=localhost:0.0
