@@ -26,6 +26,10 @@ set incsearch       "starts finding things in search while you type, including
 set smartcase       "makes searches case-insensitive UNLESS the search string
                     "contains a capital letter
 
+"Displaying non-printing characters
+set list
+set listchars=nbsp:␣
+
 "General line wrapping and scrolling settings
 "set textwidth=80    "start new lines when you hit 80 characters
 set nowrap          "do not wrap lines that are past that 80-character limit
