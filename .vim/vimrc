@@ -208,7 +208,9 @@ endif
 
 "Pandoc markdown processing
 if g:os == "Windows"
-    command Pandoc execute "!pandoc.exe -s --from markdown+blank_before_header -c \"css\\buttondown.css\" \"%\" > \"H:\\My\ Drive\\Notes\\foo.html\""
+    "command Pandoc execute "!pandoc.exe -s --from markdown+blank_before_header -c \"css\\buttondown.css\" \"%\" > \"H:\\My\ Drive\\Notes\\foo.html\""
+    "command Pandoc execute "!pandoc.exe -s --from markdown+blank_before_header -c \"css\\modest.css\" \"%\" > \"H:\\My\ Drive\\Notes\\foo.html\""
+    command Pandoc execute "!pandoc.exe -s --from markdown+blank_before_header -c \"css\\plain.css\" \"%\" > \"H:\\My\ Drive\\Notes\\foo.html\""
 elseif g:os == "Linux"
     command Pandoc execute "!pandoc -s --from markdown+blank_before_header \"%\" > ~/pandoc_output.html; firefox ~/pandoc_output.html"
     "map <F5> <ESC>:!pandoc -s "%" > ~/pandoc_output.html; firefox ~/pandoc_output.html<CR>
@@ -223,8 +225,8 @@ if g:os == "Windows"
     
     " Source Windows-specific settings for keyboard shortcuts, clipboard, pasting
     source $VIMRUNTIME/vimrc_example.vim
-    source $VIMRUNTIME/mswin.vim
-    behave mswin
+    "source $VIMRUNTIME/mswin.vim
+    "behave mswin
 
 	" Fix backup location
     set backup
