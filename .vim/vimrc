@@ -29,6 +29,9 @@ set smartcase       "makes searches case-insensitive UNLESS the search string
 "Displaying non-printing characters
 set list
 set listchars=nbsp:␣
+"Show only the following characters in ":set list" mode
+"    set nolist                      "don't show the following unless ":set list" explicitly:
+"    set listchars=eol:¬,tab:>-,trail:~,extends:>,precedes:<,nbsp:␣ 
 
 "General line wrapping and scrolling settings
 "set textwidth=80    "start new lines when you hit 80 characters
@@ -174,9 +177,9 @@ if g:os == "Darwin" || g:os == "Linux"
     set mouse=a
 
     "vim-plug plugin management
-    call plug#begin()
-    Plug 'raghur/vim-ghost', {'do': ':GhostInstall'}
-    call plug#end()
+    "call plug#begin()
+    "Plug 'raghur/vim-ghost', {'do': ':GhostInstall'}
+    "call plug#end()
 
 "    "Vundle settings
 "    set nocompatible                "required, done earlier too
@@ -269,13 +272,6 @@ if g:os == "Windows"
       endif
     endfunction
 endif
-
-"Show only the following characters in ":set list" mode
-""(Seems broken in Windows)
-"if g:os != "Windows"
-"    set nolist                      "don't show the following unless ":set list" explicitly:
-"    set listchars=eol:¬,tab:>-,trail:~,extends:>,precedes:<,nbsp:␣ 
-"endif
 
 "Fix delete (backspacec) key in macOS and BSD
 if g:os == "Darwin" || g:os == "FreeBSD"
