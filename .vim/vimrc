@@ -49,6 +49,7 @@ if exists("SSH_CONNECTION")
     colorscheme 3dglasses
 else
     set t_Co=256
+    set termguicolors
     colorscheme slate
 endif
 
@@ -79,6 +80,20 @@ set shiftwidth=4
 set smartindent     "Automatically indents new lines in code (intelligently)
 set smarttab        "Goes to the nearest 4th space when you hit tab, instead of
                     "just adding four spaces
+
+"Functions
+"" Make background transparent
+function! BGtrans()
+    highlight Normal ctermbg=NONE guibg=NONE
+    highlight NonText ctermbg=NONE guibg=NONE
+    return "1"
+endfunction
+
+"" Insert text from files, complete with keyboard shortcuts
+function! Newhtml()
+    r ~/scripts/text/new.html
+endfunction
+nmap ^H :call Newhtml()
 
 "Load filetype plugins; these are in ~/.vim/ftplugin/, or "$HOME/vimfiles/ftplugin
 filetype plugin on
