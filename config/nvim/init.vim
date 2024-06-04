@@ -6,4 +6,5 @@ set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let &packpath=&runtimepath
 source ~/.vim/vimrc
 
+colo ir_black
 call BGtrans()
