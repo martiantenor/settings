@@ -16,7 +16,7 @@ ino <C-A> <C-O>yiW<End>=<C-R>=<C-R>0<CR>
 
 "Syntax, search, and special character highlighting, language-specific settings
 set encoding=utf-8  "turns on UTF-8 encoding by default
-set ambiwidth=double "helps with displaying emoji and other sometimes-double-wide characters
+set ambiwidth=single "helps with displaying emoji and other sometimes-double-wide characters
 syntax on           "turns on syntax highlighting
 set conceallevel=0  "don't conceal special characters/syntax
 set hlsearch        "highlights search results
@@ -56,9 +56,9 @@ endif
 "Status bar
 set laststatus=2  "show status line for each of multiple open windows (panes)
 ""Complete w/ column & line info
-"set statusline=%f%y%m%r%=[%0.3c,%0.9l/%0.9L][%p%%]
+set statusline=%f%y%m%r%=[%0.3c,%0.9l/%0.9L][%p%%]
 ""Complete w/ column & line info, plus a clock!
-set statusline=%f%y%m%r%=[%0.3c,%0.9l/%0.9L][%p%%]\ \ %{strftime('%a\ %b\ %e\ %H:%M')}\ \ 
+"set statusline=%f%y%m%r%=[%0.3c,%0.9l/%0.9L][%p%%]\ \ %{strftime('%a\ %b\ %e\ %H:%M')}\ \ 
 ""Sparser
 "set statusline=%f%y%m%=[%p%%]
 " %f - full path to file in current buffer, relative to working directory
