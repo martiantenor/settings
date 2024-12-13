@@ -7,11 +7,22 @@ let &packpath=&runtimepath
 source ~/.vim/vimrc
 
 call plug#begin()
+Plug 'scrooloose/nerdtree'
+
+"Colorschemes
 Plug 'ellisonleao/gruvbox.nvim'
 Plug 'dracula/vim'
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'scrooloose/nerdtree'
+Plug 'jaredgorski/spacecamp'
+Plug 'jacoborus/tender.vim'
+Plug 'cormacrelf/vim-colors-github'
+
+"Lilypond
+Plug 'martineausimon/nvim-lilypond-suite'
 call plug#end()
 
+
 colo dracula
-call BGtrans()
+
+highlight Normal guibg=#0E1117
+"call BGtrans()
