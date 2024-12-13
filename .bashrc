@@ -130,7 +130,7 @@ Linux)
         # grayscale with red star, plus git branch status using U+2387 ALTERNATIVE KEY SYMBOL
         #PS1="\${debian_chroot:+($debian_chroot)}${C_242}\u@\h:${C_246}\w${B_97}\$(__git_ps1 ' (⎇ %s)')${C_31} 🟊${C_RST} "
         # grayscale with red star, plus git branch status using "herb" emoji
-        PS1="\${debian_chroot:+($debian_chroot)}${C_242}\u@\h:${C_246}\w${B_97}\$(__git_ps1 ' (🌿%s)')${C_31} 🟊${C_RST} "
+        PS1="\${debian_chroot:+($debian_chroot)}${C_242}\u@\h:${C_246}\w${B_97}\$(__git_ps1 ' (🌿%s)')${C_31} ★${C_RST} "
     else
         #PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
         PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$'
