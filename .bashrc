@@ -116,7 +116,9 @@ Linux)
     fi
 
     # get git branch status for prompt, using official script from git
-    source /usr/lib/git-core/git-sh-prompt
+    if [ -f "/usr/lib/git-core/git-sh-prompt" ]; then
+	    source /usr/lib/git-core/git-sh-prompt
+    fi
 
     # prompt
     if [ "$color_prompt" = yes ]; then
@@ -328,9 +330,6 @@ wiki() {
 # Clean up variables for prompt colors
 for var in $colorvars; do unset $var; done
 unset colorvars
-
-[ -f "/home/blair/.ghcup/env" ] && source "/home/blair/.ghcup/env" # ghcup-env
-. "$HOME/.cargo/env"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
