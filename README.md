@@ -1,9 +1,7 @@
 # settings
-Settings files for various computers
+Settings files for various computers, although mostly \*nix systems.
 
-On Linux, this directory should be at "~/settings". Files and folders
-can then be directly symlinked out to the home directory as needed,
-e.g. `ln -s ~/settings/.vim ~/.vim`
-
-For ZSH setup (e.g. on macOS), just symlink the `.zshenv` file by doing
-`ln -s ~/settings/zsh/.zshenv ~/`
+## Usage
+1. Clone this repo into a non-system directory on the target machine, e.g. `git clone git@github.com:martiantenor/settings.git ~/.dotfiles`
+2. Create symbolic links as needed, e.g. `ln -s ~/.dotfiles/.vim ~/.`, or all at once with `cd; ln -s ~/.dotfiles/.* ~/.`
+    - For ZSH setup, just symlink the `.zshenv` file to your home directory with `ln -s ~/.dotfiles/zsh/.zshenv ~/`
