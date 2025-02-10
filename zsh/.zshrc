@@ -25,4 +25,4 @@ alias ll="ls -lGF"
 alias la="ls -aGF"
 
 # activate Homebrew
-eval "$(/usr/local/bin/brew shellenv)"
+#eval "$(/usr/local/bin/brew shellenv)"
