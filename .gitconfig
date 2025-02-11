@@ -1,0 +1,6 @@
+[safe]
+	directory = 
+	directory = /etc/nixos
+[user]
+	name = 
+	email = 
